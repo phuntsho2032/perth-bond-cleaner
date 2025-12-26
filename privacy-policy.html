@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Perth Bond Cleaner | Protecting Your Information</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .policy-hero {
+            background: linear-gradient(135deg, 
+                rgba(34, 153, 61, 0.95),
+                rgba(28, 187, 140, 0.92),
+                rgba(34, 153, 61, 0.93)
+            );
+            padding: 120px 0 60px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .policy-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .policy-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .policy-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .policy-content {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .policy-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .policy-section h2 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .policy-section h3 {
+            color: var(--text-dark);
+            margin: 2rem 0 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .policy-section p {
+            color: var(--text-light);
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .last-updated {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .last-updated p {
+            margin-bottom: 0;
+            color: var(--text-light);
+        }
+
+        .last-updated strong {
+            color: var(--primary-green);
+        }
+
+        .policy-section,
+        .terms-section {
+            scroll-margin-top: 120px;
+        }
+
+        @media (max-width: 768px) {
+            .policy-hero {
+                padding: 100px 0 50px;
+            }
+            
+            .policy-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .policy-hero p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .policy-content {
+                padding: 3rem 0;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .policy-section h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .policy-hero {
+                padding: 80px 0 40px;
+            }
+            
+            .policy-hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2">
+        <div class="container text-center">
+            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Bond-Back Assurance • Professionally Insured
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                        <i class="fas fa-home text-white"></i>
+                    </div>
+                    <div>
+                        <span class="logo-main">Perth Bond Cleaner</span>
+                        <span class="logo-tagline d-block">Professional Bond Cleaning</span>
+                    </div>
+                </div>
+            </a>
+            
+            <div class="d-lg-none d-flex align-items-center">
+                <div class="price-display ms-3">
+                    <span class="price-badge">From $299 AUD</span>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="areas.html">Service Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="nav-cta">
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
+                            <i class="fas fa-phone"></i> +61 452 366 782
+                        </a>
+                        <a href="contact.html" class="btn btn-success">
+                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Policy Hero -->
+    <section class="policy-hero" data-aos="fade-down">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>How we collect, use, and protect your personal information when you use our services</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="policy-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="policy-section" data-aos="fade-up">
+                        <h2>Introduction</h2>
+                        <p>Perth Bond Cleaner ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or contact us for quotes and bookings.</p>
+                        <p>By accessing or using our services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="100">
+                        <h2>Information We Collect</h2>
+                        
+                        <h3>Personal Information</h3>
+                        <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                        <ul>
+                            <li>Request a quote or booking</li>
+                            <li>Contact us via phone, email, or WhatsApp</li>
+                            <li>Fill out forms on our website</li>
+                            <li>Subscribe to our newsletter or updates</li>
+                        </ul>
+                        
+                        <h3>Automatically Collected Information</h3>
+                        <p>
+                            We do not currently use analytics or tracking tools for advertising purposes. 
+                            Basic technical information (such as IP address) may be temporarily processed by our hosting provider 
+                            or security services to maintain website functionality and prevent abuse.
+                        </p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="200">
+                        <h2>How We Use Your Information</h2>
+                        <p>We use the information we collect for various purposes, including:</p>
+                        <ul>
+                            <li>Providing and managing our cleaning services</li>
+                            <li>Processing bookings and service-related enquiries</li>
+                            <li>Communicating with you about your cleaning appointments</li>
+                            <li>Sending service updates and important notices</li>
+                            <li>Improving our website and services</li>
+                            <li>Marketing and promotional communications only where you have provided consent</li>
+                            <li>Complying with legal obligations</li>
+                        </ul>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Information Sharing and Disclosure</h2>
+                        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
+                        <ul>
+                            <li>With service providers who assist in our operations (e.g., payment processors)</li>
+                            <li>When required by law or to respond to legal process</li>
+                            <li>To protect the rights, property, or safety of Perth Bond Cleaner, our customers, or others</li>
+                            <li>With your consent or at your direction</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><i class="fas fa-lock me-2 text-success"></i> We maintain appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="400">
+                        <h2>Data Security</h2>
+                        <p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee absolute security.</p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="500">
+                        <h2>Your Rights and Choices</h2>
+                        <p>You have certain rights regarding your personal information, including:</p>
+                        <ul>
+                            <li>The right to access the personal information we hold about you</li>
+                            <li>The right to request correction of inaccurate information</li>
+                            <li>The right to request deletion of your personal information</li>
+                            <li>The right to opt-out of marketing communications</li>
+                            <li>The right to object to certain processing activities</li>
+                        </ul>
+                        <p>To exercise these rights, please contact us using the information provided below.</p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="600">
+                        <h2>Cookies and Tracking Technologies</h2>
+                        <p>
+                            We do not currently use cookies for tracking, advertising, or analytics purposes.
+                            Basic cookies necessary for website functionality may be used by your browser or hosting provider.
+                        </p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="700">
+                        <h2>Third-Party Links</h2>
+                        <p>Our website may contain links to third-party websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="800">
+                        <h2>Changes to This Privacy Policy</h2>
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+                    </div>
+
+                    <div class="policy-section" data-aos="fade-up" data-aos-delay="900">
+                        <h2>Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                        <ul>
+                            <li>By email: pwangdi97@gmail.com</li>
+                            <li>By phone: +61 452 366 782</li>
+                            <li>By WhatsApp: +61 452 366 782</li>
+                        </ul>
+                    </div>
+
+                    <div class="last-updated" data-aos="fade-up">
+                        <p><strong>Last Updated:</strong> December 22, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                                <i class="fas fa-home text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="footer-logo">Perth Bond Cleaner</h4>
+                                <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <div class="trust-badges mt-3">
+                        <span class="badge bg-success me-2">Trusted by Perth residents</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Bond Cleaning</a></li>
+                        <li><a href="areas.html">Service Areas</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">End-of-Lease Cleaning</a></li>
+                        <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
+                        <li><a href="services.html#windows">Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+61452366782">+61 452 366 782</a>
+                                <small class="d-block">Call or Text</small>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                Servicing Perth & Surrounding Areas
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="whatsapp-cta mt-3">
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100">
+                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Perth Bond Cleaner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
+                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Assurance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Highlight current page in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

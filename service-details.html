@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Bond Cleaning Details | Perth Bond Cleaner | From $299 AUD</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .service-details-hero {
+            background: linear-gradient(135deg, 
+                rgba(34, 153, 61, 0.95),    /* Darker primary green */
+                rgba(28, 187, 140, 0.92),   /* Darker accent green */
+                rgba(34, 153, 61, 0.93)     /* Back to darker primary */
+            );
+            padding: 160px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add the wave pattern overlay */
+        .service-details-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        /* Clean fade to white at the bottom */
+        .service-details-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(
+                to bottom, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.1) 20%,
+                rgba(255, 255, 255, 0.3) 40%,
+                rgba(255, 255, 255, 0.6) 60%,
+                rgba(255, 255, 255, 0.85) 80%,
+                white 100%
+            );
+            z-index: 1;
+        }
+
+        .service-details-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-main-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-subtitle {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .price-display-large {
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .price-subtext {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .cta-buttons-top {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .included-section {
+            padding: 5rem 0;
+            background: var(--light-gray);
+        }
+
+        .section-title {
+            margin-bottom: 2rem;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-green);
+        }
+        
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+        
+        .category-header h3 {
+            margin: 0;
+            color: var(--text-dark);
+        }
+        
+        .task-count {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .task-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .task-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .task-list i {
+            color: var(--primary-green);
+            margin-top: 0.3rem;
+        }
+        
+        .view-more {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .view-more:hover {
+            text-decoration: underline;
+        }
+        
+        .bond-assurance-section {
+            padding: 5rem 0;
+        }
+        
+        .assurance-card {
+            background: linear-gradient(135deg, var(--light-green), #e8f5e9);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .assurance-title {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .conditions-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0 0 0;
+        }
+        
+        .conditions-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        .conditions-list i {
+            color: var(--primary-green);
+            margin-top: 0.2rem;
+        }
+        
+        .terms-link {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .terms-link:hover {
+            text-decoration: underline;
+        }
+        
+        .not-included-section {
+            padding: 5rem 0;
+            background: var(--light-gray);
+        }
+        
+        .exclusion-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .exclusion-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #ddd;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .exclusion-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .exclusion-list i {
+            color: var(--text-light);
+            margin-top: 0.2rem;
+        }
+        
+        .note-box {
+            background: white;
+            border-left: 4px solid var(--primary-green);
+            padding: 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .preparation-guide {
+            padding: 5rem 0;
+        }
+        
+        .guide-column {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            height: 100%;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .guide-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-green);
+        }
+        
+        .guide-column h4 {
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+        
+        .guide-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .guide-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .guide-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .guide-list i {
+            color: var(--primary-green);
+            margin-top: 0.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .service-details-hero {
+                padding: 140px 0 80px;
+            }
+            
+            .service-main-title {
+                font-size: 2.5rem;
+            }
+            
+            .service-subtitle {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .price-display-large {
+                font-size: 3.2rem;
+            }
+            
+            .cta-buttons-top {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .category-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-details-hero {
+                padding: 120px 0 60px;
+            }
+            
+            .service-main-title {
+                font-size: 2.2rem;
+            }
+            
+            .price-display-large {
+                font-size: 2.8rem;
+            }
+            
+            .cta-buttons-top .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2">
+        <div class="container text-center">
+            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Bond-Back Assurance • Professionally Insured
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                        <i class="fas fa-home text-white"></i>
+                    </div>
+                    <div>
+                        <span class="logo-main">Perth Bond Cleaner</span>
+                        <span class="logo-tagline d-block">Professional Bond Cleaning</span>
+                    </div>
+                </div>
+            </a>
+            
+            <div class="d-lg-none d-flex align-items-center">
+                <div class="price-display ms-3">
+                    <span class="price-badge">From $299 AUD</span>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="areas.html">Service Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="nav-cta">
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
+                            <i class="fas fa-phone"></i> +61 452 366 782
+                        </a>
+                        <a href="contact.html" class="btn btn-success">
+                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="service-details-hero">
+        <div class="container">
+            <div class="service-badge">Most Popular</div>
+            <h1 class="service-main-title">Professional Bond Cleaning</h1>
+            <p class="service-subtitle">
+                Comprehensive end-of-lease cleaning service that meets real estate standards with our bond-back assurance. Pricing starts from $299 AUD and may vary based on property details.
+            </p>
+            
+            <div class="price-display-large">From $299 AUD <small style="font-size: 1.5rem; opacity: 0.9;">inc. GST</small></div>
+            <p class="price-subtext">Final pricing depends on property details and selected services</p>
+            
+            <div class="cta-buttons-top mt-4">
+                <a href="contact.html" class="btn btn-outline-light btn-lg" style="border: 2px solid white;">
+                    <i class="fas fa-file-invoice-dollar"></i> Get Quote
+                </a>
+                <a href="contact.html" class="btn btn-light btn-lg" style="color: var(--primary-green); font-weight: 600;">
+                    <i class="fas fa-calendar-check"></i> Book Now – From $299
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="included-section">
+        <div class="container text-center mb-5">
+            <h2 class="section-title">What's Included</h2>
+            
+            <!-- Kitchen -->
+            <div class="category-card">
+                <div class="category-header">
+                    <h3><i class="fas fa-utensils me-2"></i> Kitchen</h3>
+                    <span class="task-count">7+ tasks</span>
+                </div>
+                <ul class="task-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean inside and outside of oven, including racks and glass door</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Degrease and clean stovetop, hotplates, and control knobs</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean rangehood inside and out, including filters</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Wipe down all cupboard fronts, handles, and internal shelves</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean benchtops, backsplash, and remove all marks</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean sink, taps, and remove any limescale or stains</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Sweep and mop floors, including under appliances</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Bathrooms, Laundry & Toilet -->
+            <div class="category-card">
+                <div class="category-header">
+                    <h3><i class="fas fa-bath me-2"></i> Bathrooms, Laundry & Toilet</h3>
+                    <span class="task-count">8+ tasks</span>
+                </div>
+                <ul class="task-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Scrub and sanitise toilet bowl, seat, and cistern</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean shower recess, remove soap scum and mould</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean bathtub thoroughly, including taps and drain</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean vanity, basin, and remove water marks from taps</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean mirrors and remove any spots or streaks</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Wipe down tiles and grout, remove any staining</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean exhaust fan and light fittings</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Sweep and mop floors, including behind toilet</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- All Areas -->
+            <div class="category-card">
+                <div class="category-header">
+                    <h3><i class="fas fa-home me-2"></i> All Areas</h3>
+                    <span class="task-count">8+ tasks</span>
+                </div>
+                <ul class="task-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Vacuum all carpets and rugs thoroughly</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Sweep and mop all hard floors</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Dust and wipe down all skirting boards</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean window sills, tracks, and frames</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Dust ceiling fans and light fittings</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Wipe down all power points and light switches</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Clean internal cupboards and wardrobes</div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <div>Remove cobwebs from corners and ceilings</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="checklist.html" class="btn btn-success btn-lg">
+                    <i class="fas fa-clipboard-check"></i> View Complete Checklist
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bond-Back Assurance -->
+    <section class="bond-assurance-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="assurance-card">
+                        <h3 class="assurance-title"><i class="fas fa-shield-alt me-2"></i> Bond-Back Assurance</h3>
+                        <p>
+                            If your property manager identifies cleaning issues within 72 hours of our service, 
+                            we'll return once to address cleaning-related issues noted in the inspection report at no extra cost.
+                        </p>
+                        
+                        <h5 class="mt-4">Conditions:</h5>
+                        <ul class="conditions-list">
+                            <li>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>Property manager report must be provided within 72 hours</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>One return visit included to address specified issues</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>Excludes damage, fair wear and tear</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>Excludes items not included in original booking</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div>Access must be provided for return visit</div>
+                            </li>
+                        </ul>
+                        
+                        <a href="bond-back-guarantee.html" class="terms-link mt-3 d-inline-block">
+                            <i class="fas fa-file-contract me-2"></i> Full Terms
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Not Included -->
+    <section class="not-included-section">
+        <div class="container text-center mb-5">
+            <h2 class="section-title">What's Not Included by Default</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <ul class="exclusion-list">
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <div>External window cleaning (available as add-on)</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <div>Carpet steam cleaning (available as add-on)</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <div>External areas (patios, balconies, gardens)</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <div>Garage cleaning (unless specifically requested)</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <div>Personal belongings removal</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-times-circle"></i>
+                            <div>Repairs or maintenance items</div>
+                        </li>
+                    </ul>
+                    
+                    <div class="note-box">
+                        <strong>Note:</strong> Add-on services can be included for additional cost.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparation Guide -->
+    <section class="preparation-guide">
+        <div class="container text-center mb-5">
+            <h2 class="section-title">Preparation Guide</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="guide-column">
+                        <h4>For Tenants</h4>
+                        <ul class="guide-list">
+                            <li>
+                                <i class="fas fa-trash"></i>
+                                <div>Remove all personal belongings and rubbish</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-bolt"></i>
+                                <div>Ensure utilities (power, water) are connected</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-key"></i>
+                                <div>Provide keys or access codes on cleaning day</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-box"></i>
+                                <div>Remove any items blocking access to areas</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-camera"></i>
+                                <div>Take photos before and after for your records</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="guide-column">
+                        <h4>For Property Managers</h4>
+                        <ul class="guide-list">
+                            <li>
+                                <i class="fas fa-clipboard-check"></i>
+                                <div>Schedule inspection after cleaning completion</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-alt"></i>
+                                <div>Provide detailed report if issues found</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>Allow 24-48 hours for cleaning completion</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-door-open"></i>
+                                <div>Ensure clear access for cleaning team</div>
+                            </li>
+                            <li>
+                                <i class="fas fa-handshake"></i>
+                                <div>Coordinate key collection/return if needed</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta py-5 bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="cta-title">Ready to Book Your Bond Clean?</h2>
+                    <p class="cta-text">
+                        Get your property professionally cleaned with our bond-back assurance. Police-cleared team, fully insured, and committed to your satisfaction.
+                    </p>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-light btn-lg w-100 mb-3">
+                            <i class="fas fa-file-invoice-dollar"></i> Get Instant Quote
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg w-100">
+                            <i class="fas fa-calendar-check"></i> Book Now - From $299
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                                <i class="fas fa-home text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="footer-logo">Perth Bond Cleaner</h4>
+                                <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <div class="trust-badges mt-3">
+                        <span class="badge bg-success me-2">Trusted by Perth residents</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Bond Cleaning</a></li>
+                        <li><a href="areas.html">Service Areas</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">End-of-Lease Cleaning</a></li>
+                        <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
+                        <li><a href="services.html#windows">Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+61452366782">+61 452 366 782</a>
+                                <small class="d-block">Call or Text</small>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                Servicing Perth & Surrounding Areas
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="whatsapp-cta mt-3">
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100">
+                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Perth Bond Cleaner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
+                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Assurance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Highlight active navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === 'services.html' || link.getAttribute('href') === 'service-details.html') {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

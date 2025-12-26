@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bond Cleaning Checklist | Perth Bond Cleaner | Printable & Interactive Checklist</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .checklist-hero {
+            background: linear-gradient(135deg, 
+                rgba(34, 153, 61, 0.95),    /* Darker primary green */
+                rgba(28, 187, 140, 0.92),   /* Darker accent green */
+                rgba(34, 153, 61, 0.93)     /* Back to darker primary */
+            );
+            padding: 160px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Add the wave pattern overlay */
+        .checklist-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .checklist-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .checklist-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+        
+        .checklist-subtitle {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress-indicator {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .progress-text {
+            font-weight: 600;
+            color: white;
+        }
+        
+        .checklist-section {
+            padding: 5rem 0;
+        }
+        
+        .category-card-checklist {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .category-card-checklist:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-green);
+        }
+        
+        .category-title {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+        
+        .task-item {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .task-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .task-item.completed {
+            background: var(--light-green);
+            border-left: 4px solid var(--primary-green);
+        }
+        
+        .task-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #dee2e6;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .task-item.completed .task-checkbox {
+            background: var(--primary-green);
+            border-color: var(--primary-green);
+        }
+        
+        .task-item.completed .task-checkbox::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+        }
+        
+        .task-text {
+            flex-grow: 1;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        
+        .task-item.completed .task-text {
+            text-decoration: line-through;
+            color: var(--text-light);
+        }
+        
+        .controls-section {
+            padding: 2rem 0;
+            background: var(--light-gray);
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+        
+        .controls-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .progress-bar-container {
+            margin: 2rem 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .progress-bar-bg {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-green));
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .stats-badge {
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .checklist-hero {
+                padding: 140px 0 80px;
+            }
+            
+            .checklist-title {
+                font-size: 2.5rem;
+            }
+            
+            .checklist-subtitle {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .controls-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .controls-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .task-item {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .checklist-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            
+            .checklist-hero {
+                background: white !important;
+                color: black !important;
+                padding: 40px 0 20px !important;
+            }
+            
+            .category-card-checklist {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+            
+            .task-item.completed .task-text {
+                text-decoration: none;
+            }
+
+            .task-item {
+                background: white !important;
+                border: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2 no-print">
+        <div class="container text-center">
+            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Bond-Back Assurance • Professionally Insured
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top no-print">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                        <i class="fas fa-home text-white"></i>
+                    </div>
+                    <div>
+                        <span class="logo-main">Perth Bond Cleaner</span>
+                        <span class="logo-tagline d-block">Professional Bond Cleaning</span>
+                    </div>
+                </div>
+            </a>
+            
+            <div class="d-lg-none d-flex align-items-center">
+                <div class="price-display ms-3">
+                    <span class="price-badge">From $299 AUD</span>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="areas.html">Service Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="nav-cta">
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
+                            <i class="fas fa-phone"></i> +61 452 366 782
+                        </a>
+                        <a href="contact.html" class="btn btn-success">
+                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checklist Hero -->
+    <section class="checklist-hero no-print">
+        <div class="container">
+            <h1 class="checklist-title">Bond Cleaning Checklist</h1>
+            <p class="checklist-subtitle">Track your cleaning progress with our interactive checklist. Perfect for DIY cleaning or to understand what our professional service includes.</p>
+            
+            <div class="progress-indicator">
+                <span class="progress-text"><i class="fas fa-save me-2"></i> Auto-saves in your browser</span>
+            </div>
+
+            <div class="mt-4">
+                <a href="service-details.html" class="btn btn-light btn-lg me-3">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Service Details
+                </a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-calendar-check me-2"></i> Book Professional Clean - From $299
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Content -->
+    <section class="checklist-section">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressBar" style="width: 0%"></div>
+                </div>
+                <div class="progress-stats">
+                    <span id="completedCount">0</span> of <span id="totalCount">0</span> tasks completed
+                    <span class="stats-badge" id="percentage">0%</span>
+                </div>
+            </div>
+            
+            <!-- Kitchen Section -->
+            <div class="category-card-checklist">
+                <h3 class="category-title"><i class="fas fa-utensils me-2"></i> Kitchen</h3>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean inside and outside of oven, including racks and glass door</div>
+                </div>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Degrease and clean stovetop, hotplates, and control knobs</div>
+                </div>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean rangehood inside and out, including filters</div>
+                </div>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Wipe down all cupboard fronts, handles, and internal shelves</div>
+                </div>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean benchtops, backsplash, and remove all marks</div>
+                </div>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean sink, taps, and remove any limescale or stains</div>
+                </div>
+                
+                <div class="task-item" data-category="kitchen">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Sweep and mop floors, including under appliances</div>
+                </div>
+            </div>
+            
+            <!-- Bathrooms Section -->
+            <div class="category-card-checklist">
+                <h3 class="category-title"><i class="fas fa-bath me-2"></i> Bathrooms, Laundry & Toilet</h3>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Scrub and sanitise toilet bowl, seat, and cistern</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean shower recess, remove soap scum and mould</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean bathtub thoroughly, including taps and drain</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean vanity, basin, and remove water marks from taps</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean mirrors and remove any spots or streaks</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Wipe down tiles and grout, remove any staining</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean exhaust fan and light fittings</div>
+                </div>
+                
+                <div class="task-item" data-category="bathroom">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Sweep and mop floors, including behind toilet</div>
+                </div>
+            </div>
+            
+            <!-- All Areas Section -->
+            <div class="category-card-checklist">
+                <h3 class="category-title"><i class="fas fa-home me-2"></i> All Areas</h3>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Vacuum all carpets and rugs thoroughly</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Sweep and mop all hard floors</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Dust and wipe down all skirting boards</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean window sills, tracks, and frames</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Dust ceiling fans and light fittings</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Wipe down all power points and light switches</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Clean internal cupboards and wardrobes</div>
+                </div>
+                
+                <div class="task-item" data-category="areas">
+                    <div class="task-checkbox"></div>
+                    <div class="task-text">Remove cobwebs from corners and ceilings</div>
+                </div>
+            </div>
+            
+            <!-- Marketing Note -->
+            <div class="alert alert-success text-center mt-4" style="border-left: 4px solid var(--primary-green);">
+                <h5><i class="fas fa-lightbulb me-2"></i> Professional Cleaning Tip</h5>
+                <p class="mb-0">
+                    This checklist shows why professional bond cleaning from $299 AUD offers great value. 
+                    Our team completes all these tasks efficiently with professional equipment and expertise.
+                    <a href="contact.html" class="alert-link">Get your professional clean booked today.</a>
+                </p>
+            </div>
+            
+            <!-- Controls -->
+            <div class="controls-section no-print">
+                <div class="text-center">
+                    <div class="controls-buttons">
+                        <button class="btn btn-outline-success" id="clearAllBtn">
+                            <i class="fas fa-eraser me-2"></i> Clear All Ticks
+                        </button>
+                        <button class="btn btn-success" id="printBtn">
+                            <i class="fas fa-print me-2"></i> Print Checklist
+                        </button>
+                        <a href="contact.html" class="btn btn-success">
+                            <i class="fas fa-calendar-check me-2"></i> Book Professional Clean
+                        </a>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <button class="btn btn-link text-success" id="exportPdfBtn" disabled>
+                            <i class="fas fa-download me-2"></i> Export PDF (coming soon)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                                <i class="fas fa-home text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="footer-logo">Perth Bond Cleaner</h4>
+                                <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <div class="trust-badges mt-3">
+                        <span class="badge bg-success me-2">Trusted by Perth residents</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Bond Cleaning</a></li>
+                        <li><a href="areas.html">Service Areas</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">End-of-Lease Cleaning</a></li>
+                        <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
+                        <li><a href="services.html#windows">Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+61452366782">+61 452 366 782</a>
+                                <small class="d-block">Call or Text</small>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                Servicing Perth & Surrounding Areas
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="whatsapp-cta mt-3">
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100">
+                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Perth Bond Cleaner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
+                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Assurance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const taskItems = document.querySelectorAll('.task-item');
+            const progressBar = document.getElementById('progressBar');
+            const completedCount = document.getElementById('completedCount');
+            const totalCount = document.getElementById('totalCount');
+            const percentage = document.getElementById('percentage');
+            const clearAllBtn = document.getElementById('clearAllBtn');
+            const printBtn = document.getElementById('printBtn');
+            
+            // Set total count
+            totalCount.textContent = taskItems.length;
+            
+            // Load saved state from localStorage
+            function loadSavedState() {
+                const savedState = localStorage.getItem('checklistState');
+                if (savedState) {
+                    const state = JSON.parse(savedState);
+                    taskItems.forEach((item, index) => {
+                        if (state[index]) {
+                            item.classList.add('completed');
+                        }
+                    });
+                }
+                updateProgress();
+            }
+            
+            // Save state to localStorage
+            function saveState() {
+                const state = Array.from(taskItems).map(item => 
+                    item.classList.contains('completed')
+                );
+                localStorage.setItem('checklistState', JSON.stringify(state));
+            }
+            
+            // Update progress
+            function updateProgress() {
+                const completed = document.querySelectorAll('.task-item.completed').length;
+                const total = taskItems.length;
+                const percent = Math.round((completed / total) * 100);
+                
+                progressBar.style.width = `${percent}%`;
+                completedCount.textContent = completed;
+                percentage.textContent = `${percent}%`;
+            }
+            
+            // Toggle task completion
+            taskItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('completed');
+                    updateProgress();
+                    saveState();
+                });
+            });
+            
+            // Clear all tasks
+            clearAllBtn.addEventListener('click', function() {
+                if (confirm('Clear all checkmarks?')) {
+                    taskItems.forEach(item => {
+                        item.classList.remove('completed');
+                    });
+                    updateProgress();
+                    saveState();
+                }
+            });
+            
+            // Print checklist
+            printBtn.addEventListener('click', function() {
+                window.print();
+            });
+            
+            // Initialize
+            loadSavedState();
+        });
+    </script>
+</body>
+</html>

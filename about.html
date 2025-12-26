@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Perth Bond Cleaner | Trusted Bond Cleaning in Perth</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+.about-hero {
+    background: linear-gradient(135deg, 
+        rgba(34, 153, 61, 0.95),    /* Darker primary green */
+        rgba(28, 187, 140, 0.92),   /* Darker accent green */
+        rgba(34, 153, 61, 0.93)     /* Back to darker primary */
+    );
+    padding: 140px 0 100px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Clean fade to white at the bottom */
+.about-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(
+        to bottom, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 20%,
+        rgba(255, 255, 255, 0.3) 40%,
+        rgba(255, 255, 255, 0.6) 60%,
+        rgba(255, 255, 255, 0.85) 80%,
+        white 100%
+    );
+    z-index: 1;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.about-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    opacity: 0.95;
+    line-height: 1.6;
+    font-weight: 300;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Simplified Stats Section - no cards, clean design */
+.stats-section {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stats-section .row {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Add subtle vertical dividers between stats */
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.5px;
+}
+
+/* Rest of your existing CSS remains exactly the same */
+.story-section {
+    padding: 5rem 0 4rem;
+    background: white;
+    position: relative;
+}
+
+.story-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.story-content p {
+    margin-bottom: 1.5rem;
+}
+
+.values-section {
+    padding: 5rem 0;
+    background: var(--light-gray);
+}
+
+.value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    height: 100%;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-color: var(--primary-green);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.value-card h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.value-card p {
+    text-align: center;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.credentials-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.credential-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.credential-card:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.credential-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--primary-green);
+    font-size: 2rem;
+}
+
+.credential-card h4 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.credential-card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.abn-badge {
+    background: var(--light-green);
+    color: var(--primary-green);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.team-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.team-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.team-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.team-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.team-card .title {
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.about-cta {
+    padding: 5rem 0;
+    text-align: center;
+    background: white;
+}
+
+.cta-box {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 1px solid rgba(40, 167, 69, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timeline for our story */
+.timeline-story {
+    position: relative;
+    padding-left: 2rem;
+    margin: 2rem 0;
+}
+
+.timeline-story::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-green), var(--accent-green));
+    border-radius: 2px;
+}
+
+.timeline-point {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-point::before {
+    content: '';
+    position: absolute;
+    left: -2.3rem;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-green);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--light-green);
+}
+
+.timeline-point h4 {
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .about-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-hero {
+        padding: 140px 0 80px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .stats-section {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .stats-section .row {
+        padding: 1.5rem;
+    }
+    
+    .stat-item {
+        padding: 0.75rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .about-hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .stats-section .row {
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .stat-label {
+        font-size: 1rem;
+    }
+    
+    /* Remove vertical dividers on mobile */
+    .stat-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .cta-box {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero {
+        padding: 100px 0 50px;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .stats-section {
+        padding: 1rem;
+    }
+    
+    .stats-section .row {
+        padding: 1.25rem;
+    }
+    
+    .stat-item {
+        padding: 0.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.95rem;
+    }
+    
+    .value-card, .credential-card, .team-card {
+        padding: 1.5rem;
+    }
+    
+    .timeline-story {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-point::before {
+        left: -1.8rem;
+    }
+}
+
+/* Animation for stat numbers */
+.stat-number {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2">
+        <div class="container text-center">
+            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Bond-Back Assurance • Professionally Insured
+        </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="d-flex align-items-center">
+                    <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                        <i class="fas fa-home text-white"></i>
+                    </div>
+                    <div>
+                        <span class="logo-main">Perth Bond Cleaner</span>
+                        <span class="logo-tagline d-block">Professional Bond Cleaning</span>
+                    </div>
+                </div>
+            </a>
+            
+            <div class="d-lg-none d-flex align-items-center">
+                <div class="price-display ms-3">
+                    <span class="price-badge">From $299 AUD</span>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="areas.html">Service Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="nav-cta">
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
+                            <i class="fas fa-phone"></i> +61 452 366 782
+                        </a>
+                        <a href="contact.html" class="btn btn-success">
+                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero" data-aos="fade-down">
+    <div class="container">
+        <div class="hero-content">
+            <h1>About Perth Bond Cleaner</h1>
+            <p>Perth's trusted specialists in affordable, professional bond cleaning with a commitment to excellence and customer satisfaction.</p>
+        </div>
+        
+        <div class="stats-section" data-aos="fade-up" data-aos-delay="300">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Properties Cleaned</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Bond Success Rate</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">24hr</span>
+                        <span class="stat-label">Typical Response Time</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">5★</span>
+                        <span class="stat-label">Customer Focus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Our Story -->
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title mb-4">Our Story</h2>
+                    <div class="story-content">
+                        <p>
+                            Founded with a simple mission: to provide affordable, reliable bond cleaning services that help Perth residents secure their bond returns without the stress and uncertainty that often comes with end-of-lease cleaning.
+                        </p>
+                        <p>
+                            We understand that moving can be stressful enough without worrying about whether your property will pass inspection. That's why we've developed our comprehensive cleaning process and Bond-Back Assurance to give you complete peace of mind.
+                        </p>
+                        <p>
+                            Our approach is built on mutual benefit – when you succeed in getting your bond back, we've succeeded in our mission. It's this philosophy that drives our commitment to excellence in every clean we perform.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="timeline-story">
+                        <div class="timeline-point">
+                            <h4>Our Founding</h4>
+                            <p>Started with a vision to make bond cleaning stress-free and affordable for all Perth residents.</p>
+                        </div>
+                        <div class="timeline-point">
+                            <h4>Bond-Back Assurance</h4>
+                            <p>Introduced our bond-back assurance to support customers if cleaning issues are identified.</p>
+                        </div>
+                        <div class="timeline-point">
+                            <h4>Team Expansion</h4>
+                            <p>Grew our team with police-cleared professionals dedicated to quality service.</p>
+                        </div>
+                        <div class="timeline-point">
+                            <h4>Perth-Wide Service</h4>
+                            <p>Expanded to service all Perth metropolitan areas with pricing starting from $299 AUD.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Our Values</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Based on Mutual Benefit</h3>
+                        <p>We believe in creating win-win relationships with our customers, ensuring both parties benefit from our services.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Trustworthy & Reliable</h3>
+                        <p>Police-cleared team members you can trust in your property. Fully insured and committed to excellence.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Professional Excellence</h3>
+                        <p>Skilled cleaning professionals with years of experience in vacate and end-of-lease cleaning.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Quality Guaranteed</h3>
+                        <p>Our Bond-Back Assurance gives you peace of mind that your clean will meet real estate standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials & Insurance -->
+    <section class="credentials-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Credentials & Insurance</h2>
+                <p class="section-subtitle">Your peace of mind is our priority</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="credential-card">
+                        <div class="credential-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h4>Police Clearances</h4>
+                        <p>All team members hold current police clearances, giving you confidence and peace of mind when we're in your property.</p>
+                        <div class="badge bg-success">All Staff Cleared</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="credential-card">
+                        <div class="credential-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h4>Fully Insured</h4>
+                        <p>Public liability insurance coverage is in place to protect both you and our team during cleaning services.</p>
+                        <div class="badge bg-success">Full Coverage</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="credential-card">
+                        <div class="credential-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Professional Registration</h4>
+                        <p>Registered Australian business committed to professional standards and customer satisfaction.</p>
+                        <div class="abn-badge">Australian Registered Business</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="text-center" data-aos="fade-up">
+                        <div class="alert alert-success" style="max-width: 800px; margin: 0 auto;">
+                            <h5><i class="fas fa-certificate me-2 text-warning"></i> Industry Trained & Experienced</h5>
+                            <p class="mb-0">Our team follows industry best practices and real estate inspection standards to deliver consistent, high-quality bond cleaning results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="mb-3">Meet Our Team</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Dedicated professionals committed to your satisfaction</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Professional Cleaners</h4>
+                        <div class="title">Cleaning Specialists</div>
+                        <p>Skilled professionals with extensive experience in bond cleaning and attention to detail.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h4>Quality Inspectors</h4>
+                        <div class="title">Standards Assurance</div>
+                        <p>Dedicated to ensuring every property meets real estate inspection standards before you leave.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-card">
+                        <div class="team-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Customer Support</h4>
+                        <div class="title">Service Team</div>
+                        <p>Available 7 days a week to answer your questions and schedule your cleaning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CTA -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-box" data-aos="fade-up">
+                <h2 class="section-title mb-3">Ready to Experience the Difference?</h2>
+                <p class="mb-4" style="font-size: 1.2rem; color: var(--text-light);">
+                    Join the growing number of Perth residents who trust us with their bond cleaning. Professional service, fair pricing, and bond-back assurance you can trust.
+                </p>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a href="contact.html" class="btn btn-success btn-lg w-100">
+                            <i class="fas fa-calculator"></i> Get Quote
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a href="tel:+61452366782" class="btn btn-outline-success btn-lg w-100">
+                            <i class="fas fa-phone"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-muted mb-2"><i class="fas fa-star text-success"></i> 5-star rated on Google</p>
+                    <p class="text-muted mb-2"><i class="fas fa-check-circle text-success"></i> 98% bond success rate</p>
+                    <p class="text-muted"><i class="fas fa-clock text-success"></i> 24-hour response guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <div class="d-flex align-items-center">
+                            <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
+                                <i class="fas fa-home text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="footer-logo">Perth Bond Cleaner</h4>
+                                <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <div class="trust-badges mt-3">
+                        <span class="badge bg-success me-2">Trusted by Perth residents</span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Bond Cleaning</a></li>
+                        <li><a href="areas.html">Service Areas</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services.html">End-of-Lease Cleaning</a></li>
+                        <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
+                        <li><a href="services.html#windows">Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+61452366782">+61 452 366 782</a>
+                                <small class="d-block">Call or Text</small>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                Servicing Perth & Surrounding Areas
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="whatsapp-cta mt-3">
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100">
+                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Perth Bond Cleaner. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
+                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Assurance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Highlight current page in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Animate statistics
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalValue = stat.textContent;
+                let startValue = 0;
+                const duration = 2000;
+                const increment = finalValue.includes('%') ? 1 : 10;
+                const stepTime = Math.abs(Math.floor(duration / (parseInt(finalValue) / increment)));
+                
+                const timer = setInterval(() => {
+                    startValue += increment;
+                    if (startValue >= parseInt(finalValue)) {
+                        stat.textContent = finalValue;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = startValue + (finalValue.includes('%') ? '%' : '+');
+                    }
+                }, stepTime);
+            });
+        });
+    </script>
+</body>
+</html>
