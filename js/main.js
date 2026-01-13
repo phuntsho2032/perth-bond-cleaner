@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.innerHTML = originalText;
                 
                 // Track form submission
-                gtag('event', 'form_submit', {
-                    'event_category': 'lead',
-                    'event_label': form.id || 'contact_form'
-                });
+                //gtag('event', 'form_submit', {
+                    //'event_category': 'lead',
+                    //'event_label': form.id || 'contact_form'
+                //});
                 
             }, 1500);
         });
