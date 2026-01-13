@@ -1,6 +1,5 @@
 // Main JavaScript for Perth Bond Cleaner
 document.addEventListener('DOMContentLoaded', function () {
-
     /* ================= NAVBAR SCROLL ================= */
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -69,16 +68,70 @@ document.addEventListener('DOMContentLoaded', function () {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href === '#') return;
-
             const target = document.querySelector(href);
             if (!target) return;
-
             e.preventDefault();
             window.scrollTo({
                 top: target.offsetTop - 80,
                 behavior: 'smooth'
             });
         });
+    });
+
+    /* ================= PRICE CALCULATOR ================= */
+    const priceCalculator = document.getElementById('priceCalculator');
+    if (priceCalculator) {
+        const bedroomsSelect = document.getElementById('bedrooms');
+        const extrasCheckboxes = document.querySelectorAll('.extra-service');
+        const totalPriceEl = document.getElementById('totalPrice');
+        
+        function updatePrice() {
+            let total = 299; // Base price
+            
+            // Add bedroom charges if any
+            const bedrooms = parseInt(bedroomsSelect.value) || 0;
+            if (bedrooms > 4) {
+                total += (bedrooms - 4) * 50; // $50 per extra bedroom
+            }
+            
+            // Add extras
+            extrasCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    total += parseInt(checkbox.dataset.price || 0);
+                }
+            });
+            
+            // Update display
+            totalPriceEl.textContent = `$${total}`;
+        }
+        
+        bedroomsSelect.addEventListener('change', updatePrice);
+        extrasCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updatePrice);
+        });
+    }
+
+    /* ================= LAZY LOADING IMAGES ================= */
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+
+    /* ================= AOS FADE-IN ================= */
+    document.querySelectorAll('[data-aos]').forEach(el => {
+        el.classList.add('fade-in');
     });
 
     /* ================= BACK TO TOP BUTTON ================= */
@@ -96,11 +149,9 @@ document.addEventListener('DOMContentLoaded', function () {
         z-index: 1000;
     `;
     document.body.appendChild(backToTop);
-
     backToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
     window.addEventListener('scroll', () => {
         backToTop.style.display = window.scrollY > 500 ? 'block' : 'none';
     });
@@ -117,4 +168,27 @@ document.addEventListener('DOMContentLoaded', function () {
 function sendWhatsAppMessage() {
     const message = "Hi, I'm interested in your bond cleaning service starting at $299. Can you provide more information?";
     window.open(`https://wa.me/61452366782?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+/* ================= BOOK NOW ================= */
+function bookNow() {
+    const bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+    bookingModal.show();
+}
+
+/* ================= UPDATE SERVICE PRICE ================= */
+function updateServicePrice(service) {
+    const prices = {
+        'bond': 299,
+        'carpet': 99,
+        'oven': 79,
+        'window': 129,
+        'wall': 149,
+        'blind': 89
+    };
+    
+    const priceElement = document.getElementById('selectedPrice');
+    if (priceElement && prices[service]) {
+        priceElement.textContent = `$${prices[service]}`;
+    }
 }
