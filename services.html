@@ -14,6 +14,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <style>
         /* Additional styles for services page */
 .service-hero {
@@ -410,6 +411,125 @@
         font-size: 1.8rem;
     }
 }
+/* Clean CTA Section */
+.cta-clean-section {
+    background: linear-gradient(135deg, #1a5e2a, #20c997);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-clean-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+    opacity: 0.3;
+}
+
+.cta-clean-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-clean-section h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-clean-section .cta-text {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+}
+
+.cta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.cta-badge {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #1a5e2a;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 220px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    color: #1a5e2a;
+    background: #f8f9fa;
+}
+
+.cta-button i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+    .cta-clean-section .col-lg-4 {
+        text-align: right;
+    }
+    
+    .cta-button {
+        width: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .cta-clean-section .col-lg-4 {
+        text-align: center;
+    }
+    
+    .cta-button {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-clean-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-badges {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .cta-badge {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -424,15 +544,11 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <div class="d-flex align-items-center">
-                    <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
-                        <i class="fas fa-home text-white"></i>
-                    </div>
-                    <div>
-                        <span class="logo-main">Perth Bond Cleaner</span>
-                        <span class="logo-tagline d-block">Professional Bond Cleaning</span>
-                    </div>
-                </div>
+                <img 
+                    src="images/logo.png" 
+                    alt="Perth Bond Cleaner Logo"
+                    class="navbar-logo"
+                >
             </a>
             
             <div class="d-lg-none d-flex align-items-center">
@@ -719,26 +835,27 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8" data-aos="fade-right">
-                    <h2>Ready to Secure Your Bond Return?</h2>
-                    <p>Book our professional bond cleaning service today. Transparent pricing, comprehensive service, and bond-back assurance.</p>                    <div class="mt-3">
-                    <div class="mt-3">
-                        <span class="badge bg-light text-success me-2"><i class="fas fa-clock"></i> Same Day Available</span>
-                        <span class="badge bg-light text-success me-2"><i class="fas fa-shield-alt"></i> Insured Team</span>
-                        <span class="badge bg-light text-success"><i class="fas fa-check-circle"></i> Bond-Back Guarantee</span>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
-                    <a href="tel:+61452366782" class="btn btn-success btn-lg me-3">
-                        <i class="fas fa-phone"></i> Call Now
-                    </a>
+<!-- Clean CTA Section -->
+<section class="cta-clean-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h2>Ready to Secure Your Bond Return?</h2>
+                <p class="cta-text">Book our professional bond cleaning service today. Transparent pricing, comprehensive service, and bond-back assurance.</p>
+                <div class="cta-badges mt-3">
+                    <span class="cta-badge"><i class="fas fa-clock"></i> Same Day Available</span>
+                    <span class="cta-badge"><i class="fas fa-shield-alt"></i> Insured Team</span>
+                    <span class="cta-badge"><i class="fas fa-check-circle"></i> Bond-Back Guarantee</span>
                 </div>
             </div>
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">                    
+                <a href="tel:+61452366782" class="cta-button">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="footer py-5 bg-dark text-white">
@@ -747,9 +864,11 @@
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand mb-3">
                         <div class="d-flex align-items-center">
-                            <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
-                                <i class="fas fa-home text-white"></i>
-                            </div>
+                            <img 
+                                src="images/logo.png" 
+                                alt="Perth Bond Cleaner Logo"
+                                class="footer-logo-img me-2"
+                            />
                             <div>
                                 <h4 class="footer-logo">Perth Bond Cleaner</h4>
                                 <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Perth Bond Cleaner | Get Your Free Quote Today</title>
+    
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -14,8 +15,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
     <style>
-        /* Additional styles for contact page */
+        /* ===============================
+           ADDITIONAL STYLES FOR CONTACT PAGE
+        =============================== */
         .contact-hero {
             background: linear-gradient(135deg, 
                 rgba(34, 153, 61, 0.95),    /* Darker primary green */
@@ -441,6 +446,9 @@
             margin: 0;
         }
 
+        /* ===============================
+           RESPONSIVE STYLES
+        =============================== */
         @media (max-width: 992px) {
             .contact-info {
                 padding-right: 0;
@@ -528,8 +536,36 @@
                 margin-top: 2rem;
             }
         }
+
+        /* ===============================
+           NAVBAR LOGO – DESKTOP
+        =============================== */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar-logo {
+            height: 80px;        /* 👈 MAIN CONTROL */
+            width: auto;
+            max-width: 260px;
+            object-fit: contain;
+        }
+
+        /* Desktop only */
+        @media (min-width: 992px) {
+            .navbar {
+                min-height: 90px;
+            }
+
+            .navbar-logo {
+                height: 80px;    /* Bigger logo on desktop */
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Top Alert Bar -->
     <div class="top-alert bg-success text-white py-2">
@@ -542,15 +578,11 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <div class="d-flex align-items-center">
-                    <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
-                        <i class="fas fa-home text-white"></i>
-                    </div>
-                    <div>
-                        <span class="logo-main">Perth Bond Cleaner</span>
-                        <span class="logo-tagline d-block">Professional Bond Cleaning</span>
-                    </div>
-                </div>
+                <img 
+                    src="images/logo.png" 
+                    alt="Perth Bond Cleaner Logo"
+                    class="navbar-logo"
+                >
             </a>
             
             <div class="d-lg-none d-flex align-items-center">
@@ -571,7 +603,8 @@
                         <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="areas.html">Service Areas</a></li>
+                        <a class="nav-link" href="areas.html">Service Areas</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
@@ -699,157 +732,234 @@
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="contact-card form-section">
                         <h3 class="form-title">Get Your Free Quote</h3>
-                        
+
                         <div class="form-note">
-                            <i class="fas fa-info-circle"></i> Fill out the form below and we'll get back to you within 24 hours with a free, no-obligation quote.
+                            <i class="fas fa-info-circle"></i>
+                            Fill out the form below and we'll get back to you within 24 hours with a free, no-obligation quote.
                         </div>
-                        
-                        <!-- UPDATED FORM TAG FOR NETLIFY -->
+
+                        <!-- Netlify Form -->
                         <form 
                             id="contactForm"
-                            name="contact" 
-                            method="POST" 
-                            data-netlify="true" 
+                            name="contact"
+                            method="POST"
+                            data-netlify="true"
                             netlify-honeypot="bot-field"
                             action="/thank-you.html"
                         >
-                            <!-- Netlify Hidden Field (REQUIRED) -->
+                            <!-- Required for Netlify -->
                             <input type="hidden" name="form-name" value="contact">
-                            
-                            <!-- Netlify Bot Honeypot Field -->
+
+                            <!-- Honeypot -->
                             <p style="display:none;">
-                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
                             </p>
-                            
+
+                            <!-- Personal Details -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="firstName" class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
-                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                        <label class="form-label">First Name *</label>
+                                        <input type="text" class="form-control" name="firstName" id="firstName" required>
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="lastName" name="lastName">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" name="lastName">
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="phone" class="form-label">Phone Number *</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" required>
-                                        <div class="invalid-feedback">Please enter a valid phone number.</div>
+                                        <input 
+                                            type="tel"
+                                            class="form-control"
+                                            id="phone"
+                                            name="phone"
+                                            inputmode="numeric"
+                                            placeholder="+61412345678"
+                                            required
+                                        >
+                                        <div class="invalid-feedback">
+                                            Enter a valid Australian number (e.g. +61412345678)
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email" name="email">
-                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" name="email">
                                     </div>
                                 </div>
                             </div>
-                            
+
+                            <!-- Address Details -->
                             <div class="form-group">
-                                <label for="suburb" class="form-label">Suburb *</label>
-                                <input type="text" class="form-control" id="suburb" name="suburb" placeholder="Enter your suburb" required>
-                                <div class="invalid-feedback">Please enter your suburb.</div>
+                                <label class="form-label">Street Address *</label>
+                                <input type="text" class="form-control" name="address" placeholder="House number & street name" required>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="propertyType" class="form-label">Property Type *</label>
-                                        <select class="form-select" id="propertyType" name="propertyType" required>
-                                            <option value="">Select property type</option>
-                                            <option value="apartment">Apartment/Unit</option>
-                                            <option value="house">House</option>
-                                            <option value="townhouse">Townhouse</option>
-                                            <option value="villa">Villa</option>
-                                            <option value="studio">Studio</option>
-                                        </select>
-                                        <div class="invalid-feedback">Please select your property type.</div>
+                                        <label for="suburb" class="form-label">Suburb *</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="suburb"
+                                            name="suburb"
+                                            required
+                                        >
+                                        <div class="invalid-feedback">Please enter your suburb.</div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="bedrooms" class="form-label">Bedrooms *</label>
-                                        <select class="form-select" id="bedrooms" name="bedrooms" required>
-                                            <option value="">Select number</option>
-                                            <option value="studio">Studio</option>
-                                            <option value="1">1 Bedroom</option>
-                                            <option value="2">2 Bedrooms</option>
-                                            <option value="3">3 Bedrooms</option>
-                                            <option value="4">4 Bedrooms</option>
-                                            <option value="5+">5+ Bedrooms</option>
-                                        </select>
-                                        <div class="invalid-feedback">Please select number of bedrooms.</div>
+                                        <label for="postcode" class="form-label">Postcode *</label>
+                                        <input
+                                            type="tel"
+                                            inputmode="numeric"
+                                            class="form-control"
+                                            id="postcode"
+                                            name="postcode"
+                                            pattern="\d{4}"
+                                            maxlength="4"
+                                            placeholder="6000"
+                                            required
+                                        >
+                                        <div class="invalid-feedback">
+                                            Enter a valid 4-digit postcode.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
+                            <!-- Property Details -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Bedrooms</label>
+                                        <select class="form-select" name="bedrooms" id="bedrooms">
+                                            <option value="">Select</option>
+                                            <option>Studio</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Bathrooms</label>
+                                        <select class="form-select" name="bathrooms">
+                                            <option value="">Select</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Storeys</label>
+                                        <select class="form-select" name="storeys">
+                                            <option value="">Select</option>
+                                            <option>1 Storey</option>
+                                            <option>2 Storey</option>
+                                            <option>3+ Storey</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Services -->
                             <div class="form-group">
                                 <label class="form-label">Additional Services (Optional)</label>
                                 <div class="additional-services-grid">
-                                    <div class="additional-service-item">
-                                        <label>
-                                            <input class="form-check-input" type="checkbox" id="carpetCleaning" name="additional[]" value="Carpet Steam Cleaning (+$99)">
-                                            Carpet Steam Cleaning <span class="price">+$99 AUD</span>
-                                        </label>
+                                    <label class="additional-service-item">
+                                        <input type="checkbox" name="additional[]" value="Carpet Steam Cleaning">
+                                        Carpet Steam Cleaning <span class="price">+$99</span>
+                                    </label>
+
+                                    <label class="additional-service-item">
+                                        <input type="checkbox" name="additional[]" value="Oven Deep Clean">
+                                        Oven Deep Clean <span class="price">+$79</span>
+                                    </label>
+
+                                    <label class="additional-service-item">
+                                        <input type="checkbox" name="additional[]" value="Window Cleaning">
+                                        Window Cleaning <span class="price">+$129</span>
+                                    </label>
+
+                                    <label class="additional-service-item">
+                                        <input type="checkbox" name="additional[]" value="Wall Washing">
+                                        Wall Washing <span class="price">+$149</span>
+                                    </label>
+
+                                    <label class="additional-service-item">
+                                        <input type="checkbox" name="additional[]" value="Blind Cleaning">
+                                        Blind Cleaning <span class="price">+$89</span>
+                                    </label>
+
+                                    <label class="additional-service-item">
+                                        <input type="checkbox" name="additional[]" value="Curtain Cleaning">
+                                        Curtain Cleaning <span class="price">+$149</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Date & Time -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="preferredDate" class="form-label">Preferred Date *</label>
+                                        <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+                                        <div class="invalid-feedback">
+                                            Please select a preferred date.
+                                        </div>
                                     </div>
-                                    <div class="additional-service-item">
-                                        <label>
-                                            <input class="form-check-input" type="checkbox" id="ovenCleaning" name="additional[]" value="Oven Deep Clean (+$79)">
-                                            Oven Deep Clean <span class="price">+$79 AUD</span>
-                                        </label>
-                                    </div>
-                                    <div class="additional-service-item">
-                                        <label>
-                                            <input class="form-check-input" type="checkbox" id="windowCleaning" name="additional[]" value="Window Cleaning (+$129)">
-                                            Window Cleaning <span class="price">+$129 AUD</span>
-                                        </label>
-                                    </div>
-                                    <div class="additional-service-item">
-                                        <label>
-                                            <input class="form-check-input" type="checkbox" id="wallWashing" name="additional[]" value="Wall Washing (+$149)">
-                                            Wall Washing <span class="price">+$149 AUD</span>
-                                        </label>
-                                    </div>
-                                    <div class="additional-service-item">
-                                        <label>
-                                            <input class="form-check-input" type="checkbox" id="blindCleaning" name="additional[]" value="Blind Cleaning (+$89)">
-                                            Blind Cleaning <span class="price">+$89 AUD</span>
-                                        </label>
-                                    </div>
-                                    <div class="additional-service-item">
-                                        <label>
-                                            <input class="form-check-input" type="checkbox" id="curtainCleaning" name="additional[]" value="Curtain Cleaning (+$149)">
-                                            Curtain Cleaning <span class="price">+$149 AUD</span>
-                                        </label>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Preferred Time</label>
+                                        <select class="form-select" name="preferredTime">
+                                            <option value="">Any time</option>
+                                            <option>Morning (8am - 12pm)</option>
+                                            <option>Afternoon (12pm - 4pm)</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-                            
+
+                            <!-- Notes -->
                             <div class="form-group">
-                                <label for="preferredDate" class="form-label">Preferred Date</label>
-                                <input type="date" class="form-control" id="preferredDate" name="preferredDate">
+                                <label class="form-label">Additional Information</label>
+                                <textarea class="form-control" name="message" rows="4"
+                                    placeholder="Access instructions, pets, special requests, etc."></textarea>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="message" class="form-label">Additional Information</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Any specific requirements or special instructions..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn" id="submitBtn">
+
+                            <!-- Submit -->
+                            <button type="submit" class="submit-btn">
                                 <i class="fas fa-paper-plane"></i> Get Free Quote Now
                             </button>
-                            
+
                             <div class="text-center mt-3">
-                                <small class="text-muted">By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>. We'll never share your information.</small>
+                                <small class="text-muted">
+                                    By submitting this form, you agree to our
+                                    <a href="privacy-policy.html">Privacy Policy</a>.
+                                </small>
                             </div>
                         </form>
                     </div>
@@ -888,7 +998,7 @@
                         <i class="fas fa-dollar-sign"></i>
                     </div>
                     <h4>Price Match Guarantee</h4>
-                    <p>Found a better comparable quote? Let us know and we’ll do our best to match it.</p>
+                    <p>Found a better comparable quote? Let us know and we'll do our best to match it.</p>
                 </div>
                 
                 <div class="guarantee-card" data-aos="fade-up" data-aos-delay="400">
@@ -973,9 +1083,11 @@
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand mb-3">
                         <div class="d-flex align-items-center">
-                            <div class="logo-icon bg-success rounded-circle d-flex align-items-center justify-content-center me-2">
-                                <i class="fas fa-home text-white"></i>
-                            </div>
+                            <img 
+                                src="images/logo.png" 
+                                alt="Perth Bond Cleaner Logo"
+                                class="footer-logo-img me-2"
+                            />
                             <div>
                                 <h4 class="footer-logo">Perth Bond Cleaner</h4>
                                 <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
@@ -1069,6 +1181,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    
     <script>
         AOS.init({
             duration: 800,
@@ -1133,8 +1246,8 @@
                 // Phone validation
                 if (field.id === 'phone' && field.value) {
                     const phoneDigits = field.value.replace(/\D/g, '');
-                    if (phoneDigits.length < 8) {
-                        showError(field, 'Please enter a valid phone number (at least 8 digits).');
+                    if (phoneDigits.length < 10) {
+                        showError(field, 'Please enter a valid Australian phone number.');
                         return false;
                     }
                 }
@@ -1154,21 +1267,15 @@
                 feedback.style.display = 'block';
             }
             
-            // Auto-format phone number
+            // Simple AU phone helper (Netlify-safe)
             const phoneInput = document.getElementById('phone');
             if (phoneInput) {
-                phoneInput.addEventListener('input', function(e) {
-                    let value = e.target.value.replace(/\D/g, '');
-                    if (value.length > 0) {
-                        if (value.startsWith('61')) {
-                            value = '+61 ' + value.substring(2);
-                        } else if (value.startsWith('0')) {
-                            value = '+61 ' + value.substring(1);
-                        } else {
-                            value = '+61 ' + value;
-                        }
-                    }
-                    e.target.value = value;
+                phoneInput.addEventListener('focus', () => {
+                    if (!phoneInput.value) phoneInput.value = '+61';
+                });
+
+                phoneInput.addEventListener('input', () => {
+                    phoneInput.value = phoneInput.value.replace(/[^+\d]/g, '');
                 });
             }
             

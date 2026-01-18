@@ -1,9 +1,5 @@
 /* Responsive Styles */
 @media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
-    
     .hero-title {
         font-size: 2.5rem;
     }
@@ -55,7 +51,7 @@
     }
     
     .footer {
-        text-align: center;
+        text-align: left;
     }
     
     .footer-contact li {
@@ -107,3 +103,48 @@
         transition-delay: 0s !important;
     }
 }
+/* ============================= */
+/* MOBILE NAVBAR FIX (LOGO + PRICE + TOGGLER) */
+/* ============================= */
+@media (max-width: 991.98px) {
+
+    /* Make navbar content align in one row */
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Logo stays left */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+    }
+
+    /* Right-side group (price + toggle) */
+    .navbar .d-lg-none {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    /* Prevent price badge from dropping to new line */
+    .price-display {
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    /* Adjust logo size ONLY on mobile */
+    .navbar-brand img {
+        max-height: 42px;
+        width: auto;
+    }
+
+    /* Clean up toggler spacing */
+    .navbar-toggler {
+        padding: 6px 10px;
+    }
+}
+
