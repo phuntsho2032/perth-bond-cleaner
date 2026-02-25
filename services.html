@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bond Cleaning Services Perth | From $299 AUD | Perth Bond Cleaner</title> 
+    <title>Bond Cleaning Services Perth | From $249 AUD | Perth Bond Cleaner</title> 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -16,529 +16,560 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Favicon -->
-<link rel="icon" href="/favicon/favicon.ico">
-
-<!-- Apple (iPhone / iPad) -->
-<link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
-
-<!-- Android / Chrome -->
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
     <style>
         /* Additional styles for services page */
-.service-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), url('../images/hero-cleaning.jpg'),var(--primary-green);;    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 160px 0 120px;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), url('../images/hero-cleaning.jpg'),var(--primary-green); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 160px 0 120px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-.service-hero::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to bottom, transparent, var(--light-gray));
-    z-index: 1;
-}
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--light-gray));
+            z-index: 1;
+        }
 
-.service-hero .container {
-    position: relative;
-    z-index: 2;
-}
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.service-hero h1 {
-    font-size: 3.2rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    line-height: 1.2;
-    text-align:center;
-}
+        .service-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            text-align:center;
+        }
 
-.service-hero p {
-    font-size: 1.3rem;
-    max-width: 800px;
-    margin: 0 auto 2.5rem;
-    opacity: 0.95;
-    line-height: 1.6;
-    font-weight: 300;
-}
+        .service-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+        }
 
-.hero-cta {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 1.5rem 2rem;
-    display: inline-block;
-    margin-top: 2rem;
-}
+        .hero-cta {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            display: inline-block;
+            margin-top: 2rem;
+        }
 
-.price-highlight {
-    background: var(--primary-green);
-    color: white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    font-size: 1.8rem;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 1rem;
-    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
-}
+        .price-highlight {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+        }
 
-.price-highlight small {
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0.9;
-}
+        .price-highlight small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
 
-.main-service-card {
-    border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
-    border: 1px solid rgba(40, 167, 69, 0.15);
-    margin-top: -80px;
-    position: relative;
-    z-index: 10;
-    background: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .main-service-card {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+            border: 1px solid rgba(40, 167, 69, 0.15);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.main-service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-}
+        .main-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
 
-.service-header {
-    background: linear-gradient(135deg, var(--primary-green), #28a745, var(--accent-green));
-    color: white;
-    padding: 3rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        .service-header {
+            background: linear-gradient(135deg, var(--primary-green), #28a745, var(--accent-green));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-.service-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-    background-size: cover;
-    background-position: bottom;
-    opacity: 0.3;
-}
+        .service-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.3;
+        }
 
-.service-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.8rem;
-    position: relative;
-    z-index: 2;
-}
+        .service-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 2;
+        }
 
-.service-header .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.95;
-    margin-bottom: 1.5rem;
-    position: relative;
-    z-index: 2;
-}
+        .service-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
 
-.service-price-badge {
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(5px);
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-size: 1.8rem;
-    font-weight: 700;
-    display: inline-block;
-    margin: 1rem 0;
-    border: 1px solid rgba(255,255,255,0.3);
-    position: relative;
-    z-index: 2;
-}
+        .service-price-badge {
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1rem 0;
+            border: 1px solid rgba(255,255,255,0.3);
+            position: relative;
+            z-index: 2;
+        }
 
-.service-body {
-    padding: 3rem 2rem;
-    background: white;
-    position: relative;
-}
+        .service-body {
+            padding: 3rem 2rem;
+            background: white;
+            position: relative;
+        }
 
-.service-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 5%;
-    right: 5%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(40, 167, 69, 0.3), transparent);
-}
+        .service-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(40, 167, 69, 0.3), transparent);
+        }
 
-.whats-included h3 {
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--light-green);
-}
+        .whats-included h3 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-green);
+        }
 
-.included-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.included-list li {
-    padding: 0.8rem 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    border-bottom: 1px solid #f0f0f0;
-}
+        .included-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
 
-.included-list li:last-child {
-    border-bottom: none;
-}
+        .included-list li:last-child {
+            border-bottom: none;
+        }
 
-.included-list i {
-    color: var(--primary-green);
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-}
+        .included-list i {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
 
-.service-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
 
-.feature-item {
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--light-green);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-green);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
 
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.1);
-}
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.1);
+        }
 
-.feature-icon {
-    font-size: 2.5rem;
-    color: var(--primary-green);
-    margin-bottom: 1rem;
-}
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
 
-.feature-item h4 {
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
-}
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
 
-.service-cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
+        .service-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
 
-.service-cta-buttons .btn {
-    flex: 1;
-    min-width: 200px;
-}
+        .service-cta-buttons .btn {
+            flex: 1;
+            min-width: 200px;
+        }
 
-.why-choose-section {
-    padding: 6rem 0 5rem;
-    background: var(--light-gray);
-    position: relative;
-}
+        .why-choose-section {
+            padding: 6rem 0 5rem;
+            background: var(--light-gray);
+            position: relative;
+        }
 
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
 
-.why-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    text-align: center;
-    transition: all 0.3s ease;
-}
+        .why-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-.why-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
 
-.why-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: white;
-    font-size: 1.8rem;
-}
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
 
-.why-card h3 {
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
+        .why-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
 
-.other-services {
-    padding: 5rem 0 6rem;
-}
+        .other-services {
+            padding: 5rem 0 6rem;
+        }
 
-.other-service-card {
-    background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    border: 1px solid #e9ecef;
-    transition: all 0.3s ease;
-    height: 100%;
-}
+        .other-service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
 
-.other-service-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-green);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
+        .other-service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
 
-.other-service-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--light-green);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    color: var(--primary-green);
-    font-size: 1.8rem;
-}
+        .other-service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+            font-size: 1.8rem;
+        }
 
-.other-service-card h4 {
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
+        .other-service-card h4 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
 
-.other-service-price {
-    color: var(--primary-green);
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 1rem;
-}
+        .other-service-price {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
 
-@media (max-width: 992px) {
-    .service-hero {
-        padding: 140px 0 100px;
-        background-attachment: scroll;
-    }
-    
-    .service-hero h1 {
-        font-size: 2.8rem;
-    }
-    
-    .main-service-card {
-        margin-top: -60px;
-    }
-}
+        /* Price table inside main card */
+        .price-table {
+            margin-top: 1.5rem;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        .price-table h5 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .price-table .row {
+            padding: 0.65rem 0;
+            border-bottom: 1px dashed #dee2e6;
+        }
+        .price-table .row:last-child {
+            border-bottom: none;
+        }
+        .price-table .price {
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+        .note-included {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-green);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #1e3a5f;
+            margin-top: 1.5rem;
+        }
 
-@media (max-width: 768px) {
-    .service-hero {
-        padding: 120px 0 80px;
-    }
-    
-    .service-hero h1 {
-        font-size: 2.3rem;
-    }
-    
-    .service-hero p {
-        font-size: 1.1rem;
-        padding: 0 1rem;
-    }
-    
-    .price-highlight {
-        font-size: 1.5rem;
-    }
-    
-    .service-header h2 {
-        font-size: 2rem;
-    }
-    
-    .main-service-card {
-        margin-top: -40px;
-        border-radius: 20px;
-    }
-    
-    .service-header {
-        padding: 2rem 1.5rem;
-    }
-    
-    .service-body {
-        padding: 2rem 1.5rem;
-    }
-    
-    .service-price-badge {
-        font-size: 1.5rem;
-        padding: 0.6rem 1.5rem;
-    }
-    
-    .service-cta-buttons .btn {
-        width: 100%;
-    }
-    
-    .service-features-grid {
-        grid-template-columns: 1fr;
-    }
-}
+        @media (max-width: 992px) {
+            .service-hero {
+                padding: 140px 0 100px;
+                background-attachment: scroll;
+            }
+            
+            .service-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .main-service-card {
+                margin-top: -60px;
+            }
+        }
 
-@media (max-width: 576px) {
-    .service-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .service-header h2 {
-        font-size: 1.8rem;
-    }
-}
-/* Clean CTA Section */
-.cta-clean-section {
-    background: linear-gradient(135deg, #1a5e2a, #20c997);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
+        @media (max-width: 768px) {
+            .service-hero {
+                padding: 120px 0 80px;
+            }
+            
+            .service-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .service-hero p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+            
+            .price-highlight {
+                font-size: 1.5rem;
+            }
+            
+            .service-header h2 {
+                font-size: 2rem;
+            }
+            
+            .main-service-card {
+                margin-top: -40px;
+                border-radius: 20px;
+            }
+            
+            .service-header {
+                padding: 2rem 1.5rem;
+            }
+            
+            .service-body {
+                padding: 2rem 1.5rem;
+            }
+            
+            .service-price-badge {
+                font-size: 1.5rem;
+                padding: 0.6rem 1.5rem;
+            }
+            
+            .service-cta-buttons .btn {
+                width: 100%;
+            }
+            
+            .service-features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-.cta-clean-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
-    opacity: 0.3;
-}
+        @media (max-width: 576px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .service-header h2 {
+                font-size: 1.8rem;
+            }
+        }
 
-.cta-clean-section .container {
-    position: relative;
-    z-index: 1;
-}
+        /* Clean CTA Section */
+        .cta-clean-section {
+            background: linear-gradient(135deg, #1a5e2a, #20c997);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-.cta-clean-section h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
+        .cta-clean-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+            opacity: 0.3;
+        }
 
-.cta-clean-section .cta-text {
-    font-size: 1.1rem;
-    opacity: 0.95;
-    margin-bottom: 1.5rem;
-}
+        .cta-clean-section .container {
+            position: relative;
+            z-index: 1;
+        }
 
-.cta-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-}
+        .cta-clean-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
 
-.cta-badge {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    backdrop-filter: blur(5px);
-}
+        .cta-clean-section .cta-text {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
 
-.cta-button {
-    display: inline-block;
-    background: white;
-    color: #1a5e2a;
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 220px;
-}
+        .cta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    color: #1a5e2a;
-    background: #f8f9fa;
-}
+        .cta-badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(5px);
+        }
 
-.cta-button i {
-    margin-right: 0.5rem;
-}
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1a5e2a;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 220px;
+        }
 
-/* Responsive adjustments */
-@media (min-width: 992px) {
-    .cta-clean-section .col-lg-4 {
-        text-align: right;
-    }
-    
-    .cta-button {
-        width: auto;
-    }
-}
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            color: #1a5e2a;
+            background: #f8f9fa;
+        }
 
-@media (max-width: 991px) {
-    .cta-clean-section .col-lg-4 {
-        text-align: center;
-    }
-    
-    .cta-button {
-        max-width: none;
-        width: 100%;
-    }
-}
+        .cta-button i {
+            margin-right: 0.5rem;
+        }
 
-@media (max-width: 768px) {
-    .cta-clean-section h2 {
-        font-size: 1.8rem;
-    }
-    
-    .cta-badges {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .cta-badge {
-        justify-content: center;
-    }
-}
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .cta-clean-section .col-lg-4 {
+                text-align: right;
+            }
+            
+            .cta-button {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .cta-clean-section .col-lg-4 {
+                text-align: center;
+            }
+            
+            .cta-button {
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-clean-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-badges {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .cta-badge {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -553,49 +584,28 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img 
-                    src="images/logo.png" 
-                    alt="Perth Bond Cleaner Logo"
-                    class="navbar-logo"
-                >
+                <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="navbar-logo">
             </a>
-            
             <div class="d-lg-none d-flex align-items-center">
                 <div class="price-display ms-3">
-                    <span class="price-badge">From $299 AUD</span>
+                    <span class="price-badge">From $249 AUD</span>
                 </div>
                 <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="areas.html">Service Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="areas.html">Service Areas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
-                
                 <div class="d-none d-lg-flex align-items-center">
                     <div class="nav-cta">
-                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
-                            <i class="fas fa-phone"></i> +61 452 366 782
-                        </a>
-                        <a href="contact.html" class="btn btn-success">
-                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
-                        </a>
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3"><i class="fas fa-phone"></i> +61 452 366 782</a>
+                        <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-alt"></i> Get Instant Quote</a>
                     </div>
                 </div>
             </div>
@@ -603,11 +613,12 @@
     </nav>
 
     <!-- Service Hero -->
-<section class="service-hero" data-aos="fade-down">
-    <div class="container">
-        <h1>Our Services in Perth</h1>
-        <p>Complete end-of-lease cleaning with our Bond-Back Assurance. Pricing starts from $299 AUD for all property sizes with no hidden fees.</p>    </div>
-</section>
+    <section class="service-hero" data-aos="fade-down">
+        <div class="container">
+            <h1>Our Services in Perth</h1>
+            <p>Complete end-of-lease cleaning with our Bond-Back Assurance. Prices from $249 AUD – based on property size. No hidden fees.</p>
+        </div>
+    </section>
 
     <!-- Main Service -->
     <section class="pt-0 pb-5">
@@ -615,7 +626,7 @@
             <div class="main-service-card" data-aos="fade-up">
                 <div class="service-header">
                     <h2>Professional Bond Cleaning</h2>
-                        <div class="subtitle">Complete end-of-lease cleaning – from $299 AUD</div>
+                    <div class="subtitle">Complete end-of-lease cleaning – prices based on property size</div>
                 </div>
                 
                 <div class="service-body">
@@ -624,90 +635,73 @@
                             <div class="whats-included">
                                 <h3><i class="fas fa-clipboard-check me-2"></i> What's Included:</h3>
                                 <ul class="included-list">
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Kitchen deep clean</strong> including inside oven, stovetop, and rangehood
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Bathroom sanitisation</strong> and tile cleaning
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>All rooms vacuumed and mopped</strong> - living areas, bedrooms, hallways
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Window sills and tracks</strong> thoroughly cleaned
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Light fittings and fans</strong> dusted and cleaned
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Skirting boards</strong> wiped down throughout property
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Internal cupboards</strong> cleaned inside and out
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Toilet deep clean</strong> and complete sanitisation
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-check-circle"></i>
-                                        <div>
-                                            <strong>Covers all property sizes</strong> - studio to 4+ bedrooms
-                                        </div>
-                                    </li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Kitchen deep clean</strong> including inside oven, stovetop, and rangehood</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Bathroom sanitisation</strong> and tile cleaning</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>All rooms vacuumed and mopped</strong> - living areas, bedrooms, hallways</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Window sills and tracks</strong> thoroughly cleaned</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Light fittings and fans</strong> dusted and cleaned</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Skirting boards</strong> wiped down throughout property</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Internal cupboards</strong> cleaned inside and out</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Toilet deep clean</strong> and complete sanitisation</div></li>
+                                    <li><i class="fas fa-check-circle"></i> <div><strong>Curtains, spot wall cleaning, internal windows</strong> included</div></li>
                                 </ul>
+                            </div>
+
+                            <!-- Price table for bond cleaning -->
+                            <div class="price-table">
+                                <h5 class="mb-2">Bond Cleaning Prices (AUD)</h5>
+                                <div class="row">
+                                    <div class="col-8">Studio / 1 Bedroom Unit</div>
+                                    <div class="col-4 text-end price">$249</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">2 Bedroom Unit / House</div>
+                                    <div class="col-4 text-end price">$299</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">3 Bedroom House</div>
+                                    <div class="col-4 text-end price">$599</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">4 Bedroom House</div>
+                                    <div class="col-4 text-end price">$799</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8">5+ Bedroom House</div>
+                                    <div class="col-4 text-end price">$899</div>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="col-lg-4">
                             <div class="service-features-grid">
                                 <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-home"></i>
-                                    </div>
-                                    <h4>One Price, All Sizes</h4>
-                                    <p>Studio to 4+ bedrooms - pricing starts from $299 AUD</p>
+                                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                                    <h4>Transparent Pricing</h4>
+                                    <p>Prices based on property size – no surprises</p>
                                 </div>
-                                
                                 <div class="feature-item">
-                                    <div class="feature-icon">
-                                        <i class="fas fa-shield-alt"></i>
-                                    </div>
+                                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
                                     <h4>Bond-Back Assurance</h4>
                                     <p>If cleaning-related issues are raised within 72 hours, we’ll return to address them at no extra cost</p>
+                                </div>
+                                <div class="feature-item text-start">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h4>Included With Every Clean</h4>
+                                <ul class="small mt-2 mb-0 ps-3">
+                                    <li>Bond-back assurance</li>
+                                    <li>Police-cleared professionals</li>
+                                    <li>Real-estate compliant checklist</li>
+                                    <li>No hidden charges</li>
+                                </ul>
                                 </div>
                             </div>
                             
                             <div class="service-cta-buttons">
-                                <a href="service-details.html" class="btn btn-outline-success">
-                                    <i class="fas fa-info-circle"></i> Full Details
-                                </a>
-                                <a href="contact.html" class="btn btn-success">
-                                    <i class="fas fa-calendar-check"></i> Book from $299
-                                </a>
+                                <a href="service-details.html" class="btn btn-outline-success"><i class="fas fa-info-circle"></i> Full Details</a>
+                                <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-check"></i> Book from $249</a>
                             </div>
                         </div>
                     </div>
@@ -726,25 +720,17 @@
             
             <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
                 <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-tag"></i>
-                    </div>
-                    <h3>All-Inclusive Pricing</h3>
-                    <p>Pricing starts from $299 AUD – no hidden costs or surprise extras. What you see is what you pay.</p>
+                    <div class="why-icon"><i class="fas fa-tag"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Prices from $249 AUD – clear tiered pricing based on property size. No hidden costs.</p>
                 </div>
-                
                 <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-expand-arrows-alt"></i>
-                    </div>
+                    <div class="why-icon"><i class="fas fa-expand-arrows-alt"></i></div>
                     <h3>All Property Sizes</h3>
-                    <p>Studio to 4+ bedrooms with pricing starting from $299 AUD. Final pricing depends on service requirements.</p>
+                    <p>Studio to 5+ bedrooms with clear upfront pricing. See our price table above.</p>
                 </div>
-                
                 <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
+                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
                     <h3>Bond-Back Guarantee</h3>
                     <p>We offer bond-back support and will return to address issues at no extra cost. Your satisfaction is our priority.</p>
                 </div>
@@ -752,91 +738,95 @@
         </div>
     </section>
 
-    <!-- Other Services -->
+    <!-- Other Services (Updated with new 7 items, correct per-unit prices, removed Oven & Curtains) -->
     <section class="other-services">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Additional Services</h2>
-                <p class="section-subtitle">Enhance your bond clean with our optional add-on services</p>
+                <h2 class="section-title">Optional Extras</h2>
+                <p class="section-subtitle">Enhance your bond clean with these add‑on services (per‑unit pricing)</p>
             </div>
             
             <div class="row">
+                <!-- Wall Wash -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="other-service-card">
-                        <div class="other-service-icon">
-                            <i class="fas fa-couch"></i>
-                        </div>
+                        <div class="other-service-icon"><i class="fas fa-paint-roller"></i></div>
+                        <h4>Wall Wash / Wall Cleaning</h4>
+                        <p>Gentle wall washing to remove marks, stains, and scuff marks. Restores walls to like-new condition.</p>
+                        <div class="other-service-price">$5 per wall</div>
+                        <a href="contact.html?service=wall" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- External Window Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-window-maximize"></i></div>
+                        <h4>External Window Cleaning</h4>
+                        <p>Streak-free exterior window cleaning for crystal clear views. Includes frames, tracks, and glass.</p>
+                        <div class="other-service-price">$40 per window</div>
+                        <a href="contact.html?service=external-window" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- Carpet Steam Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-couch"></i></div>
                         <h4>Carpet Steam Cleaning</h4>
                         <p>Professional deep steam cleaning for carpets to remove stains, dirt, and odors. Perfect for end-of-lease requirements.</p>
-                        <div class="other-service-price">From $99</div>
+                        <div class="other-service-price">$50 per room</div>
                         <a href="contact.html?service=carpet" class="btn btn-outline-success mt-3">Add This Service</a>
                     </div>
                 </div>
-                
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="other-service-card">
-                        <div class="other-service-icon">
-                            <i class="fas fa-fire"></i>
-                        </div>
-                        <h4>Oven Deep Clean</h4>
-                        <p>Complete oven cleaning including racks, glass, and interior degreasing. Removes built-up grease and carbon.</p>
-                        <div class="other-service-price">From $79</div>
-                        <a href="contact.html?service=oven" class="btn btn-outline-success mt-3">Add This Service</a>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="other-service-card">
-                        <div class="other-service-icon">
-                            <i class="fas fa-window-maximize"></i>
-                        </div>
-                        <h4>Window Cleaning</h4>
-                        <p>Interior and exterior window cleaning for crystal clear views. Includes frames, tracks, and glass.</p>
-                        <div class="other-service-price">From $129</div>
-                        <a href="contact.html?service=windows" class="btn btn-outline-success mt-3">Add This Service</a>
-                    </div>
-                </div>
-                
+                <!-- Mattress Cleaning -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="other-service-card">
-                        <div class="other-service-icon">
-                            <i class="fas fa-brush"></i>
-                        </div>
-                        <h4>Wall Washing</h4>
-                        <p>Gentle wall washing to remove marks, stains, and scuff marks. Restores walls to like-new condition.</p>
-                        <div class="other-service-price">From $149</div>
-                        <a href="contact.html?service=walls" class="btn btn-outline-success mt-3">Add This Service</a>
+                        <div class="other-service-icon"><i class="fas fa-bed"></i></div>
+                        <h4>Mattress Cleaning</h4>
+                        <p>Deep cleaning for mattresses to remove dust mites, stains, and allergens.</p>
+                        <div class="other-service-price">$30 per mattress</div>
+                        <a href="contact.html?service=mattress" class="btn btn-outline-success mt-3">Add This Service</a>
                     </div>
                 </div>
-                
+                <!-- Fridge Cleaning (Interior) -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="other-service-card">
-                        <div class="other-service-icon">
-                            <i class="fas fa-th-large"></i>
-                        </div>
+                        <div class="other-service-icon"><i class="fas fa-thermometer-half"></i></div>
+                        <h4>Fridge Cleaning (Interior)</h4>
+                        <p>Thorough cleaning inside your fridge, including shelves and drawers.</p>
+                        <div class="other-service-price">$50 per fridge</div>
+                        <a href="contact.html?service=fridge" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- Sliding Door Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-door-open"></i></div>
+                        <h4>Sliding Door Cleaning</h4>
+                        <p>Cleaning and track clearing for sliding doors, ensuring smooth operation.</p>
+                        <div class="other-service-price">$30 per sliding door</div>
+                        <a href="contact.html?service=sliding-door" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- Blind Cleaning (icon updated to fa-grip-lines) -->
+                <div class="col-md-4 mb-4 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-border-all"></i></div>
                         <h4>Blind Cleaning</h4>
-                        <p>Thorough cleaning of all types of blinds - Venetian, vertical, roller. Removes dust and stains.</p>
-                        <div class="other-service-price">From $89</div>
+                        <p>Thorough cleaning of all types of blinds – Venetian, vertical, roller. Removes dust and stains.</p>
+                        <div class="other-service-price">$10 per blind</div>
                         <a href="contact.html?service=blinds" class="btn btn-outline-success mt-3">Add This Service</a>
                     </div>
                 </div>
-                
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="other-service-card">
-                        <div class="other-service-icon">
-                            <i class="fas fa-broom"></i>
-                        </div>
-                        <h4>Curtain Cleaning</h4>
-                        <p>Professional curtain cleaning service for all fabric types. Removes odors and allergens.</p>
-                        <div class="other-service-price">From $149</div>
-                        <a href="contact.html?service=curtains" class="btn btn-outline-success mt-3">Add This Service</a>
-                    </div>
-                </div>
+            </div>
+            
+            <!-- Note about included services -->
+            <div class="note-included text-center mx-auto mt-4" style="max-width: 700px;">
+                <i class="fas fa-check-circle text-success me-1"></i> <strong>Included in bond cleaning:</strong> Oven cleaning, curtain cleaning, internal window cleaning, and spot wall cleaning.
             </div>
             
             <div class="text-center mt-5" data-aos="fade-up">
                 <a href="contact.html" class="btn btn-success btn-lg">
-                    <i class="fas fa-calendar-check"></i> Book from $299
+                    <i class="fas fa-calendar-check"></i> Book from $249
                 </a>
                 <p class="text-muted mt-3">All services include GST and our Bond-Back Guarantee</p>
             </div>
@@ -844,27 +834,24 @@
     </section>
 
     <!-- CTA Section -->
-<!-- Clean CTA Section -->
-<section class="cta-clean-section py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8" data-aos="fade-right">
-                <h2>Ready to Secure Your Bond Return?</h2>
-                <p class="cta-text">Book our professional bond cleaning service today. Transparent pricing, comprehensive service, and bond-back assurance.</p>
-                <div class="cta-badges mt-3">
-                    <span class="cta-badge"><i class="fas fa-clock"></i> Same Day Available</span>
-                    <span class="cta-badge"><i class="fas fa-shield-alt"></i> Insured Team</span>
-                    <span class="cta-badge"><i class="fas fa-check-circle"></i> Bond-Back Guarantee</span>
+    <section class="cta-clean-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2>Ready to Secure Your Bond Return?</h2>
+                    <p class="cta-text">Book our professional bond cleaning service today. Transparent pricing, comprehensive service, and bond-back assurance.</p>
+                    <div class="cta-badges mt-3">
+                        <span class="cta-badge"><i class="fas fa-clock"></i> Same Day Available</span>
+                        <span class="cta-badge"><i class="fas fa-shield-alt"></i> Insured Team</span>
+                        <span class="cta-badge"><i class="fas fa-check-circle"></i> Bond-Back Guarantee</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">                    
+                    <a href="tel:+61452366782" class="cta-button"><i class="fas fa-phone"></i> Call Now</a>
                 </div>
             </div>
-            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">                    
-                <a href="tel:+61452366782" class="cta-button">
-                    <i class="fas fa-phone"></i> Call Now
-                </a>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer class="footer py-5 bg-dark text-white">
@@ -873,18 +860,14 @@
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand mb-3">
                         <div class="d-flex align-items-center">
-                            <img 
-                                src="images/logo.png" 
-                                alt="Perth Bond Cleaner Logo"
-                                class="footer-logo-img me-2"
-                            />
+                            <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="footer-logo-img me-2" />
                             <div>
                                 <h4 class="footer-logo">Perth Bond Cleaner</h4>
                                 <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
                             </div>
                         </div>
                     </div>
-                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <p>Professional, reliable bond cleaning from $249 AUD with bond-back assurance.</p>
                     <div class="trust-badges mt-3">
                         <span class="badge bg-success me-2">Trusted by Perth residents</span>
                     </div>
@@ -906,9 +889,8 @@
                     <ul class="footer-links">
                         <li><a href="services.html">End-of-Lease Cleaning</a></li>
                         <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
-                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
-                        <li><a href="services.html#windows">Window Cleaning</a></li>
-                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#windows">External Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Cleaning</a></li>
                         <li><a href="services.html#blinds">Blind Cleaning</a></li>
                     </ul>
                 </div>
@@ -916,38 +898,14 @@
                 <div class="col-lg-3 col-md-4 mb-4">
                     <h5>Get In Touch</h5>
                     <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <a href="tel:+61452366782">+61 452 366 782</a>
-                                <small class="d-block">Call or Text</small>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                Servicing Perth & Surrounding Areas
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
-                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
-                            </div>
-                        </li>
+                        <li><i class="fas fa-phone"></i><div><a href="tel:+61452366782">+61 452 366 782</a><small class="d-block">Call or Text</small></div></li>
+                        <li><i class="fas fa-envelope"></i><div><a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a></div></li>
+                        <li><i class="fas fa-map-marker-alt"></i><div>Servicing Perth & Surrounding Areas</div></li>
+                        <li><i class="fas fa-clock"></i><div><div>Mon-Fri: 7:00 AM - 6:00 PM</div><div>Sat-Sun: 8:00 AM - 4:00 PM</div></div></li>
                     </ul>
                     
                     <div class="whatsapp-cta mt-3">
-                        <a href="https://wa.me/61452366782" class="btn btn-success w-100">
-                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
-                        </a>
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100"><i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $249</a>
                     </div>
                 </div>
             </div>
@@ -955,9 +913,7 @@
             <hr class="my-4">
             
             <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2026 Perth Bond Cleaner. All rights reserved.</p>
-                </div>
+                <div class="col-md-6"><p class="mb-0">&copy; 2026 Perth Bond Cleaner. All rights reserved.</p></div>
                 <div class="col-md-6 text-md-end">
                     <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
                     <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
@@ -972,34 +928,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+        AOS.init({ duration: 800, once: true, offset: 100 });
         
-        // Highlight current page in navigation
         document.addEventListener('DOMContentLoaded', function() {
             const currentPage = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-link');
-            
             navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+                else link.classList.remove('active');
             });
             
-            // Service parameter handling
             const urlParams = new URLSearchParams(window.location.search);
             const service = urlParams.get('service');
             if (service) {
                 setTimeout(() => {
                     const element = document.getElementById(service);
-                    if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }, 500);
             }
         });

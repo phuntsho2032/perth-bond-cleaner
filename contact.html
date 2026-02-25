@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Favicon with cache busting -->
-<link rel="icon" href="/favicon/favicon.ico?v=2">
-<link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png?v=2">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png?v=2">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png?v=2">
- <style>
+    <link rel="icon" href="/favicon/favicon.ico?v=2">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png?v=2">
+    
+    <style>
         /* ===============================
            ADDITIONAL STYLES FOR CONTACT PAGE
         =============================== */
@@ -355,45 +356,83 @@
             transform: none;
         }
 
-        /* Additional Services Styling */
+        /* Additional Services Styling - Redesigned */
         .additional-services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            margin-top: 0.5rem;
+            margin: 1.5rem 0;
         }
 
         .additional-service-item {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
+            background: #f8fafc;
+            border: 1px solid #e9edf2;
+            border-radius: 12px;
+            padding: 1rem 1rem 1rem 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.2s ease;
             cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .additional-service-item:hover {
-            background: var(--light-green);
+            background: #eaf7ea;
             border-color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(40, 167, 69, 0.08);
         }
 
         .additional-service-item input[type="checkbox"] {
-            margin-right: 0.5rem;
-        }
-
-        .additional-service-item label {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
+            width: 1.2rem;
+            height: 1.2rem;
+            accent-color: var(--primary-green);
             margin: 0;
-            font-size: 0.95rem;
+            flex-shrink: 0;
         }
 
-        .additional-service-item .price {
+        .service-icon {
             color: var(--primary-green);
+            font-size: 1.2rem;
+            width: 1.6rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .service-name {
+            flex: 1;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .price-badge {
+            background: #dcfce7;
+            color: #166534;
+            padding: 0.3rem 0.7rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-left: auto;
-            font-size: 0.9rem;
+            white-space: nowrap;
+            border: 1px solid #bbf7d0;
+            flex-shrink: 0;
+        }
+
+        .note-included {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-green);
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #1e3a5f;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .additional-services-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Guarantee Section */
@@ -461,10 +500,6 @@
             
             .form-section {
                 padding-left: 0;
-            }
-            
-            .additional-services-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -591,7 +626,7 @@
             
             <div class="d-lg-none d-flex align-items-center">
                 <div class="price-display ms-3">
-                    <span class="price-badge">From $299 AUD</span>
+                    <span class="price-badge">From $249 AUD</span>
                 </div>
                 <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -647,7 +682,7 @@
                 <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
                     <div class="contact-card contact-info">
                         <div class="service-badge">
-                            <span class="price">From $299 AUD</span> 
+                            <span class="price">From $249 AUD</span> 
                             <span class="subtext">Final price depends on property details • Bond-back guarantee</span>
                         </div>
                         
@@ -670,7 +705,7 @@
                                 </div>
                                 <div class="contact-text">
                                     <h5>Email</h5>
-                                    <p><a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a></p>
+                                    <p><a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a></p>
                                 </div>
                             </div>
                             
@@ -718,7 +753,7 @@
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                             
-                            <a href="mailto:pwangdi97@gmail.com" class="contact-btn email">
+                            <a href="mailto:perthbondcleaners@gmail.com" class="contact-btn email">
                                 <div class="btn-icon">
                                     <i class="fas fa-envelope"></i>
                                 </div>
@@ -852,12 +887,11 @@
                                         <label class="form-label">Bedrooms</label>
                                         <select class="form-select" name="bedrooms" id="bedrooms">
                                             <option value="">Select</option>
-                                            <option>Studio</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5+</option>
+                                            <option>Studio / 1 Bedroom Unit — From $249</option>
+                                            <option>2 Bedroom Unit / House — From $299</option>
+                                            <option>3 Bedroom House — From $599</option>
+                                            <option>4 Bedroom House — From $799</option>
+                                            <option>5+ Bedroom House — From $899</option>
                                         </select>
                                     </div>
                                 </div>
@@ -887,44 +921,67 @@
                                 </div>
                             </div>
 
-                            <!-- Additional Services -->
-                            <div class="form-group">
-                                <label class="form-label">Additional Services (Optional)</label>
-                                <div class="additional-services-grid">
-                                    <label class="additional-service-item">
-                                        <input type="checkbox" name="additional[]" value="Carpet Steam Cleaning">
-                                        Carpet Steam Cleaning <span class="price">+$99</span>
-                                    </label>
+                            <!-- Additional Services - Updated with icons and prices -->
+                            <div class="additional-services-grid">
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="Wall Cleaning">
+                                    <i class="fas fa-paint-roller service-icon"></i>
+                                    <span class="service-name">Wall Wash / Wall Cleaning</span>
+                                    <span class="price-badge">$5 per wall</span>
+                                </label>
 
-                                    <label class="additional-service-item">
-                                        <input type="checkbox" name="additional[]" value="Oven Deep Clean">
-                                        Oven Deep Clean <span class="price">+$79</span>
-                                    </label>
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="External Window Cleaning">
+                                    <i class="fas fa-window-maximize service-icon"></i>
+                                    <span class="service-name">External Window Cleaning</span>
+                                    <span class="price-badge">$40 per window</span>
+                                </label>
 
-                                    <label class="additional-service-item">
-                                        <input type="checkbox" name="additional[]" value="Window Cleaning">
-                                        Window Cleaning <span class="price">+$129</span>
-                                    </label>
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="Carpet Steam Cleaning">
+                                    <i class="fas fa-couch service-icon"></i>
+                                    <span class="service-name">Carpet Steam Cleaning</span>
+                                    <span class="price-badge">$50 per room</span>
+                                </label>
 
-                                    <label class="additional-service-item">
-                                        <input type="checkbox" name="additional[]" value="Wall Washing">
-                                        Wall Washing <span class="price">+$149</span>
-                                    </label>
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="Mattress Cleaning">
+                                    <i class="fas fa-bed service-icon"></i>
+                                    <span class="service-name">Mattress Cleaning</span>
+                                    <span class="price-badge">$30 per mattress</span>
+                                </label>
 
-                                    <label class="additional-service-item">
-                                        <input type="checkbox" name="additional[]" value="Blind Cleaning">
-                                        Blind Cleaning <span class="price">+$89</span>
-                                    </label>
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="Fridge Cleaning">
+                                    <i class="fas fa-thermometer-half service-icon"></i>
+                                    <span class="service-name">Fridge Cleaning (Interior)</span>
+                                    <span class="price-badge">$50 per fridge</span>
+                                </label>
 
-                                    <label class="additional-service-item">
-                                        <input type="checkbox" name="additional[]" value="Curtain Cleaning">
-                                        Curtain Cleaning <span class="price">+$149</span>
-                                    </label>
-                                </div>
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="Sliding Door Cleaning">
+                                    <i class="fas fa-door-open service-icon"></i>
+                                    <span class="service-name">Sliding Door Cleaning</span>
+                                    <span class="price-badge">$30 per sliding door</span>
+                                </label>
+
+                                <label class="additional-service-item">
+                                    <input type="checkbox" name="additional[]" value="Blind Cleaning">
+                                    <i class="fas fa-border-all service-icon"></i>
+                                    <span class="service-name">Blind Cleaning</span>
+                                    <span class="price-badge">$10 per blind</span>
+                                </label>
+                            </div>
+
+                            <!-- Note about included services -->
+                            <div class="note-included">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                <strong>Included in bond cleaning:</strong> Oven cleaning, curtain cleaning, internal window cleaning, and spot wall cleaning. 
+                                Only external window cleaning is an extra charge (all other services above are optional).
                             </div>
 
                             <!-- Date & Time -->
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="preferredDate" class="form-label">Preferred Date *</label>
@@ -1041,12 +1098,12 @@
                 <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Is the price really starting from $299?
+                            Is the price really starting from $249?
                         </button>
                     </h2>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Our pricing starts from $299 AUD. The final quote depends on factors such as property type, condition, and any additional services requested. We always provide a clear, upfront quote before confirming your booking.
+                            Our pricing starts from $249 AUD. The final quote depends on factors such as property type, condition, and any additional services requested. We always provide a clear, upfront quote before confirming your booking.
                         </div>
                     </div>
                 </div>
@@ -1098,7 +1155,7 @@
                             </div>
                         </div>
                     </div>
-                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <p>Professional, reliable bond cleaning from $249 AUD with bond-back assurance.</p>
                     <div class="trust-badges mt-3">
                         <span class="badge bg-success me-2">Trusted by Perth residents</span>
                     </div>
@@ -1120,9 +1177,8 @@
                     <ul class="footer-links">
                         <li><a href="services.html">End-of-Lease Cleaning</a></li>
                         <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
-                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
-                        <li><a href="services.html#windows">Window Cleaning</a></li>
-                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#windows">External Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Cleaning</a></li>
                         <li><a href="services.html#blinds">Blind Cleaning</a></li>
                     </ul>
                 </div>
@@ -1140,7 +1196,7 @@
                         <li>
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
+                                <a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a>
                             </div>
                         </li>
                         <li>
@@ -1160,7 +1216,7 @@
                     
                     <div class="whatsapp-cta mt-3">
                         <a href="https://wa.me/61452366782" class="btn btn-success w-100">
-                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $249
                         </a>
                     </div>
                 </div>

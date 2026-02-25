@@ -16,513 +16,509 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Favicon -->
-<link rel="icon" href="/favicon/favicon.ico">
-
-<!-- Apple (iPhone / iPad) -->
-<link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
-
-<!-- Android / Chrome -->
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
     <style>
-.about-hero {
-    background: linear-gradient(135deg, 
-        rgba(34, 153, 61, 0.95),    /* Darker primary green */
-        rgba(28, 187, 140, 0.92),   /* Darker accent green */
-        rgba(34, 153, 61, 0.93)     /* Back to darker primary */
-    );
-    padding: 140px 0 100px;
-    text-align: center;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
+        .about-hero {
+            background: linear-gradient(135deg, 
+                rgba(34, 153, 61, 0.95),    /* Darker primary green */
+                rgba(28, 187, 140, 0.92),   /* Darker accent green */
+                rgba(34, 153, 61, 0.93)     /* Back to darker primary */
+            );
+            padding: 140px 0 100px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-.about-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-    background-size: cover;
-    background-position: bottom;
-    opacity: 0.8;
-    z-index: 1;
-}
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.8;
+            z-index: 1;
+        }
 
-/* Clean fade to white at the bottom */
-.about-hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background: linear-gradient(
-        to bottom, 
-        transparent 0%, 
-        rgba(255, 255, 255, 0.1) 20%,
-        rgba(255, 255, 255, 0.3) 40%,
-        rgba(255, 255, 255, 0.6) 60%,
-        rgba(255, 255, 255, 0.85) 80%,
-        white 100%
-    );
-    z-index: 1;
-}
+        /* Clean fade to white at the bottom */
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(
+                to bottom, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.1) 20%,
+                rgba(255, 255, 255, 0.3) 40%,
+                rgba(255, 255, 255, 0.6) 60%,
+                rgba(255, 255, 255, 0.85) 80%,
+                white 100%
+            );
+            z-index: 1;
+        }
 
-.about-hero .container {
-    position: relative;
-    z-index: 2;
-}
+        .about-hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.about-hero h1 {
-    font-size: 3.2rem;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
+        .about-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
 
-.about-hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    opacity: 0.95;
-    line-height: 1.6;
-    font-weight: 300;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+        .about-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
 
-/* Simplified Stats Section - no cards, clean design */
-.stats-section {
-    padding: 1.5rem;
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
-    margin: 0 auto;
-}
+        /* Simplified Stats Section - no cards, clean design */
+        .stats-section {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-.stats-section .row {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 15px;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
+        .stats-section .row {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
 
-.stat-item {
-    text-align: center;
-    padding: 1rem;
-    position: relative;
-}
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+        }
 
-/* Add subtle vertical dividers between stats */
-.stat-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 20%;
-    height: 60%;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.2);
-}
+        /* Add subtle vertical dividers between stats */
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-    display: block;
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-}
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            display: block;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
 
-.stat-label {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.95);
-    letter-spacing: 0.5px;
-}
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            letter-spacing: 0.5px;
+        }
 
-/* Rest of your existing CSS remains exactly the same */
-.story-section {
-    padding: 5rem 0 4rem;
-    background: white;
-    position: relative;
-}
+        /* Rest of your existing CSS remains exactly the same */
+        .story-section {
+            padding: 5rem 0 4rem;
+            background: white;
+            position: relative;
+        }
 
-.story-content {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-light);
-}
+        .story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
 
-.story-content p {
-    margin-bottom: 1.5rem;
-}
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
 
-.values-section {
-    padding: 5rem 0;
-    background: var(--light-gray);
-}
+        .values-section {
+            padding: 5rem 0;
+            background: var(--light-gray);
+        }
 
-.value-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    height: 100%;
-    border: 1px solid #e9ecef;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            height: 100%;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
 
-.value-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    border-color: var(--primary-green);
-}
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary-green);
+        }
 
-.value-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: white;
-    font-size: 1.8rem;
-}
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
 
-.value-card h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
+        .value-card h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
 
-.value-card p {
-    text-align: center;
-    color: var(--text-light);
-    line-height: 1.6;
-}
+        .value-card p {
+            text-align: center;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
 
-.credentials-section {
-    padding: 5rem 0;
-    background: white;
-}
+        .credentials-section {
+            padding: 5rem 0;
+            background: white;
+        }
 
-.credential-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    border: 1px solid #e9ecef;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    height: 100%;
-    text-align: center;
-    transition: all 0.3s ease;
-}
+        .credential-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-.credential-card:hover {
-    border-color: var(--primary-green);
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
+        .credential-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
 
-.credential-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--light-green);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: var(--primary-green);
-    font-size: 2rem;
-}
+        .credential-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-green);
+            font-size: 2rem;
+        }
 
-.credential-card h4 {
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
+        .credential-card h4 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
 
-.credential-card p {
-    color: var(--text-light);
-    margin-bottom: 1rem;
-}
+        .credential-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
 
-.abn-badge {
-    background: var(--light-green);
-    color: var(--primary-green);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 1rem;
-}
+        .abn-badge {
+            background: var(--light-green);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
 
-.team-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
+        .team-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-.team-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-    background-size: cover;
-    background-position: bottom;
-}
+        .team-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,181.3C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+        }
 
-.team-section .container {
-    position: relative;
-    z-index: 2;
-}
+        .team-section .container {
+            position: relative;
+            z-index: 2;
+        }
 
-.team-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 2rem;
-    text-align: center;
-    border: 1px solid rgba(255,255,255,0.2);
-    height: 100%;
-    transition: all 0.3s ease;
-}
+        .team-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
 
-.team-card:hover {
-    background: rgba(255,255,255,0.15);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+        .team-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
 
-.team-icon {
-    width: 100px;
-    height: 100px;
-    background: rgba(255,255,255,0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: white;
-    font-size: 2.5rem;
-}
+        .team-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+        }
 
-.team-card h4 {
-    margin-bottom: 0.5rem;
-}
+        .team-card h4 {
+            margin-bottom: 0.5rem;
+        }
 
-.team-card .title {
-    color: rgba(255,255,255,0.8);
-    font-style: italic;
-    margin-bottom: 1rem;
-}
+        .team-card .title {
+            color: rgba(255,255,255,0.8);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
 
-.about-cta {
-    padding: 5rem 0;
-    text-align: center;
-    background: white;
-}
+        .about-cta {
+            padding: 5rem 0;
+            text-align: center;
+            background: white;
+        }
 
-.cta-box {
-    background: white;
-    border-radius: 20px;
-    padding: 3rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    border: 1px solid rgba(40, 167, 69, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-}
+        .cta-box {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(40, 167, 69, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-/* Timeline for our story */
-.timeline-story {
-    position: relative;
-    padding-left: 2rem;
-    margin: 2rem 0;
-}
+        /* Timeline for our story */
+        .timeline-story {
+            position: relative;
+            padding-left: 2rem;
+            margin: 2rem 0;
+        }
 
-.timeline-story::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, var(--primary-green), var(--accent-green));
-    border-radius: 2px;
-}
+        .timeline-story::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--primary-green), var(--accent-green));
+            border-radius: 2px;
+        }
 
-.timeline-point {
-    position: relative;
-    margin-bottom: 2rem;
-}
+        .timeline-point {
+            position: relative;
+            margin-bottom: 2rem;
+        }
 
-.timeline-point::before {
-    content: '';
-    position: absolute;
-    left: -2.3rem;
-    top: 0.3rem;
-    width: 12px;
-    height: 12px;
-    background: var(--primary-green);
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 0 3px var(--light-green);
-}
+        .timeline-point::before {
+            content: '';
+            position: absolute;
+            left: -2.3rem;
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--light-green);
+        }
 
-.timeline-point h4 {
-    color: var(--primary-green);
-    margin-bottom: 0.5rem;
-}
+        .timeline-point h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .about-hero h1 {
-        font-size: 2.8rem;
-    }
-    
-    .stat-number {
-        font-size: 2.8rem;
-    }
-}
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .about-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2.8rem;
+            }
+        }
 
-@media (max-width: 992px) {
-    .about-hero {
-        padding: 140px 0 80px;
-    }
-    
-    .about-hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .stats-section {
-        padding: 1.5rem;
-        margin: 0 1rem;
-    }
-    
-    .stats-section .row {
-        padding: 1.5rem;
-    }
-    
-    .stat-item {
-        padding: 0.75rem;
-    }
-    
-    .stat-number {
-        font-size: 2.5rem;
-    }
-}
+        @media (max-width: 992px) {
+            .about-hero {
+                padding: 140px 0 80px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-section {
+                padding: 1.5rem;
+                margin: 0 1rem;
+            }
+            
+            .stats-section .row {
+                padding: 1.5rem;
+            }
+            
+            .stat-item {
+                padding: 0.75rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
 
-@media (max-width: 768px) {
-    .about-hero {
-        padding: 120px 0 60px;
-    }
-    
-    .about-hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .about-hero p {
-        font-size: 1.1rem;
-        padding: 0 1rem;
-        margin-bottom: 3rem;
-    }
-    
-    .stats-section .row {
-        padding: 1.5rem;
-        border-radius: 10px;
-    }
-    
-    .stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .stat-label {
-        font-size: 1rem;
-    }
-    
-    /* Remove vertical dividers on mobile */
-    .stat-item:not(:last-child)::after {
-        display: none;
-    }
-    
-    .cta-box {
-        padding: 2rem;
-        margin: 0 1rem;
-    }
-}
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 120px 0 60px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-hero p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+                margin-bottom: 3rem;
+            }
+            
+            .stats-section .row {
+                padding: 1.5rem;
+                border-radius: 10px;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .stat-label {
+                font-size: 1rem;
+            }
+            
+            /* Remove vertical dividers on mobile */
+            .stat-item:not(:last-child)::after {
+                display: none;
+            }
+            
+            .cta-box {
+                padding: 2rem;
+                margin: 0 1rem;
+            }
+        }
 
-@media (max-width: 576px) {
-    .about-hero {
-        padding: 100px 0 50px;
-    }
-    
-    .about-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .stats-section {
-        padding: 1rem;
-    }
-    
-    .stats-section .row {
-        padding: 1.25rem;
-    }
-    
-    .stat-item {
-        padding: 0.5rem;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
-    
-    .stat-label {
-        font-size: 0.95rem;
-    }
-    
-    .value-card, .credential-card, .team-card {
-        padding: 1.5rem;
-    }
-    
-    .timeline-story {
-        padding-left: 1.5rem;
-    }
-    
-    .timeline-point::before {
-        left: -1.8rem;
-    }
-}
+        @media (max-width: 576px) {
+            .about-hero {
+                padding: 100px 0 50px;
+            }
+            
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-section {
+                padding: 1rem;
+            }
+            
+            .stats-section .row {
+                padding: 1.25rem;
+            }
+            
+            .stat-item {
+                padding: 0.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.95rem;
+            }
+            
+            .value-card, .credential-card, .team-card {
+                padding: 1.5rem;
+            }
+            
+            .timeline-story {
+                padding-left: 1.5rem;
+            }
+            
+            .timeline-point::before {
+                left: -1.8rem;
+            }
+        }
 
-/* Animation for stat numbers */
-.stat-number {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
+        /* Animation for stat numbers */
+        .stat-number {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -537,16 +533,12 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img 
-                    src="images/logo.png" 
-                    alt="Perth Bond Cleaner Logo"
-                    class="navbar-logo"
-                >
+                <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="navbar-logo">
             </a>
             
             <div class="d-lg-none d-flex align-items-center">
                 <div class="price-display ms-3">
-                    <span class="price-badge">From $299 AUD</span>
+                    <span class="price-badge">From $249 AUD</span>
                 </div>
                 <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -555,31 +547,17 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="areas.html">Service Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="areas.html">Service Areas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
                 
                 <div class="d-none d-lg-flex align-items-center">
                     <div class="nav-cta">
-                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
-                            <i class="fas fa-phone"></i> +61 452 366 782
-                        </a>
-                        <a href="contact.html" class="btn btn-success">
-                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
-                        </a>
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3"><i class="fas fa-phone"></i> +61 452 366 782</a>
+                        <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-alt"></i> Get Instant Quote</a>
                     </div>
                 </div>
             </div>
@@ -588,42 +566,42 @@
 
     <!-- About Hero -->
     <section class="about-hero" data-aos="fade-down">
-    <div class="container">
-        <div class="hero-content">
-            <h1>About Perth Bond Cleaner</h1>
-            <p>Perth's trusted specialists in affordable, professional bond cleaning with a commitment to excellence and customer satisfaction.</p>
-        </div>
-        
-        <div class="stats-section" data-aos="fade-up" data-aos-delay="300">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Properties Cleaned</span>
+        <div class="container">
+            <div class="hero-content">
+                <h1>About Perth Bond Cleaner</h1>
+                <p>Perth's trusted specialists in affordable, professional bond cleaning with a commitment to excellence and customer satisfaction.</p>
+            </div>
+            
+            <div class="stats-section" data-aos="fade-up" data-aos-delay="300">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="stat-card">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Properties Cleaned</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <span class="stat-number">98%</span>
-                        <span class="stat-label">Bond Success Rate</span>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="stat-card">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Bond Success Rate</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <span class="stat-number">24hr</span>
-                        <span class="stat-label">Typical Response Time</span>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="stat-card">
+                            <span class="stat-number">24hr</span>
+                            <span class="stat-label">Fast Response Time</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="stat-card">
-                        <span class="stat-number">5★</span>
-                        <span class="stat-label">Customer Focus</span>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="stat-card">
+                            <span class="stat-number">5★</span>
+                            <span class="stat-label">Service Focus</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Our Story -->
     <section class="story-section">
@@ -659,7 +637,7 @@
                         </div>
                         <div class="timeline-point">
                             <h4>Perth-Wide Service</h4>
-                            <p>Expanded to service all Perth metropolitan areas with pricing starting from $299 AUD.</p>
+                            <p>Expanded to service all Perth metropolitan areas with pricing starting from $249 AUD (Studio/1 Bed).</p>
                         </div>
                     </div>
                 </div>
@@ -826,7 +804,7 @@
             <div class="cta-box" data-aos="fade-up">
                 <h2 class="section-title mb-3">Ready to Experience the Difference?</h2>
                 <p class="mb-4" style="font-size: 1.2rem; color: var(--text-light);">
-                    Join the growing number of Perth residents who trust us with their bond cleaning. Professional service, fair pricing, and bond-back assurance you can trust.
+                    Join the growing number of Perth residents who trust us with their bond cleaning. Professional service, fair pricing from $249 (Studio/1 Bed), and bond-back assurance you can trust.
                 </p>
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -856,18 +834,14 @@
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand mb-3">
                         <div class="d-flex align-items-center">
-                            <img 
-                                src="images/logo.png" 
-                                alt="Perth Bond Cleaner Logo"
-                                class="footer-logo-img me-2"
-                            />
+                            <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="footer-logo-img me-2" />
                             <div>
                                 <h4 class="footer-logo">Perth Bond Cleaner</h4>
                                 <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
                             </div>
                         </div>
                     </div>
-                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
+                    <p>Professional, reliable bond cleaning from $249 AUD with bond-back assurance.</p>
                     <div class="trust-badges mt-3">
                         <span class="badge bg-success me-2">Trusted by Perth residents</span>
                     </div>
@@ -889,9 +863,8 @@
                     <ul class="footer-links">
                         <li><a href="services.html">End-of-Lease Cleaning</a></li>
                         <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
-                        <li><a href="services.html#oven">Oven Deep Clean</a></li>
-                        <li><a href="services.html#windows">Window Cleaning</a></li>
-                        <li><a href="services.html#walls">Wall Washing</a></li>
+                        <li><a href="services.html#windows">External Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Cleaning</a></li>
                         <li><a href="services.html#blinds">Blind Cleaning</a></li>
                     </ul>
                 </div>
@@ -899,37 +872,15 @@
                 <div class="col-lg-3 col-md-4 mb-4">
                     <h5>Get In Touch</h5>
                     <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <a href="tel:+61452366782">+61 452 366 782</a>
-                                <small class="d-block">Call or Text</small>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <a href="mailto:pwangdi97@gmail.com">pwangdi97@gmail.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                Servicing Perth & Surrounding Areas
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
-                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
-                            </div>
-                        </li>
+                        <li><i class="fas fa-phone"></i><div><a href="tel:+61452366782">+61 452 366 782</a><small class="d-block">Call or Text</small></div></li>
+                        <li><i class="fas fa-envelope"></i><div><a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a></div></li>
+                        <li><i class="fas fa-map-marker-alt"></i><div>Servicing Perth & Surrounding Areas</div></li>
+                        <li><i class="fas fa-clock"></i><div><div>Mon-Fri: 7:00 AM - 6:00 PM</div><div>Sat-Sun: 8:00 AM - 4:00 PM</div></div></li>
                     </ul>
                     
                     <div class="whatsapp-cta mt-3">
                         <a href="https://wa.me/61452366782" class="btn btn-success w-100">
-                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $249
                         </a>
                     </div>
                 </div>
@@ -938,9 +889,7 @@
             <hr class="my-4">
             
             <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2026 Perth Bond Cleaner. All rights reserved.</p>
-                </div>
+                <div class="col-md-6"><p class="mb-0">&copy; 2026 Perth Bond Cleaner. All rights reserved.</p></div>
                 <div class="col-md-6 text-md-end">
                     <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
                     <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
@@ -955,23 +904,14 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+        AOS.init({ duration: 800, once: true, offset: 100 });
         
-        // Highlight current page in navigation
         document.addEventListener('DOMContentLoaded', function() {
             const currentPage = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-link');
-            
             navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+                else link.classList.remove('active');
             });
             
             // Animate statistics
