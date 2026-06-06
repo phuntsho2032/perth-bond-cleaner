@@ -1,4 +1,4 @@
-/* Main CSS for Pearth Bond Cleaner - Upgraded Version */
+/* Main CSS for Perth Bond Cleaner - Upgraded Version */
 :root {
     --primary-green: #28a745;
     --dark-green: #218838;
@@ -823,4 +823,63 @@ h1, h2, h3, h4, h5, h6 {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+/* SERVICES DROPDOWN */
+
+@media (min-width: 992px) {
+
+    .nav-item.dropdown {
+        position: relative;
+    }
+
+    .nav-item.dropdown .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0,0,0,.15);
+        padding: 0;
+        min-width: 220px;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        padding: 12px 20px;
+    }
+
+    .dropdown-item:hover {
+        background: #28a745 !important;
+        color: #fff !important;
+    }
+}
+/* MOBILE DROPDOWN */
+@media (max-width: 991px) {
+
+    .dropdown-menu {
+        display: none;
+        position: static !important;
+        transform: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding-left: 20px !important;
+        background: transparent !important;
+        margin-top: 0 !important;
+    }
+
+    .dropdown-item {
+        padding: 10px 0 !important;
+        color: var(--text-dark) !important;
+    }
+
+    .dropdown-item:hover {
+        background: transparent !important;
+        color: var(--primary-green) !important;
+    }
 }

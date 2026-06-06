@@ -1,4 +1,4 @@
-// Main JavaScript for Perth Bond Cleaner
+// Main JavaScript for Perth Bond Cleaners
 document.addEventListener('DOMContentLoaded', function () {
     /* ================= NAVBAR SCROLL ================= */
     const navbar = document.querySelector('.navbar');
