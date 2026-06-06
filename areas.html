@@ -1319,11 +1319,22 @@
             searchInput.addEventListener('search', filterSuburbs);
             
             // Highlight current page in navigation
-            const currentPage = window.location.pathname.split('/').pop();
+            const currentPage = window.location.pathname
+                .split('/')
+                .pop()
+                .replace('.html', '');
+
             const navLinks = document.querySelectorAll('.nav-link');
+
             navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) link.classList.add('active');
-                else link.classList.remove('active');
+                const href = link.getAttribute('href')
+                    .replace('.html', '');
+
+                if (href === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             });
             
             // Suburb parameter handling

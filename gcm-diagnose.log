@@ -1,0 +1,190 @@
+﻿Diagnose log at 2026-06-06T07:18:14Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.7.3+5fa7116896c82164996a609accd1c5ad90fe730a
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 22631)
+Reading environment variables... OK
+ Variables:
+SystemDrive=C:
+ProgramFiles(x86)=C:\Program Files (x86)
+MSYSTEM=MINGW64
+ProgramW6432=C:\Program Files
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+TMP=C:\Users\ANGELO~1\AppData\Local\Temp
+PROCESSOR_ARCHITECTURE=AMD64
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\Angelo Mabini\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\493597c785d4c5cb\askpass-main.js
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Angelo Mabini\bin;c:\Users\Angelo Mabini\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\Angelo Mabini\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\Angelo Mabini\AppData\Local\Microsoft\WindowsApps;C:\Users\Angelo Mabini\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Angelo Mabini\AppData\Roaming\npm
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-1e633a9646-sock
+PROCESSOR_REVISION=5e03
+TEMP=C:\Users\ANGELO~1\AppData\Local\Temp
+USERPROFILE=C:\Users\Angelo Mabini
+EFC_11648=1
+TERM=xterm-256color
+USERNAME=Angelo Mabini
+SystemRoot=C:\Windows
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_9320_FJYEQZQHGMJMFXHV
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+PLINK_PROTOCOL=ssh
+OneDrive=C:\Users\Angelo Mabini\OneDrive
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-S5SNH5B
+CommonProgramFiles=C:\Program Files\Common Files
+ZES_ENABLE_SYSMAN=1
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+ProgramData=C:\ProgramData
+LANG=en_US.UTF-8
+GIT_ASKPASS=c:\Users\Angelo Mabini\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\493597c785d4c5cb\askpass.sh
+HOMEPATH=\Users\Angelo Mabini
+OneDriveConsumer=C:\Users\Angelo Mabini\OneDrive
+COMPUTERNAME=DESKTOP-S5SNH5B
+VSCODE_INJECTION=1
+ALLUSERSPROFILE=C:\ProgramData
+CommonProgramW6432=C:\Program Files\Common Files
+COPILOT_DEBUG_NONCE=d694b5536bb309b74bf0486d3a4270a1
+SESSIONNAME=Console
+DriverData=C:\Windows\System32\Drivers\DriverData
+HOMEDRIVE=C:
+windir=C:\Windows
+GIT_TRACE2_PARENT_SID=48a0a467-b74d-43f0-b5b0-fb97b3f77604
+VSCODE_GIT_ASKPASS_NODE=C:\Users\Angelo Mabini\AppData\Local\Programs\Microsoft VS Code\Code.exe
+NUMBER_OF_PROCESSORS=8
+OS=Windows_NT
+ProgramFiles=C:\Program Files
+ComSpec=C:\Windows\system32\cmd.exe
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+HOME=C:\Users\Angelo Mabini
+LOGONSERVER=\\DESKTOP-S5SNH5B
+PSModulePath=C:\Users\Angelo Mabini\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+TMPDIR=C:\Users\ANGELO~1\AppData\Local\Temp
+APPDATA=C:\Users\Angelo Mabini\AppData\Roaming
+USERDOMAIN=DESKTOP-S5SNH5B
+PROCESSOR_LEVEL=6
+LOCALAPPDATA=C:\Users\Angelo Mabini\AppData\Local
+TERM_PROGRAM_VERSION=1.123.0
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+COLORTERM=truecolor
+PUBLIC=C:\Users\Public
+TERM_PROGRAM=vscode
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\Angelo Mabini\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\Angelo Mabini\AppData\Local\Temp\43264629b1f2702bbdf21179'... OK
+Reading from temporary file 'C:\Users\Angelo Mabini\AppData\Local\Temp\43264629b1f2702bbdf21179'... OK
+Deleting temporary file 'C:\Users\Angelo Mabini\AppData\Local\Temp\43264629b1f2702bbdf21179'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\Angelo Mabini
+UserDataDirectoryPath: C:\Users\Angelo Mabini\.gcm
+GetCurrentDirectory(): C:\Users\Angelo Mabini\Downloads\perth-bond-cleaner-main\perth-bond-cleaner
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:62841/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.54.0.windows.1'
+Locating current repository...Git repository at 'C:/Users/Angelo Mabini/Downloads/perth-bond-cleaner-main/perth-bond-cleaner/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/Angelo Mabini/.gitconfig	core.editor="C:\Users\Angelo Mabini\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait
+file:C:/Users/Angelo Mabini/.gitconfig	user.name=Angelo Mabini
+file:C:/Users/Angelo Mabini/.gitconfig	user.email=f8results@gmail.com
+file:C:/Users/Angelo Mabini/.gitconfig	credential.helper=manager
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/russellgrg/perth-bond-cleaner.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+file:.git/config	branch.main.vscode-merge-base=origin/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\Angelo Mabini\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\Angelo Mabini\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
