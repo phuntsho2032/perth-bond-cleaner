@@ -73,16 +73,30 @@
             font-weight: 300;
         }
 
-        .hero-cta {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 1.5rem 2rem;
-            display: inline-block;
-            margin-top: 2rem;
-        }
+        .service-hero .container {
+    text-align: center;
+}
 
+
+      .hero-cta {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+    max-width: fit-content;
+
+}
+
+@media (max-width: 768px) {
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta .btn {
+        width: 220px;
+    }
+}
         .price-highlight {
             background: var(--primary-green);
             color: white;
@@ -731,12 +745,11 @@
                             Services
                         </a>
                     
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="bond-cleaning-perth.html">
-                                    Bond Cleaning Perth
-                                </a>
-                            </li>
+                       <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                            <li><a class="dropdown-item" href="house-cleaning-perth.html">House Cleaning</a></li>
+                            <li><a class="dropdown-item" href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+                            <li><a class="dropdown-item" href="window-cleaning-perth.html">Window Cleaning</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="areas.html">Service Areas</a></li>
@@ -761,17 +774,20 @@
             <h1>Bond Cleaning Perth</h1>
             <p>Professional bond cleaning Perth tenants trust for end of lease inspections, vacate cleaning, and move
                 out cleaning services across Perth and surrounding suburbs.</p>
-            <div class="text-center mt-5" data-aos="fade-up">
-                <a href="contact.html" class="btn btn-success btn-lg me-3">
+            
+                <div class="hero-cta text-center" data-aos="fade-up">
+            
+                <a href="contact.html" class="btn btn-success btn-lg">
                     <i class="fas fa-calendar-check"></i> Request Free Quote
                 </a>
-
+            
                 <a href="contact.html" class="btn btn-outline-light btn-lg">
                     <i class="fas fa-broom"></i> Book Bond Cleaning
                 </a>
+            
             </div>
-        </div>
-    </section>
+            </div>
+            </section>
 
     <!-- Introduction Section -->
     <section class="py-5 mb-5 bg-white">
@@ -1430,7 +1446,10 @@
                 <div class="col-lg-3 col-md-4 mb-4">
                     <h5>Our Services</h5>
                     <ul class="footer-links">
-                        <li><a href="bond-cleaning-perth.html">Bond Cleaning Perth</a></li>
+                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                        <li><a href="house-cleaning-perth.html">House Cleaning</a></li>
+                        <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+                        <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
                         <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
                         <li><a href="services.html#windows">External Window Cleaning</a></li>
                         <li><a href="services.html#walls">Wall Cleaning</a></li>

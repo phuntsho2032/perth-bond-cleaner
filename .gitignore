@@ -1,1 +1,4 @@
 .DS_Store
+*.log
+gcm-diagnose.log
+drafts/
