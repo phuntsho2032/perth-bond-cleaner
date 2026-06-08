@@ -1,108 +1,1548 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpet Cleaning Perth | Perth Bond Cleaners</title>
-    <meta name="robots" content="noindex,follow">
-
+    <title>Carpet Cleaning Perth | Professional Steam Carpet Cleaning</title>
+    <meta name="description"
+        content="Carpet cleaning Perth specialists offering steam carpet cleaning, rug cleaning, upholstery cleaning, mattress cleaning and odour removal.">
+    <link rel="canonical" href="https://perthbondcleaners.com/carpet-cleaning-perth">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
-            color: #2c3e50;
+        /* Additional styles for services page */
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), url('../images/hero-cleaning.jpg'), var(--primary-green);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 160px 0 120px;
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
 
-        .placeholder-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--light-gray));
+            z-index: 1;
+        }
 
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url('images/area.jpg');
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-        .placeholder-card {
-            max-width: 700px;
+        .service-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
             text-align: center;
-            background: #ffffff;
-            padding: 50px 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #28a745;
-            font-size: 2.5rem;
+        .service-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .btn {
+        .hero-cta {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
             display: inline-block;
-            background: #28a745;
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 28px;
+            margin-top: 2rem;
+        }
+
+        .price-highlight {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.5rem 1.5rem;
             border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+        }
+
+        .price-highlight small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .main-service-card {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(40, 167, 69, 0.15);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, var(--primary-green), #28a745, var(--accent-green));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.3;
+        }
+
+        .service-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-price-badge {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-body {
+            padding: 3rem 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .service-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(40, 167, 69, 0.3), transparent);
+        }
+
+        .whats-included h3 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .included-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .included-list li:last-child {
+            border-bottom: none;
+        }
+
+        .included-list i {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-green);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .service-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .service-cta-buttons .btn {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .why-choose-section {
+            padding: 6rem 0 5rem;
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .why-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .other-services {
+            padding: 5rem 0 6rem;
+        }
+
+        .other-service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .other-service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .other-service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+            font-size: 1.8rem;
+        }
+
+        .other-service-card h4 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .other-service-price {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        /* Price table inside main card */
+        .price-table {
+            margin-top: 1.5rem;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-table h5 {
             font-weight: 600;
-            transition: 0.3s ease;
+            margin-bottom: 0.75rem;
         }
 
-        .btn:hover {
-            background: #218838;
+        .price-table .row {
+            padding: 0.65rem 0;
+            border-bottom: 1px dashed #dee2e6;
         }
 
-        .brand {
-            font-size: 1.95rem;
-            color: #666;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .price-table .row:last-child {
+            border-bottom: none;
+        }
+
+        .price-table .price {
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .note-included {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-green);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #1e3a5f;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .service-hero {
+                padding: 140px 0 100px;
+                background-attachment: scroll;
+            }
+
+            .service-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .main-service-card {
+                margin-top: -60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-hero {
+                padding: 120px 0 80px;
+            }
+
+            .service-hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .service-hero p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .price-highlight {
+                font-size: 1.5rem;
+            }
+
+            .service-header h2 {
+                font-size: 2rem;
+            }
+
+            .main-service-card {
+                margin-top: -40px;
+                border-radius: 20px;
+            }
+
+            .service-header {
+                padding: 2rem 1.5rem;
+            }
+
+            .service-body {
+                padding: 2rem 1.5rem;
+            }
+
+            .service-price-badge {
+                font-size: 1.5rem;
+                padding: 0.6rem 1.5rem;
+            }
+
+            .service-cta-buttons .btn {
+                width: 100%;
+            }
+
+            .service-features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Clean CTA Section */
+        .cta-clean-section {
+            background: linear-gradient(135deg, #1a5e2a, #20c997);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-clean-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+            opacity: 0.3;
+        }
+
+        .cta-clean-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-clean-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-clean-section .cta-text {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .cta-badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1a5e2a;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 220px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            color: #1a5e2a;
+            background: #f8f9fa;
+        }
+
+        .cta-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .cta-clean-section .col-lg-4 {
+                text-align: right;
+            }
+
+            .cta-button {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .cta-clean-section .col-lg-4 {
+                text-align: center;
+            }
+
+            .cta-button {
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-clean-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-badges {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .cta-badge {
+                justify-content: center;
+            }
         }
     </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Perth Bond Cleaners",
+  "url": "https://www.perthbondcleaner.com.au",
+  "description": "Professional cleaning services in Perth, Western Australia, including bond cleaning, house cleaning, carpet steam cleaning, and related residential cleaning services.",
+  "telephone": "+61 4 5236 6782",
+  "priceRange": "$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Perth"
+    },
+    {
+      "@type": "City",
+      "name": "Fremantle"
+    },
+    {
+      "@type": "City",
+      "name": "Joondalup"
+    },
+    {
+      "@type": "City",
+      "name": "Rockingham"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Perth",
+    "addressRegion": "WA",
+    "addressCountry": "AU"
+  },
+  "openingHours": "Mo-Su 07:00-19:00"
+}
+</script>
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How often should carpets be professionally cleaned?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Most Perth households benefit from professional carpet cleaning every 6 to 12 months, depending on foot traffic, pets, children, and allergy concerns."
+}
+},
+{
+"@type": "Question",
+"name": "Is steam carpet cleaning safe for all carpets?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Most carpet types are suitable for steam cleaning, although certain delicate materials may require specialised treatment. We assess carpets before cleaning to determine the best method."
+}
+},
+{
+"@type": "Question",
+"name": "How long do carpets take to dry after steam cleaning?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Drying times vary depending on carpet thickness, airflow, and weather conditions. Most carpets dry within several hours after cleaning."
+}
+},
+{
+"@type": "Question",
+"name": "Can professional carpet cleaning remove pet odours?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Our pet odour removal treatments target odours trapped within carpet fibres and underlay to help neutralise lingering smells."
+}
+},
+{
+"@type": "Question",
+"name": "Do you provide carpet cleaning for rental properties?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We regularly provide carpet cleaning for rental properties and end of lease cleaning across Perth and surrounding suburbs."
+}
+},
+{
+"@type": "Question",
+"name": "Do you clean rugs, mattresses, and upholstery as well?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We provide rug cleaning, mattress cleaning, upholstery cleaning, and carpet deodorising services for residential properties throughout Perth."
+}
+}
+]
+}
+</script>
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Service",
+"name": "Carpet Cleaning Perth",
+"serviceType": "Carpet Cleaning",
+"description": "Professional carpet cleaning Perth services including steam carpet cleaning, rug cleaning, upholstery cleaning, mattress cleaning, and pet odour removal.",
+"provider": {
+"@type": "LocalBusiness",
+"name": "Perth Bond Cleaners",
+"url": "https://perthbondcleaners.com"
+},
+"areaServed": {
+"@type": "City",
+"name": "Perth"
+}
+}
+</script>
+
 </head>
+
 <body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2">
+        <div class="container text-center">
+            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Flexible Cleaning Plans • Professionally
+            Insured
+        </div>
+    </div>
 
-<section class="placeholder-section">
-    <div class="placeholder-card">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="navbar-logo">
+            </a>
+            <div class="d-lg-none d-flex align-items-center">
+                <div class="price-display ms-3">
+                    <span class="price-badge">Free Quotes Available</span>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown">
+                            Services
+                        </a>
 
-        <div class="brand">
-            Perth Bond Cleaners
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                            <li><a class="dropdown-item" href="house-cleaning-perth.html">House Cleaning</a></li>
+                            <li><a class="dropdown-item" href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+                            <li><a class="dropdown-item" href="window-cleaning-perth.html">Window Cleaning</a></li>
+                            <li><a class="dropdown-item" href="commercial-cleaning-perth.html">Commercial Cleaning</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="areas.html">Service Areas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="nav-cta">
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3"><i class="fas fa-phone"></i> +61
+                            452 366 782</a>
+                        <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-alt"></i> Get Instant
+                            Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="service-hero" data-aos="fade-down">
+        <div class="container">
+            <h1>Professional Carpet Cleaning Perth</h1>
+            <p>
+                Restore freshness, remove deep-seated dirt, and improve indoor hygiene with professional steam carpet
+                cleaning
+                services across Perth and surrounding suburbs.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-center mt-5" data-aos="fade-up">
+
+                <a href="contact.html" class="btn btn-success btn-lg">
+                    <i class="fas fa-calendar-check"></i> Get a Free Quote
+                </a>
+
+                <a href="contact.html" class="btn btn-outline-light btn-lg">
+                    <i class="fas fa-broom"></i> Book Carpet Cleaning
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+
+    <section class="py-5 mb-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-8" data-aos="fade-right">
+
+                    <h2 class="fw-bold mb-4">
+                        Reliable Carpet Cleaning Perth Services
+                    </h2>
+
+                    <p class="lead mb-4" style="color: #495057;">
+                        Carpets go through a lot in busy Perth homes and businesses. Dust, dirt, pet hair, spills, foot
+                        traffic, allergens, and odours all build up over time, even with regular vacuuming.
+                    </p>
+
+                    <p>
+                        At Perth Bond Cleaners, we provide professional carpet cleaning Perth services designed to
+                        restore freshness, improve hygiene, and extend the life of your carpets and upholstery.
+                    </p>
+
+                    <p>
+                        We work with homeowners, tenants, landlords, property managers, and businesses across Perth City
+                        and surrounding suburbs, delivering reliable steam carpet cleaning using professional equipment
+                        and proven cleaning methods.
+                    </p>
+
+                    <p>
+                        From apartment carpets in East Perth to large family homes in Baldivis and Canning Vale, our
+                        experienced team provides deep carpet cleaning tailored to your property and flooring type.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4" data-aos="fade-left">
+
+                    <div class="bg-light rounded-4 shadow-sm p-4">
+
+                        <h4 class="fw-bold mb-4">
+                            Why Perth Homeowners Choose Us
+                        </h4>
+
+                        <ul class="list-unstyled mb-0">
+
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Police-Cleared Team
+                            </li>
+
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Fully Insured Service
+                            </li>
+
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Flexible Cleaning Schedules
+                            </li>
+
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Regular & One-Off Cleaning
+                            </li>
+
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Custom Cleaning Plans
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle text-success me-2"></i>
+                                Local Perth Cleaning Specialists
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <h1>Carpet Cleaning Service Page</h1>
+    </section>
 
-        <p>
-            We're currently putting the finishing touches on our Carpet Cleaning service page.
-        </p>
+    <!-- Main Service -->
 
-        <p>
-            If you require carpet cleaning, stain removal, rug cleaning, upholstery cleaning, or end of lease carpet cleaning, contact our team today for a free quote.
-        </p>
+    <section class="pt-0 pb-5">
+        <div class="container">
+            <div class="main-service-card" data-aos="fade-up">
 
-        <a href="contact.html" class="btn">
-            Request Free Quote
-        </a>
+                <div class="service-header">
+                    <h2>Professional Carpet Cleaning Services Across Perth</h2>
+                    <div class="subtitle">
+                        <p> Vacuuming only removes surface dust and loose debris. Over time, carpets trap dirt,
+                            allergens, bacteria, moisture, pet
+                            odours, and stains deep within the fibres. Professional steam carpet cleaning reaches below
+                            the surface to remove
+                            embedded contaminants and refresh the carpet properly.</p>
 
-    </div>
-</section>
+                        <p> At Perth Bond Cleaners, we provide a range of carpet and fabric cleaning services for
+                            residential and rental properties
+                            throughout Perth. Whether you need a one-off carpet clean before hosting guests, regular
+                            maintenance for a busy
+                            household, or a deep clean before moving out, our team can tailor services to suit your
+                            needs and budget.</p>
 
+                    </div>
+                </div>
+
+                <div class="service-body">
+
+                    <div class="row">
+
+                        <div class="col-lg-8">
+
+                            <div class="whats-included">
+
+                                <h3>
+                                    <i class="fas fa-home me-2"></i>
+                                    Carpet Cleaning Services Includes:
+                                </h3>
+
+                                <ul class="included-list">
+
+                                    <li><i class="fas fa-check-circle"></i>
+                                        <div><strong>Steam carpet cleaning</strong> using professional hot water
+                                            extraction equipment</div>
+                                    </li>
+
+                                    <li><i class="fas fa-check-circle"></i>
+                                        <div><strong>Carpet deodorising</strong> to help neutralise unpleasant odours
+                                        </div>
+                                    </li>
+
+                                    <li><i class="fas fa-check-circle"></i>
+                                        <div><strong>Pet odour removal treatments</strong> for lingering pet smells
+                                        </div>
+                                    </li>
+
+                                    <li><i class="fas fa-check-circle"></i>
+                                        <div><strong>Rug cleaning</strong> for common household rugs and area rugs</div>
+                                    </li>
+
+                                    <li><i class="fas fa-check-circle"></i>
+                                        <div><strong>Mattress cleaning</strong> to help remove allergens and dust mites
+                                        </div>
+                                    </li>
+
+                                    <li><i class="fas fa-check-circle"></i>
+                                        <div><strong>Upholstery cleaning</strong> for couches, dining chairs and fabric
+                                            furniture</div>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="border rounded-4 px-4 py-4 bg-white shadow-sm">
+
+                                <h3 class="fw-bold mb-4">
+                                    Why Professional Carpet Cleaning Matters for Perth Homes
+                                </h3>
+
+                                <p>
+                                    Many Perth homeowners wait until carpets look visibly dirty before arranging
+                                    professional cleaning. In reality,
+                                    carpets can contain dust, allergens, bacteria, pet hair, and other contaminants deep
+                                    within the fibres long before they become noticeable.
+                                </p>
+
+                                <p>
+                                    Professional steam carpet cleaning helps remove embedded dirt and grime that regular
+                                    vacuuming cannot reach. This
+                                    improves cleanliness, restores freshness, and can contribute to a healthier indoor
+                                    environment for families, pets, and allergy-sensitive households.
+                                </p>
+
+                                <p class="mb-0">
+                                    Routine carpet cleaning can also help extend the life of your carpets, improve their
+                                    appearance, and remove lingering odours caused by pets, spills, moisture, and
+                                    everyday foot traffic.
+                                </p>
+
+                            </div>
+                            <div class="border rounded-4 p-4 mt-4 bg-white shadow-sm">
+
+                                <h3 class="fw-bold mb-3">
+                                    Healthier Indoor Environment
+                                </h3>
+
+                                <p>
+                                    Carpets act like filters, trapping dust, allergens, bacteria, pollen, pet hair, and
+                                    debris throughout the day. Without deep cleaning, these contaminants continue
+                                    building up inside the fibres.
+                                </p>
+
+                                <p>
+                                    This can affect indoor air quality, especially in homes with children, pets, asthma
+                                    sufferers, or allergy sensitivities.
+                                </p>
+
+                                <p class="mb-0">
+                                    Professional carpet cleaning also helps extend the life of your carpets, remove
+                                    stubborn odours, and improve the overall appearance of your home. This is
+                                    particularly valuable for rental inspections, property sales, and end of lease
+                                    cleaning requirements across Perth.
+                                </p>
+
+                            </div>
+                            <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                                <h3 class="fw-bold mb-3">
+                                    Extends Carpet Life
+                                </h3>
+
+                                <p>
+                                    Dirt and grit trapped inside carpets gradually wear down carpet fibres over time.
+                                    Professional steam cleaning helps remove abrasive particles and can help prolong the
+                                    life of your carpets.
+                                </p>
+
+                                <p class="mb-0">
+                                    Replacing carpets is expensive. Routine professional cleaning helps protect that
+                                    investment.
+                                </p>
+
+                            </div>
+                            <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                                <h3 class="fw-bold mb-3">
+                                    Removes Stubborn Odours
+                                </h3>
+
+                                <p>
+                                    Odours caused by pets, spills, moisture, or heavy use often settle deep within the
+                                    carpet underlay. Surface cleaning products rarely remove the source completely.
+                                </p>
+
+                                <p class="mb-0">
+                                    Professional deodorising and pet odour removal treatments target the deeper layers
+                                    where smells tend to linger.
+                                </p>
+
+                            </div>
+                            <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                                <h3 class="fw-bold mb-3">
+                                    Improves Appearance
+                                </h3>
+
+                                <p>
+                                    Carpets naturally lose brightness and freshness over time due to foot traffic and
+                                    dirt build-up. Deep cleaning helps restore colour, texture, and overall
+                                    presentation.
+                                </p>
+
+                                <p class="mb-0">
+                                    This is especially important for rental inspections, property sales, and end of
+                                    lease cleaning.
+                                </p>
+                            </div>
+                            <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                                <h3 class="fw-bold mb-3">
+                                    Helps During End of Lease Cleaning
+                                </h3>
+
+                                <p>
+                                    Many Perth lease agreements require professional steam carpet cleaning before
+                                    vacating a rental property.
+                                </p>
+
+                                <p class="mb-0">
+                                    Our carpet cleaning services are commonly booked alongside bond cleaning for tenants
+                                    moving out of homes in areas like Victoria Park, Subiaco, and East Perth.
+                                </p>
+                            </div>
+                            <!-- Frequently Asked Questions -->
+                            <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                                <h2 class="fw-bold mb-4">Frequently Asked Questions</h2>
+
+                                <div class="mb-4">
+                                    <h3 class="h5 fw-bold">How often should carpets be professionally cleaned?</h3>
+                                    <p class="mb-0">
+                                        Most Perth households benefit from professional carpet cleaning every 6 to 12
+                                        months, depending on foot traffic, pets, children, and allergy concerns.
+                                    </p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h3 class="h5 fw-bold">Is steam carpet cleaning safe for all carpets?</h3>
+                                    <p class="mb-0">
+                                        Most carpet types are suitable for steam cleaning, although certain delicate
+                                        materials may require specialised treatment. We assess carpets before cleaning
+                                        to determine the best method.
+                                    </p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h3 class="h5 fw-bold">How long do carpets take to dry after steam cleaning?</h3>
+                                    <p class="mb-0">
+                                        Drying times vary depending on carpet thickness, airflow, and weather
+                                        conditions. Most carpets dry within several hours after cleaning.
+                                    </p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h3 class="h5 fw-bold">Can professional carpet cleaning remove pet odours?</h3>
+                                    <p class="mb-0">
+                                        Yes. Our pet odour removal treatments target odours trapped within carpet fibres
+                                        and underlay to help neutralise lingering smells.
+                                    </p>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h3 class="h5 fw-bold">Do you provide carpet cleaning for rental properties?</h3>
+                                    <p class="mb-0">
+                                        Yes. We regularly provide carpet cleaning for rental properties and end of lease
+                                        cleaning across Perth and surrounding suburbs.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h3 class="h5 fw-bold">Do you clean rugs, mattresses, and upholstery as well?</h3>
+                                    <p class="mb-0">
+                                        Yes. We provide rug cleaning, mattress cleaning, upholstery cleaning, and carpet
+                                        deodorising services for residential properties throughout Perth.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+
+                            <div class="service-features-grid">
+
+                                <div class="feature-item">
+                                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                                    <h4>Flexible Cleaning Plans</h4>
+                                    <p>Weekly, fortnightly, monthly and one-off cleaning services available.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                                    <h4>Fully Insured</h4>
+                                    <p>Professional carpet cleaning services backed by insurance and trained cleaners.
+                                    </p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                                    <h4>Included With Every Clean</h4>
+                                    <ul class="small mt-2 mb-0 ps-3">
+                                        <li>Police-cleared professionals</li>
+                                        <li>Professional equipment</li>
+                                        <li>Flexible scheduling</li>
+                                        <li>No hidden charges</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="service-cta-buttons">
+                                <a href="service-details.html" class="btn btn-outline-success"><i
+                                        class="fas fa-info-circle"></i> Full Details</a>
+                                <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-check"></i>
+                                    Request a Free Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Our Service -->
+    <section class="why-choose-section" id="details">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="section-title">Make the Switch. Experience Professional Carpet Cleaning Done Right</h2>
+
+                <p class="section-subtitle">
+                    Choosing the right carpet cleaning company matters. Poor cleaning methods or inexperienced operators
+                    can
+                    leave carpets overly wet, damaged, or improperly cleaned.
+                </p>
+
+                <p class="section-subtitle">
+                    At Perth Bond Cleaners, we deliver professional carpet cleaning services backed by reliable
+                    workmanship,
+                    quality equipment, and local Perth experience.
+                </p>
+            </div>
+
+            <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-tag"></i></div>
+                    <h3>Experienced Carpet Cleaners</h3>
+                    <p>
+                        Expert carpet cleaning solutions customised to suit your property's layout, carpet type, and
+                        level of cleaning required.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h3>Tailored Carpet Cleaning</h3>
+                    <p>Customised carpet cleaning solutions designed to suit your property's size, carpet condition, and
+                        cleaning requirements.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Professional Steam Cleaning</h3>
+                    <p>
+                        Deep carpet cleaning using professional hot water extraction equipment to remove dirt,
+                        allergens, bacteria, and built-up grime.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Other Services (Updated with new 7 items, correct per-unit prices, removed Oven & Curtains) -->
+    <section class="other-services">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Must-Have Carpet & Fabric Cleaning Services</h2>
+                <p class="section-subtitle">From rug cleaning and mattress cleaning to upholstery cleaning and pet odour
+                    removal, we provide comprehensive cleaning solutions for Perth homes and rental properties.</p>
+            </div>
+            <h3>Specialised Cleaning Services</h3>
+            <!-- Carpet Steam Cleaning -->
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-spray-can"></i></div>
+                        <h4>Carpet Steam Cleaning</h4>
+                        <p>Professional deep steam cleaning for carpets to remove stains, dirt, allergens, and odours.
+                            Ideal for refreshing and maintaining healthy home environments.</p>
+                        <div class="other-service-price">From $50 per unit</div>
+                        <a href="contact.html?service=carpet" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+                <!-- Carpet Deodorising -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-couch"></i></div>
+                        <h4>Carpet Deodorising</h4>
+                        <p>Effective removal of odours from carpets using specialised techniques and products.</p>
+                        <div class="other-service-price">Custom Quote Available</div>
+                        <a href="contact.html?service=carpet" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+                <!-- Rug Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-rug"></i></div>
+                        <h4>Rug Cleaning</h4>
+                        <p>Professional cleaning for rugs to remove dirt, stains, and allergens.</p>
+                        <div class="other-service-price">Custom Quote Available</div>
+                        <a href="contact.html?service=rug" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+
+                <!-- Steam Mattress Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-bed"></i></div>
+                        <h4>Steam Mattress Cleaning</h4>
+                        <p>Deep cleaning for mattresses to remove dust mites, stains, and allergens.</p>
+                        <div class="other-service-price">$60</div>
+                        <a href="contact.html?service=mattress" class="btn btn-outline-success mt-3">ADD THIS
+                            SERVICE</a>
+                    </div>
+                </div>
+
+                <!-- Steam Couch Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-couch"></i></div>
+                        <h4>Steam Couch Cleaning</h4>
+                        <p>Deep cleaning for couches to remove dust mites, stains, and allergens.</p>
+                        <div class="other-service-price">$60</div>
+                        <a href="contact.html?service=couch" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+
+                <!-- Upholstery Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-couch"></i></div>
+                        <h4>Upholstery Cleaning</h4>
+                        <p>Professional cleaning for upholstered furniture to remove dirt, stains, and allergens.</p>
+                        <div class="other-service-price">Custom Quote Available</div>
+                        <a href="contact.html?service=upholstery" class="btn btn-outline-success mt-3">ADD THIS
+                            SERVICE</a>
+                    </div>
+                </div>
+                <!-- Pet Odour Removal -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-paw"></i></div>
+                        <h4>Pet Odour Removal</h4>
+                        <p>Specialised treatment to eliminate stubborn pet odours from carpets, upholstery, and other
+                            surfaces.</p>
+                        <div class="other-service-price">Custom Quote Available</div>
+                        <a href="contact.html?service=pet-odour" class="btn btn-outline-success mt-3">ADD THIS
+                            SERVICE</a>
+                    </div>
+                    <hr class="my-5">
+                </div>
+            </div>
+
+            <h3 class="mb-4">Popular Add-On Cleaning Services</h3>
+            <div class="row">
+                <!-- Wall Wash -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-paint-roller"></i></div>
+                        <h4>Wall Wash / Wall Cleaning</h4>
+                        <p>Gentle wall washing to remove marks, stains, and scuff marks. Restores walls to like-new
+                            condition.</p>
+                        <div class="other-service-price">From $5-$8/m²</div>
+                        <a href="contact.html?service=wall" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+                <!-- External Window Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-window-maximize"></i></div>
+                        <h4>External Window Cleaning</h4>
+                        <p>Streak-free exterior window cleaning for crystal clear views. Includes frames, tracks, and
+                            glass.</p>
+                        <div class="other-service-price">$30 per window</div>
+                        <a href="contact.html?service=external-window" class="btn btn-outline-success mt-3">ADD THIS
+                            SERVICE</a>
+                    </div>
+                </div>
+
+
+                <!-- Fridge Cleaning (Interior) -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-thermometer-half"></i></div>
+                        <h4>Fridge Cleaning (Interior)</h4>
+                        <p>Thorough cleaning inside your fridge, including shelves and drawers.</p>
+                        <div class="other-service-price">$50 per fridge</div>
+                        <a href="contact.html?service=fridge" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+                <!-- Sliding Door Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-door-open"></i></div>
+                        <h4>Sliding Door Cleaning</h4>
+                        <p>Cleaning and track clearing for sliding doors, ensuring smooth operation.</p>
+                        <div class="other-service-price">$30 per sliding door</div>
+                        <a href="contact.html?service=sliding-door" class="btn btn-outline-success mt-3">ADD THIS
+                            SERVICE</a>
+                    </div>
+                </div>
+                <!-- Garage Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-warehouse"></i></div>
+                        <h4>Garage Cleaning</h4>
+                        <p>Thorough cleaning of your garage, including floors, walls, and storage areas.</p>
+                        <div class="other-service-price">From $50</div>
+                        <a href="contact.html?service=garage" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div><!-- Balcony Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-building"></i></div>
+                        <h4>Balcony Cleaning</h4>
+                        <p>Thorough cleaning of your balcony, including surfaces and furniture.</p>
+                        <div class="other-service-price">$50 per balcony</div>
+                        <a href="contact.html?service=balcony" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div><!-- Patio Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-chair"></i></div>
+                        <h4>Patio Cleaning</h4>
+                        <p>Thorough cleaning of your patio, including surfaces and furniture.</p>
+                        <div class="other-service-price">$60 per patio</div>
+                        <a href="contact.html?service=patio" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+                <!-- Blind Cleaning (icon updated to fa-grip-lines) -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-border-all"></i></div>
+                        <h4>Blind Cleaning</h4>
+                        <p>Thorough cleaning of all types of blinds – Venetian, vertical, roller. Removes dust and
+                            stains.</p>
+                        <div class="other-service-price">$10 per blind</div>
+                        <a href="contact.html?service=blinds" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+                <!-- Grout Cleaning (icon updated to fa-grip-lines) -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-border-all"></i></div>
+                        <h4>Grout Cleaning</h4>
+                        <p>Deep cleaning for tile grout lines to remove dirt, stains, and built-up grime.</p>
+                        <div class="other-service-price">From $50</div>
+                        <a href="contact.html?service=grout" class="btn btn-outline-success mt-3">ADD THIS SERVICE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note about included services -->
+            <div class="note-included text-center mx-auto mt-4" style="max-width: 700px;">
+                <i class="fas fa-check-circle text-success me-1"></i> <strong>Included in our carpet cleaning
+                    services:</strong> Steam carpet cleaning, carpet deodorising, rug cleaning, mattress cleaning,
+                upholstery cleaning, and pet odour removal.
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="contact.html" class="btn btn-success btn-lg">
+                    <i class="fas fa-calendar-check"></i> Request a Quote
+                </a>
+                <p class="text-muted mt-3">
+                    Flexible scheduling, professional equipment, and fully insured cleaning services included.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-clean-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2>Ready for a Professional Carpet Clean?</h2>
+                    <p class="cta-text">Comprehensive carpet cleaning services tailored to your home and business needs.
+                    </p>
+                    <div class="cta-badges mt-3">
+                        <span class="cta-badge"><i class="fas fa-clock"></i> Same Day Available</span>
+                        <span class="cta-badge"><i class="fas fa-shield-alt"></i> Insured Team</span>
+                        <span class="cta-badge"><i class="fas fa-check-circle"></i> Flexible Cleaning Plans</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                    <a href="tel:+61452366782" class="cta-button"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="footer-logo-img me-2" />
+                            <div>
+                                <h4 class="footer-logo">Perth Bond Cleaners</h4>
+                                <p class="footer-tagline">
+                                    Perth's trusted cleaning professionals
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Professional cleaning services across Perth for homes, rental properties, and businesses.</p>
+                    <div class="trust-badges mt-3">
+                        <span class="badge bg-success me-2">Trusted by Perth residents</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                        <li><a href="areas.html">Service Areas</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                        <li><a href="house-cleaning-perth.html">House Cleaning</a></li>
+                        <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+                        <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
+                        <li><a href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
+                        <!--
+                        <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#windows">External Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Cleaning</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li> 
+                        -->
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i>
+                            <div><a href="tel:+61452366782">+61 452 366 782</a><small class="d-block">Call or
+                                    Text</small></div>
+                        </li>
+                        <li><i class="fas fa-envelope"></i>
+                            <div><a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a></div>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i>
+                            <div>109 Weston St, Maddington WA 6109, Australia</div>
+                        </li>
+                        <li><i class="fas fa-clock"></i>
+                            <div>
+                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="whatsapp-cta mt-3">
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100"><i
+                                class="fab fa-whatsapp"></i> WhatsApp for a Free Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2026 Perth Bond Cleaners. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
+                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Guarantee</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+                else link.classList.remove('active');
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            if (service) {
+                setTimeout(() => {
+                    const element = document.getElementById(service);
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
+        });
+    </script>
+    <script src="js/navigation.js"></script>
 </body>
+
 </html>
