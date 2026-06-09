@@ -185,7 +185,7 @@
         }
 
         .service-body {
-            padding: 3rem 2rem;
+            padding: 2rem 2rem;
             background: white;
             position: relative;
         }
@@ -202,19 +202,19 @@
 
         .whats-included h3 {
             color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
+            margin-bottom: 0rem;
+            padding-bottom: 0rem;
             
         }
 
         .included-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 1rem;
         }
 
         .included-list li {
-            padding: 0.8rem 0;
+            padding: 0.4rem 0;
             display: flex;
             align-items: flex-start;
             gap: 1rem;
@@ -365,7 +365,7 @@
         /* Price table inside main card */
         .price-table {
             margin-top: 1.5rem;
-            background: #ffffff;
+            background: #fffdfd;
             border-radius: 12px;
             padding: 1.25rem;
             border: 1px solid #e9ecef;
@@ -601,7 +601,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Perth Bond Cleaners",
-  "url": "https://www.perthbondcleaner.com.au",
+  "url": "https://www.perthbondcleaners.com",
   "description": "Professional bond cleaning and end of lease cleaning services in Perth, Western Australia, with bond-back assurance.",
   "telephone": "+61 4 5236 6782",
   "priceRange": "$$",
@@ -698,7 +698,7 @@
   "provider": {
     "@type": "LocalBusiness",
     "name": "Perth Bond Cleaners",
-    "url": "https://perthbondcleaner.com"
+    "url": "https://perthbondcleaners.com"
   },
   "areaServed": {
     "@type": "City",
@@ -750,6 +750,7 @@
                             <li><a class="dropdown-item" href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
                             <li><a class="dropdown-item" href="window-cleaning-perth.html">Window Cleaning</a></li>
                             <li><a class="dropdown-item" href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
+                            <li><a class="dropdown-item" href="oven-cleaning-perth.html">Oven Cleaning</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="areas.html">Service Areas</a></li>
@@ -938,7 +939,11 @@
                             </div>
                             <!-- Price table for bond cleaning -->
                             <div class="price-table text-center"
-                                style="border:2px solid #28a745; border-radius:12px; padding:30px; background-color:#f5fff7; box-shadow:0 4px 12px rgba(40,167,69,0.08);">
+                                style="border:2px solid #28a745; 
+                                border-radius:12px; 
+                                padding:30px; 
+                                background-color:#f5fff7; 
+                                box-shadow:0 4px 12px rgba(40,167,69,0.08);">
                                 <h3 class="text-success fw-bold mb-2">From $299 AUD</h3>
                                 <h5 class="mb-3">Professional Bond Cleaning</h5>
                                 <p class="mb-0">
@@ -1192,12 +1197,12 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="service-features-grid">
-                                <div class="feature-item">
+                                <div class="feature-item text-start">
                                     <div class="feature-icon"><i class="fas fa-home"></i></div>
                                     <h4>Transparent Pricing</h4>
                                     <p>Custom quotes based on property size and cleaning requirements</p>
                                 </div>
-                                <div class="feature-item">
+                                <div class="feature-item text-start">
                                     <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
                                     <h4>Bond-Back Assurance</h4>
                                     <p>After receiving the property manager’s exit report, we will arrange a return
@@ -1207,8 +1212,8 @@
                                     <div class="feature-icon">
                                         <i class="fas fa-check-circle"></i>
                                     </div>
-                                    <h4>Included With Every Clean</h4>
-                                    <ul class="small mt-2 mb-0 ps-3">
+                                    <h4>Premium Features</h4>
+                                    <ul class="medium mt-2 mb-0 ps-3">
                                         <li>Bond-back assurance</li>
                                         <li>Police-cleared professionals</li>
                                         <li>Real-estate compliant checklist</li>
@@ -1449,7 +1454,9 @@
                     </div>
                     <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
                     <div class="trust-badges mt-3">
-                        <span class="badge bg-success me-2">Trusted by Perth residents</span>
+                        <span class="badge bg-success me-0" style="font-size:0.95rem; padding:0.5rem 1rem;">
+                            TRUSTED by Perth residents
+                        </span>
                     </div>
                 </div>
 
@@ -1472,6 +1479,7 @@
                         <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
                         <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
                         <li><a href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
+                        <li><a href="oven-cleaning-perth.html">Oven Cleaning</a></li>
                         <!-- 
                         <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
                         <li><a href="services.html#windows">External Window Cleaning</a></li>
