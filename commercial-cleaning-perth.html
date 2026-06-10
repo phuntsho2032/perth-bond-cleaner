@@ -1,108 +1,1594 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpet Cleaning Perth | Perth Bond Cleaners</title>
-    <meta name="robots" content="noindex,follow">
-
+    <title>Commercial Cleaning Perth | Offices, Warehouses & Workplaces</title>
+    <meta name="description"
+        content="Professional commercial cleaning Perth services for offices, warehouses, gyms, childcare centres, medical facilities and strata properties. Get a free quote today.">
+    <link rel="canonical" href="https://perthbondcleaners.com/commercial-cleaning-perth.html">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
-            color: #2c3e50;
+        /* Additional styles for services page */
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)), url('../images/hero-cleaning.jpg'), var(--primary-green);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 160px 0 120px;
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
 
-        .placeholder-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--light-gray));
+            z-index: 1;
+        }
 
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url('images/area.jpg');
+        .service-hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-        .placeholder-card {
-            max-width: 700px;
+        .service-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
             text-align: center;
-            background: #ffffff;
-            padding: 50px 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #28a745;
-            font-size: 2.5rem;
+        .service-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 300;
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .btn {
+        .hero-cta {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem 2rem;
             display: inline-block;
-            background: #28a745;
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 28px;
+            margin-top: 2rem;
+        }
+
+        .price-highlight {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.5rem 1.5rem;
             border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+        }
+
+        .price-highlight small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .main-service-card {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(40, 167, 69, 0.15);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .main-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-header {
+            background: linear-gradient(135deg, var(--primary-green), #28a745, var(--accent-green));
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: bottom;
+            opacity: 0.3;
+        }
+
+        .service-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-price-badge {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: inline-block;
+            margin: 1rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-body {
+            padding: 3rem 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .service-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(40, 167, 69, 0.3), transparent);
+        }
+
+        .whats-included h3 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .included-list li {
+            padding: 0.8rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .included-list li:last-child {
+            border-bottom: none;
+        }
+
+        .included-list i {
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--light-green);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .service-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .service-cta-buttons .btn {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .why-choose-section {
+            padding: 6rem 0 5rem;
+            background: var(--light-gray);
+            position: relative;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .why-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .other-services {
+            padding: 5rem 0 6rem;
+        }
+
+        .other-service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .other-service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .other-service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+            font-size: 1.8rem;
+        }
+
+        .other-service-card h4 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .other-service-price {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        /* Price table inside main card */
+        .price-table {
+            margin-top: 1.5rem;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .price-table h5 {
             font-weight: 600;
-            transition: 0.3s ease;
+            margin-bottom: 0.75rem;
         }
 
-        .btn:hover {
-            background: #218838;
+        .price-table .row {
+            padding: 0.65rem 0;
+            border-bottom: 1px dashed #dee2e6;
         }
 
-        .brand {
-            font-size: 1.95rem;
-            color: #666;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .price-table .row:last-child {
+            border-bottom: none;
+        }
+
+        .price-table .price {
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .note-included {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-green);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #1e3a5f;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .service-hero {
+                padding: 140px 0 100px;
+                background-attachment: scroll;
+            }
+
+            .service-hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .main-service-card {
+                margin-top: -60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-hero {
+                padding: 120px 0 80px;
+            }
+
+            .service-hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .service-hero p {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            .price-highlight {
+                font-size: 1.5rem;
+            }
+
+            .service-header h2 {
+                font-size: 2rem;
+            }
+
+            .main-service-card {
+                margin-top: -40px;
+                border-radius: 20px;
+            }
+
+            .service-header {
+                padding: 2rem 1.5rem;
+            }
+
+            .service-body {
+                padding: 2rem 1.5rem;
+            }
+
+            .service-price-badge {
+                font-size: 1.5rem;
+                padding: 0.6rem 1.5rem;
+            }
+
+            .service-cta-buttons .btn {
+                width: 100%;
+            }
+
+            .service-features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+
+            .service-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Clean CTA Section */
+        .cta-clean-section {
+            background: linear-gradient(135deg, #1a5e2a, #20c997);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-clean-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+            opacity: 0.3;
+        }
+
+        .cta-clean-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-clean-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-clean-section .cta-text {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .cta-badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1a5e2a;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 220px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            color: #1a5e2a;
+            background: #f8f9fa;
+        }
+
+        .cta-button i {
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 992px) {
+            .cta-clean-section .col-lg-4 {
+                text-align: right;
+            }
+
+            .cta-button {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .cta-clean-section .col-lg-4 {
+                text-align: center;
+            }
+
+            .cta-button {
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-clean-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-badges {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .cta-badge {
+                justify-content: center;
+            }
         }
     </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Perth Bond Cleaners",
+  "url": "https://www.perthbondcleaners.com",
+  "description": "Professional cleaning services in Perth, Western Australia, including bond cleaning, house cleaning, carpet steam cleaning, residential and commercial cleaning services.",
+  "telephone": "+61 4 5236 6782",
+  "priceRange": "$$",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Perth"
+    },
+    {
+      "@type": "City",
+      "name": "Fremantle"
+    },
+    {
+      "@type": "City",
+      "name": "Joondalup"
+    },
+    {
+      "@type": "City",
+      "name": "Rockingham"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Perth",
+    "addressRegion": "WA",
+    "addressCountry": "AU"
+  },
+  "openingHours": "Mo-Su 07:00-19:00"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What types of businesses do you clean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide commercial cleaning services for offices, warehouses, gyms, childcare centres, medical facilities, strata properties, retail spaces, and other commercial workplaces across Perth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you clean outside business hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer flexible scheduling options including early morning, evening, and after-hours commercial cleaning services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide regular ongoing cleaning services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer daily, weekly, fortnightly, and customised recurring cleaning schedules depending on your business requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your cleaners insured and police-cleared?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our cleaning team is police-cleared and our business is fully insured for commercial cleaning services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide cleaning supplies and equipment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our team arrives fully equipped with professional cleaning products and equipment suitable for commercial environments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Perth suburbs do you service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We service Perth CBD and surrounding suburbs including Subiaco, East Perth, Rockingham, Baldivis, Canning Vale, Gosnells, Thornlie, South Perth, and nearby areas."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Cleaning Perth",
+  "serviceType": "Commercial Cleaning",
+  "description": "Professional commercial cleaning services across Perth for offices, warehouses, gyms, and other business environments.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Perth Bond Cleaners",
+    "url": "https://perthbondcleaners.com"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Perth"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "AUD"
+  }
+}
+</script>
+
 </head>
+
 <body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2">
+        <div class="container text-center">
+            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Flexible Cleaning Plans • Professionally Insured
+        </div>
+    </div>
 
-<section class="placeholder-section">
-    <div class="placeholder-card">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="navbar-logo">
+            </a>
+            <div class="d-lg-none d-flex align-items-center">
+                <div class="price-display ms-3">
+                    <span class="price-badge">Free Quotes Available</span>
+                </div>
+                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown">
+                            Services
+                        </a>
+                    
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                            <li><a class="dropdown-item" href="house-cleaning-perth.html">House Cleaning</a></li>
+                            <li><a class="dropdown-item" href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+                            <li><a class="dropdown-item" href="window-cleaning-perth.html">Window Cleaning</a></li>
+                            <li><a class="dropdown-item" href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
+                            <li><a class="dropdown-item" href="oven-cleaning-perth.html">Oven Cleaning</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="areas.html">Service Areas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="nav-cta">
+                        <a href="tel:+61452366782" class="btn btn-outline-success me-3"><i class="fas fa-phone"></i> +61
+                            452 366 782</a>
+                        <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-alt"></i> Get Instant
+                            Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <div class="brand">
-            Perth Bond Cleaners
+    <!-- Service Hero -->
+    <section class="service-hero" data-aos="fade-down">
+        <div class="container">
+            <h1>Commercial Cleaning Perth</h1>
+            
+            <p>Professional commercial cleaning Perth services for offices, warehouses, gyms, childcare centres, medical facilities and strata properties. Police-cleared and fully insured cleaners servicing Perth City and surrounding suburbs with regular and one-off cleaning options.
+
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-center mt-5" data-aos="fade-up">
+
+    <a href="contact.html" class="btn btn-success btn-lg">
+        <i class="fas fa-calendar-check"></i> Request Free Quote
+    </a>
+
+    <a href="tel:+61452366782" class="btn btn-outline-light btn-lg">
+        <i class="fas fa-broom"></i> CALL NOW
+    </a>
+
+</div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    
+<section class="py-5 mb-5 bg-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+        <div class="col-lg-8" data-aos="fade-right">
+
+            <h2 class="fw-bold mb-4">
+                Professional Commercial Cleaning Services Across Perth
+            </h2>
+
+            <p class="lead mb-4" style="color: #495057;">
+                A clean workplace reflects directly on your business. Whether you manage an office, warehouse, gym, childcare centre, medical facility, or strata property, cleanliness affects staff wellbeing, customer impressions, workplace safety, and daily operations. At Perth Bond Cleaners, we provide reliable commercial cleaning Perth services tailored to businesses and commercial properties across Perth City and surrounding suburbs.
+            </p>
+
+            <p>
+                From office cleaning in Perth CBD to warehouse cleaning in Kwinana and strata cleaning in South Perth, our experienced team provides dependable commercial cleaning services designed around your property and operating hours.
+            </p>
+
+            <p>
+                Our police-cleared cleaners are professionally trained and fully insured, giving businesses confidence when trusting us with their premises.
+            </p>
+
+            <p>
+                We proudly service Perth CBD and surrounding suburbs including Byford, Subiaco, Baldivis, Gosnells, Thornlie, Kelmscott, East Perth, Rockingham, West Perth, Leederville, Northbridge, Canning Vale, Mount Lawley, Victoria Park, Southern River, and nearby areas.
+            </p>
+
         </div>
 
-        <h1>Commercial Cleaning Service Page</h1>
+        <div class="col-lg-4" data-aos="fade-left">
 
-        <p>
-            We're currently putting the finishing touches on our Commercial Cleaning service page.
-        </p>
+            <div class="bg-light rounded-4 shadow-sm p-4">
 
-        <p>
-            If you require commercial cleaning, office cleaning, warehouse cleaning, retail cleaning, or any other commercial cleaning services, contact our team today for a free quote.
-        </p>
+                <h4 class="fw-bold mb-4">
+                    Why Perth Commercial Businesses Choose Us
+                </h4>
 
-        <a href="contact.html" class="btn">
-            Request Free Quote
-        </a>
+                <ul class="list-unstyled mb-0">
+
+                    <li class="mb-3">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        Police-Cleared Team
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        Fully Insured Service
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        Flexible Cleaning Schedules
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        Regular & One-Off Cleaning
+                    </li>
+
+                    <li class="mb-3">
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        Custom Cleaning Plans
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle text-success me-2"></i>
+                        Local Perth Cleaning Specialists
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
 
     </div>
+</div>
+
 </section>
 
+<!-- Main Service -->
+
+<section class="pt-0 pb-5">
+    <div class="container">
+        <div class="main-service-card" data-aos="fade-up">
+
+        <div class="service-header">
+            <h2>Professional Commercial Cleaning Services Across Perth</h2>
+            <div class="subtitle">
+                Commercial properties experience constant daily use. Foot traffic, shared spaces, staff amenities, customer areas, bathrooms, kitchens, and workstations all require regular cleaning to maintain a hygienic and professional environment.
+            </div>
+        </div>
+
+        <div class="service-body">
+
+            <div class="row">
+
+                <div class="col-lg-8">
+
+                    <div class="whats-included">
+
+                        <h3>
+                            <i class="fas fa-home me-2"></i>
+                            Commercial Cleaning Includes:
+                        </h3>
+
+                        <ul class="included-list">
+
+                        <li><i class="fas fa-check-circle"></i>
+                            <div><strong>Bathroom sanitisation</strong> including toilets, basins, mirrors and high-touch surface disinfection
+                            </div>
+                        </li>
+                        
+                        <li><i class="fas fa-check-circle"></i>
+                            <div><strong>Vacuuming and mopping</strong> throughout offices, common areas, hallways and commercial spaces</div>
+                        </li>
+                        
+                        <li><i class="fas fa-check-circle"></i>
+                            <div><strong>Dusting and surface cleaning</strong> of desks, counters, reception areas and workplace surfaces</div>
+                        </li>
+                        
+                        <li><i class="fas fa-check-circle"></i>
+                            <div><strong>Bin emptying and waste removal</strong> to help maintain a clean and professional environment</div>
+                        </li>
+                        
+                        <li><i class="fas fa-check-circle"></i>
+                            <div><strong>Flexible commercial cleaning solutions</strong> tailored to offices, warehouses, gyms, childcare
+                                centres, medical facilities and strata properties</div>
+                        </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="border rounded-4 px-4 py-4 bg-white shadow-sm">
+
+                        <h3 class="fw-bold mb-4">
+                            Commercial Cleaning Solutions for Perth Businesses
+                        </h3>
+
+                        <p>
+                            Commercial properties experience constant daily use. Foot traffic, shared spaces, staff amenities, customer areas, bathrooms, kitchens, and workstations all require regular cleaning to maintain a hygienic and professional environment.
+                        </p>
+
+                        <p>
+                            At Perth Bond Cleaners, we provide tailored commercial cleaning solutions for a wide range of businesses and industries across Perth.
+                        </p>
+
+                        <p class="mb-0">
+                            We provide flexible cleaning solutions for offices, warehouses, retail premises, gyms, childcare centres, medical facilities and strata properties across Perth.
+                        </p>
+
+                    </div>
+                    <div class="border rounded-4 p-4 mt-4 bg-white shadow-sm">
+                    
+                        <h3 class="fw-bold mb-3">
+                            Office Cleaning Perth
+                        </h3>
+                    
+                        <p>
+                           A clean office helps create a more productive and professional workplace. Dusty desks, overflowing bins, dirty kitchens, and neglected bathrooms quickly affect staff morale and leave poor impressions on clients and visitors.
+                        </p>
+                    
+                        <p>
+                            Our commercial cleaning services can include:
+                        </p>
+                            <ul>
+                                <li>Desk and workstation cleaning</li>
+                                <li>Kitchen and lunchroom cleaning</li>
+                                <li>Bathroom sanitisation</li>
+                                <li>Vacuuming and mopping</li>
+                                <li>Bin emptying</li>
+                                <li>Glass and surface cleaning</li>
+                                <li>Dusting common areas</li>
+                                <li>High-touch surface disinfection</li>
+                            </ul>
+                                            
+                        <p class="mb-0">
+                            We clean offices throughout Perth CBD, West Perth, East Perth, Subiaco, and surrounding commercial areas.
+                        </p>
+                    
+                    </div>
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                    
+                        <h3 class="fw-bold mb-3">
+                            Workplace Cleaning Perth
+                        </h3>
+                    
+                        <p>
+                            Different workplaces require different cleaning schedules and priorities. We tailor workplace cleaning services according to the business type, operating hours, staff size, and daily traffic levels.
+                        </p>
+                    
+                        <p class="mb-0">
+                            This may include:
+                        </p>
+                            <ul>
+                                <li>Retail spaces</li>
+                                <li>Showrooms</li>
+                                <li>Professional offices</li>
+                                <li>Shared workspaces</li>
+                                <li>Commercial facilities</li>
+                                <li>Service businesses</li>
+                            </ul>
+                        <p>
+                            Flexible scheduling options are available to minimise disruption to daily operations.
+                        </p>
+                    </div>
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                    
+                                       
+                        <h3 class="fw-bold mb-3">
+                            Warehouse Cleaning Perth
+                        </h3>
+                    
+                        <p>
+                            Warehouses and industrial spaces accumulate dust, debris, dirt, packaging waste, and grime quickly due to constant activity and machinery movement.
+                        </p>
+                    
+                        <p>
+                            Our warehouse cleaning services help maintain safer, cleaner working environments by addressing:
+                            <ul>
+                                <li>Floor cleaning</li>
+                                <li>Dust build-up</li>
+                                <li>Staff amenities</li>
+                                <li>Break rooms</li>
+                                <li>Bathrooms</li>
+                                <li>Entryways and high-traffic areas</li>
+                            </ul>
+                        </p>
+                                            
+                        <p class="mb-0">
+                            Warehouse cleaning is commonly requested in industrial areas around Kwinana, Canning Vale, and Southern River.
+                        </p>
+                    
+                    </div>
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                    
+                        <h3 class="fw-bold mb-3">
+                            Gym Cleaning Perth
+                        </h3>
+                    
+                        <p>
+                            Gyms and fitness facilities require strict cleaning standards due to constant equipment use and high-touch surfaces.
+                        </p>
+                    
+                        <p class="mb-0">
+                            We provide gym cleaning services focused on maintaining hygienic workout environments, including:
+                            <ul>
+                                <li>Equipment wiping and sanitising</li>
+                                <li>Bathroom and shower cleaning</li>
+                                <li>Floor cleaning</li>
+                                <li>Reception area cleaning</li>
+                                <li>Mirror and glass cleaning</li>
+                                <li>Odour management</li>
+                            </ul>
+                        </p>
+                        
+                    </div>
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                    
+                        <h3 class="fw-bold mb-3">
+                            Medical Cleaning
+                        </h3>
+                    
+                        <p>
+                            Medical environments require consistent cleaning standards to help maintain hygienic conditions for staff and patients.
+                        </p>
+                    
+                        <p class="mb-0">
+                            Our medical cleaning services can include:
+                            <ul>
+                                <li>Waiting room cleaning</li>
+                                <li>Treatment room cleaning</li>
+                                <li>Surface sanitisation</li>
+                                <li>Bathroom cleaning</li>
+                                <li>High-touch point disinfection</li>
+                                <li>Reception area cleaning</li>
+                            </ul>
+                        </p>
+                        <p>
+                            We understand the importance of reliability and discretion in healthcare-related environments.
+                        </p>
+                    </div>
+
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                        <h3 class="fw-bold mb-4">
+                            Childcare Cleaning
+                        </h3>
+
+                        <p>
+                            Childcare centres require careful cleaning attention due to high-contact surfaces and busy daily use.
+                        </p>
+
+                        <p class="mb-0">
+                            Our childcare cleaning services focus on maintaining cleaner environments for children, educators, and families through routine sanitisation and detailed cleaning practices.
+                        </p>
+
+                        </div>
+                        <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+
+                        <h3 class="fw-bold mb-4">
+                            Strata Cleaning
+                        </h3>
+
+                        <p>
+                           Shared residential and commercial buildings require regular cleaning to maintain presentation and resident satisfaction.
+                        </p>
+
+                        <p>
+                            Our strata cleaning services can include:
+                            <ul>
+                                <li>Lobby cleaning</li>
+                                <li>Stairwell cleaning</li>
+                                <li>Lift cleaning</li>
+                                <li>Common area vacuuming</li>
+                                <li>Glass cleaning</li>
+                                <li>Bin area cleaning</li>
+                                <li>Outdoor common area maintenance</li>
+                            </ul>
+                        </p>
+                        <p class="mb-0">
+                        We provide strata cleaning services throughout Perth City and surrounding suburbs including South Perth, Victoria Park, and Mount Lawley.
+                            </p>
+                        </div>
+                        <!-- Why Professional Commercial Cleaning Matters for Perth Businesses -->
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                    
+                        <h2 class="fw-bold mb-4">Why Professional Commercial Cleaning Matters for Perth Businesses</h2>
+                    
+                        <div class="mb-4">
+                            <p class="mb-0">
+                                A professionally cleaned workplace does more than improve appearance. Clean environments help support productivity, staff wellbeing, safety, and customer confidence.
+                            </p>
+                            <p>
+                                Many Perth businesses now rely on professional commercial cleaning Perth services as part of routine workplace management.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Creates a Better First Impression</h3>
+                            <p class="mb-0">
+                                Customers and visitors notice cleanliness immediately. Clean entryways, bathrooms, meeting rooms, and common areas help businesses appear more professional and organised.
+                            </p>
+                            <p>
+                                This is especially important for customer-facing businesses throughout Perth CBD, Leederville, and Northbridge.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Supports Staff Health and Hygiene</h3>
+                            <p class="mb-0">
+                                Busy workplaces naturally collect dust, bacteria, and germs on shared surfaces throughout the day.
+                            </p>
+                            <p>
+                                Routine workplace cleaning helps maintain cleaner environments by reducing build-up on desks, kitchens, bathrooms, and high-touch areas. This can help reduce sick days and support staff wellbeing.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Improves Workplace Productivity</h3>
+                            <p class="mb-0">
+                                Cleaner workplaces are generally more comfortable and organised for staff. Employees are more likely to feel productive and focused in well-maintained environments.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Helps Maintain Safety Standards</h3>
+                            <p class="mb-0">
+                                In warehouses, gyms, childcare centres, and commercial facilities, cleanliness also contributes to workplace safety.
+                                
+                                    <p>Professional cleaning helps reduce:</p> 
+                                    <ul>
+                                    <li>Dust build-up</li>
+                                    <li> Slippery floors </li>
+                                    <li> Bathroom hygiene issues </li>
+                                    <li> General clutter and debris </li>
+                                </ul>
+                            </p>
+                        </div>
+                    
+                        <div>
+                            <h3 class="h5 fw-bold">Tailored for Perth Conditions</h3>
+                            <p class="mb-0">
+                                Perth businesses deal with environmental factors including dust, heat, coastal residue, and heavy foot traffic.
+                            </p>
+                        </div>
+                       <p class="mb-0">
+                                Properties near coastal areas like Rockingham and South Perth often experience salt and moisture build-up, while industrial and inland areas such as Kwinana and Gosnells commonly face dust accumulation during dry weather.
+                            </p>
+                            <p>
+                                Professional commercial cleaning helps businesses stay on top of these conditions consistently.
+                            </p>
+                        </div>
+                        <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                        
+                            <h3 class="fw-bold mb-4">
+                                Book Professional Commercial Cleaning Perth Services Today
+                            </h3>
+                        
+                            <p>
+                                Maintaining a clean commercial property is essential for staff wellbeing, customer impressions, workplace
+                                safety, and day-to-day operations.
+                            </p>
+                        
+                            <p>
+                                At Perth Bond Cleaners, we provide reliable commercial cleaning Perth services tailored to offices, workplaces,
+                                warehouses, gyms, childcare centres, medical facilities, and strata properties throughout Perth City and
+                                surrounding suburbs.
+                            </p>
+                            <p>
+                                From office cleaning in West Perth to childcare cleaning in Byford and warehouse cleaning in Kwinana, our
+                                experienced local team delivers dependable service backed by professional standards and flexible scheduling.
+                            </p>
+                            <p class="mb-0">
+                                If you are looking for trusted commercial cleaning Perth services, contact Perth Bond Cleaners today to arrange
+                                a customised cleaning plan for your business.
+                            </p>
+                        </div>
+                        <!-- Frequently Asked Questions -->
+                    <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                    
+                        <h2 class="fw-bold mb-4">Frequently Asked Questions</h2>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">What types of businesses do you clean?</h3>
+                            <p class="mb-0">
+                                We provide commercial cleaning services for offices, warehouses, gyms, childcare centres, medical facilities, strata properties, retail spaces, and other commercial workplaces across Perth.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Can you clean outside business hours?</h3>
+                            <p class="mb-0">
+                                Yes. We offer flexible scheduling options including early morning, evening, and after-hours commercial cleaning services.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Do you provide regular ongoing cleaning services?</h3>
+                            <p class="mb-0">
+                                Yes. We offer daily, weekly, fortnightly, and customised recurring cleaning schedules depending on your business requirements.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Are your cleaners insured and police-cleared?</h3>
+                            <p class="mb-0">
+                                Yes. Our cleaning team is police-cleared and our business is fully insured for commercial cleaning services.
+                            </p>
+                        </div>
+                    
+                        <div class="mb-4">
+                            <h3 class="h5 fw-bold">Do you provide cleaning supplies and equipment?</h3>
+                            <p class="mb-0">
+                                Yes. Our team arrives fully equipped with professional cleaning products and equipment suitable for commercial environments.
+                            </p>
+                        </div>
+                    
+                        <div>
+                            <h3 class="h5 fw-bold">Which Perth suburbs do you service?</h3>
+                            <p class="mb-0">
+                                We service Perth CBD and surrounding suburbs including Subiaco, East Perth, Rockingham, Baldivis, Canning Vale, Gosnells, Thornlie, South Perth, and nearby areas.
+                            </p>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4">
+                        
+                            <div class="service-features-grid">
+                        
+                                <div class="feature-item">
+                                    <div class="feature-icon"><i class="fas fa-building"></i></div>
+                                    <h4>Flexible Commercial Cleaning Plans</h4>
+                                    <p>Weekly, fortnightly, monthly and one-off cleaning services available.</p>
+                                </div>
+                        
+                                <div class="feature-item">
+                                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                                    <h4>Fully Insured</h4>
+                                    <p>Professional commercial cleaning services backed by insurance and trained cleaners.</p>
+                                </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                            <h4>Included With Every Clean</h4>
+                            <ul class="small mt-2 mb-0 ps-3">
+                                <li>Police-cleared professionals</li>
+                                <li>Professional equipment</li>
+                                <li>Flexible scheduling</li>
+                                <li>No hidden charges</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="service-cta-buttons">
+                                <!--
+                                <a href="service-details.html" class="btn btn-outline-success"><i
+                                        class="fas fa-info-circle"></i> Full Details</a>-->
+                                <a href="contact.html" class="btn btn-success"><i class="fas fa-calendar-check"></i>
+                                    Request a Free Quote</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- Why Choose Our Service -->
+    <section class="why-choose-section" id="details">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="section-title">Why Choose Our Professional Commercial Cleaning Service</h2>
+                <p class="section-subtitle"> At Perth Bond Cleaners, we provide reliable commercial cleaning Perth services tailored to offices, workplaces, warehouses, gyms, childcare centres, medical facilities, and strata properties throughout Perth City and surrounding suburbs.</p>
+            </div>
+
+            <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-tag"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>
+                        Commercial cleaning services with customised quotes based on your business's size, condition, and cleaning requirements.
+                    </p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                    <h3>All Property Sizes</h3>
+                    <p>We clean commercial properties of all sizes, from a small offices to large business premises.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Flexible Cleaning Plans</h3>
+                    <p>
+                        Choose from weekly, fortnightly, monthly, or one-off cleaning services designed to fit your office's schedule.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Other Services (Updated with new 7 items, correct per-unit prices, removed Oven & Curtains) -->
+    <section class="other-services">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Complete Workplace Commercial Cleaning Solutions</h2>
+                <p class="section-subtitle">From routine office cleaning to specialised cleaning services, we help businesses maintain a clean, professional, and welcoming environment.</p>
+            </div>
+
+            <div class="row">
+                <!-- Carpet Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-paint-roller"></i></div>
+                        <h4>Commercial Carpet Cleaning</h4>
+                        <p>Professional carpet cleaning for offices, meeting rooms, reception areas and commercial facilities to help maintain a cleaner and more professional workplace.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=carpet" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- Window Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-window-maximize"></i></div>
+                        <h4>Commercial Window Cleaning</h4>
+                        <p>Interior and exterior window cleaning to improve presentation, natural light and first impressions for staff and visitors.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=window-cleaning" class="btn btn-outline-success mt-3">Add This
+                            Service</a>
+                    </div>
+                </div>
+                <!-- Strata Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-couch"></i></div>
+                        <h4>Strata Property Cleaning</h4>
+                        <p>Regular cleaning for shared residential and commercial buildings including lobbies, stairwells, lifts and common areas.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=strata" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- High-Touch Surface Disinfection -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-bed"></i></div>
+                        <h4>High-Touch Surface Disinfection</h4>
+                        <p>Enhanced cleaning of frequently touched surfaces including door handles, counters, desks, switches and shared equipment.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=disinfection" class="btn btn-outline-success mt-3">Add This
+                            Service</a>
+                    </div>
+                </div>
+                <!-- Washroom & Amenities Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-thermometer-half"></i></div>
+                        <h4>Washroom & Amenities Cleaning</h4>
+                        <p>Thorough cleaning of washrooms and amenities to maintain hygiene and comfort.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=washroom" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- Warehouse & Industrial Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-door-open"></i></div>
+                        <h4>Warehouse & Industrial Cleaning</h4>
+                        <p>Specialized cleaning services for warehouse and industrial spaces, ensuring a safe and productive environment.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=warehouse" class="btn btn-outline-success mt-3">Add This
+                            Service</a>
+                    </div>
+                </div>
+                <!-- Large Garage Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-warehouse"></i></div>
+                        <h4>Large Garage Cleaning</h4>
+                        <p>Thorough cleaning of your large garage, including floors, walls, and storage areas.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=garage" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div><!-- Common Area Cleaning -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-building"></i></div>
+                        <h4>Common Area Cleaning</h4>
+                        <p>Thorough cleaning of common areas, including lobbies, hallways, and shared spaces.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=common-area" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div><!-- Floor Cleaning & Maintenance -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-chair"></i></div>
+                        <h4>Floor Cleaning & Maintenance</h4>
+                        <p>Thorough cleaning of your floor surfaces, including mopping and maintenance.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=floor" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+                <!-- Glass & Partition Cleaning -->
+                <div class="col-md-4 mb-4 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="other-service-card">
+                        <div class="other-service-icon"><i class="fas fa-border-all"></i></div>
+                        <h4>Glass & Partition Cleaning</h4>
+                        <p>Thorough cleaning of glass surfaces and partitions, removing streaks and smudges.</p>
+                        <div class="other-service-price">Customized Quote Available</div>
+                        <a href="contact.html?service=glass" class="btn btn-outline-success mt-3">Add This Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note about included services -->
+            <div class="note-included text-center mx-auto mt-4" style="max-width: 700px;">
+                <i class="fas fa-check-circle text-success me-2"></i> <strong>Included in standard commercial
+                    cleaning:</strong>
+                    Washroom and amenities cleaning, glass & partition cleaning, high-touch surface disinfection, floor cleaning, and common area maintenance.
+                    <p>
+                        <strong>Note:</strong> Subject to property size, condition, and cleaning requirements.
+                    </p>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="contact.html" class="btn btn-success btn-lg">
+    <i class="fas fa-calendar-check"></i> Request a Quote
+</a>
+                <p class="text-muted mt-3">
+    Flexible scheduling, professional equipment, and fully insured cleaning services included.
+</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-clean-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2>Ready for a Professional Commercial Clean?</h2>
+                    <p class="cta-text">Comprehensive commercial cleaning services tailored to your business needs.</p>
+                    <div class="cta-badges mt-3">
+                        <span class="cta-badge"><i class="fas fa-clock"></i> After-Hours Cleaning Available</span>
+                        <span class="cta-badge"><i class="fas fa-shield-alt"></i> Insured Team</span>
+                        <span class="cta-badge"><i class="fas fa-check-circle"></i> Flexible Cleaning Plans</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+                    <a href="tel:+61452366782" class="cta-button"><i class="fas fa-phone"></i> Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="images/logo.png" alt="Perth Bond Cleaner Logo" class="footer-logo-img me-2" />
+                            <div>
+                                <h4 class="footer-logo">Perth Bond Cleaners</h4>
+                                <p class="footer-tagline">
+                                    Commercial Cleaning Specialists Across Perth
+                                </p>
+                                </div>
+                                </div>
+                                </div>
+                    <p>Professional commercial cleaning services across Perth for warehouses, rental properties, and businesses.</p>
+                    <div class="trust-badges mt-3">
+                        <span class="badge bg-success px-2 py-2 fs-6 fw-normal">
+                            <strong>TRUSTED</strong> by Perth Commercial Establishments</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                        <li><a href="areas.html">Service Areas</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Book Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+                        <li><a href="house-cleaning-perth.html">House Cleaning</a></li>
+                        <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+                        <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
+                        <li><a href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
+                        <li><a href="oven-cleaning-perth.html">Oven Cleaning</a></li>
+                    <!-- <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#windows">External Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Cleaning</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h5>Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i>
+                            <div><a href="tel:+61452366782">+61 452 366 782</a><small class="d-block">Call or
+                                    Text</small></div>
+                        </li>
+                        <li><i class="fas fa-envelope"></i>
+                            <div><a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a></div>
+                        </li>
+                        <li><i class="fas fa-map-marker-alt"></i>
+                            <div>109 Weston St, Maddington WA 6109, Australia</div>
+                        </li>
+                        <li><i class="fas fa-clock"></i>
+                            <div>
+                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="whatsapp-cta mt-3">
+                        <a href="https://wa.me/61452366782" class="btn btn-success w-100"><i
+                                class="fab fa-whatsapp"></i> WhatsApp for a Free Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2026 Perth Bond Cleaners. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
+                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Assurance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true, offset: 100 });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) link.classList.add('active');
+                else link.classList.remove('active');
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            if (service) {
+                setTimeout(() => {
+                    const element = document.getElementById(service);
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
+        });
+    </script>
+    <script src="js/navigation.js"></script>
 </body>
+
 </html>
