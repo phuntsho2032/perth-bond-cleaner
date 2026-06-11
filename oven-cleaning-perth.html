@@ -1,108 +1,1995 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Cleaning Perth | Perth Bond Cleaners</title>
-    <meta name="robots" content="noindex,follow">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oven Cleaning Perth | Professional Oven & Kitchen Cleaning</title>
+    <meta
+      name="description"
+      content="Professional Oven Cleaning Perth services including oven degreasing, exhaust fan cleaning, and kitchen cleaning. Fully insured local cleaners across Perth."
+    />
+    <link
+      rel="canonical"
+      href="https://perthbondcleaners.com/oven-cleaning-perth.html"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/favicon/android-chrome-512x512.png"
+    />
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
-            color: #2c3e50;
+      /* Additional styles for services page */
+      .service-hero {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.6)),
+          url("../images/hero-cleaning.jpg"), var(--primary-green);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 160px 0 120px;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-hero::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(to bottom, transparent, var(--light-gray));
+        z-index: 1;
+      }
+
+      .service-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-hero h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .service-hero p {
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto 2.5rem;
+        opacity: 0.95;
+        line-height: 1.6;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      .hero-cta {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 1.5rem 2rem;
+        display: inline-block;
+        margin-top: 2rem;
+      }
+
+      .price-highlight {
+        background: var(--primary-green);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 1rem;
+        box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+      }
+
+      .price-highlight small {
+        font-size: 0.9rem;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+
+      .main-service-card {
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+        border: 1px solid rgba(40, 167, 69, 0.15);
+        margin-top: -80px;
+        position: relative;
+        z-index: 10;
+        background: white;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .main-service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          #28a745,
+          var(--accent-green)
+        );
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        background-size: cover;
+        background-position: bottom;
+        opacity: 0.3;
+      }
+
+      .service-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-header .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.95;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-price-badge {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(5px);
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: inline-block;
+        margin: 1rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-body {
+        padding: 1.5rem 2rem 2rem;
+        background: white;
+        position: relative;
+      }
+
+      .service-body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 5%;
+        right: 5%;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(40, 167, 69, 0.3),
+          transparent
+        );
+      }
+
+      .whats-included h3 {
+        color: var(--text-dark);
+        margin-bottom: 0rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .included-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .included-list li {
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .included-list li:last-child {
+        border-bottom: none;
+      }
+
+      .included-list i {
+        color: var(--primary-green);
+        font-size: 1.2rem;
+        margin-top: 0.2rem;
+      }
+
+      .service-features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .feature-item {
+        text-align: center;
+        padding: 1rem;
+        background: var(--light-green);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .feature-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(40, 167, 69, 0.1);
+      }
+
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-green);
+        margin-bottom: 1rem;
+      }
+
+      .feature-item h4 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .service-cta-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .service-cta-buttons .btn {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .why-choose-section {
+        padding: 6rem 0 5rem;
+        background: var(--light-gray);
+        position: relative;
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 992px) {
+        .why-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .why-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .why-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .why-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          var(--accent-green)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 1.8rem;
+      }
+
+      .why-card h3 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .other-services {
+        padding: 5rem 0 6rem;
+      }
+
+      .other-service-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .other-service-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--primary-green);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .other-service-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--light-green);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        color: var(--primary-green);
+        font-size: 1.8rem;
+      }
+
+      .other-service-card h4 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .other-service-price {
+        color: var(--primary-green);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 1rem;
+      }
+
+      /* Price table inside main card */
+      .price-table {
+        margin-top: 1.5rem;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 1.25rem;
+        border: 1px solid #e9ecef;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .price-table h5 {
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .price-table .row {
+        padding: 0.65rem 0;
+        border-bottom: 1px dashed #dee2e6;
+      }
+
+      .price-table .row:last-child {
+        border-bottom: none;
+      }
+
+      .price-table .price {
+        font-weight: 700;
+        color: var(--primary-green);
+      }
+
+      .note-included {
+        background: #f0f9ff;
+        border-left: 4px solid var(--primary-green);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        color: #1e3a5f;
+        margin-top: 1.5rem;
+      }
+
+      @media (max-width: 992px) {
+        .service-hero {
+          padding: 140px 0 100px;
+          background-attachment: scroll;
         }
 
-        .placeholder-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url('images/area.jpg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-        .placeholder-card {
-            max-width: 700px;
-            text-align: center;
-            background: #e7e7eb;
-            padding: 50px 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        .service-hero h1 {
+          font-size: 2.8rem;
         }
 
-        h1 {
-            margin-bottom: 20px;
-            color: #28a745;
-            font-size: 2.5rem;
+        .main-service-card {
+          margin-top: -60px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .service-hero {
+          padding: 120px 0 80px;
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
+        .service-hero h1 {
+          font-size: 2.3rem;
         }
 
-        .btn {
-            display: inline-block;
-            background: #28a745;
-            color: #fff;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s ease;
+        .service-hero p {
+          font-size: 1.1rem;
+          padding: 0 1rem;
         }
 
-        .btn:hover {
-            background: #218838;
+        .price-highlight {
+          font-size: 1.5rem;
         }
 
-        .brand {
-            font-size: 1.95rem;
-            color: #666;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .service-header h2 {
+          font-size: 2rem;
         }
+
+        .main-service-card {
+          margin-top: -40px;
+          border-radius: 20px;
+        }
+
+        .service-header {
+          padding: 2rem 1.5rem;
+        }
+
+        .service-body {
+          padding: 2rem 1.5rem;
+        }
+
+        .service-price-badge {
+          font-size: 1.5rem;
+          padding: 0.6rem 1.5rem;
+        }
+
+        .service-cta-buttons .btn {
+          width: 100%;
+        }
+
+        .service-features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .service-hero h1 {
+          font-size: 2rem;
+        }
+
+        .service-header h2 {
+          font-size: 1.8rem;
+        }
+      }
+
+      /* Clean CTA Section */
+      .cta-clean-section {
+        background: linear-gradient(135deg, #1a5e2a, #20c997);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-clean-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
+        opacity: 0.3;
+      }
+
+      .cta-clean-section .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-clean-section h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .cta-clean-section .cta-text {
+        font-size: 1.1rem;
+        opacity: 0.95;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .cta-badge {
+        background: #d1f2db;
+        color: #155724;
+        border: 1px solid rgba(40, 167, 69, 0.35);
+        padding: 0.6rem 1.2rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        backdrop-filter: blur(5px);
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: white;
+        color: #1a5e2a;
+        border: none;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        width: 100%;
+        max-width: 220px;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        color: #1a5e2a;
+        background: #f8f9fa;
+      }
+
+      .cta-button i {
+        margin-right: 0.5rem;
+      }
+
+      /* Responsive adjustments */
+      @media (min-width: 992px) {
+        .cta-clean-section .col-lg-4 {
+          text-align: right;
+        }
+
+        .cta-button {
+          width: auto;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .cta-clean-section .col-lg-4 {
+          text-align: center;
+        }
+
+        .cta-button {
+          max-width: none;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .cta-clean-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .cta-badges {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .cta-badge {
+          justify-content: center;
+        }
+      }
     </style>
-</head>
-<body>
 
-<section class="placeholder-section">
-    <div class="placeholder-card">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Perth Bond Cleaners",
+        "url": "https://www.perthbondcleaners.com",
+        "description": "Professional oven cleaning services across Perth, Western Australia, including oven degreasing, exhaust fan cleaning, rangehood cleaning, kitchen cleaning, and end of lease oven cleaning for homes, apartments, and rental properties.",
+        "telephone": "+61 4 5236 6782",
+        "priceRange": "$$",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Perth"
+          },
+          {
+            "@type": "City",
+            "name": "Fremantle"
+          },
+          {
+            "@type": "City",
+            "name": "Joondalup"
+          },
+          {
+            "@type": "City",
+            "name": "Rockingham"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perth",
+          "addressRegion": "WA",
+          "addressCountry": "AU"
+        },
+        "openingHours": "Mo-Su 07:00-19:00"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How often should an oven be professionally cleaned?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Perth households benefit from professional oven cleaning every 6 to 12 months depending on cooking frequency and oven usage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you remove heavy grease and burnt residue?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We use professional cleaning products and degreasing methods designed to remove stubborn grease, carbon build-up, and burnt food residue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you clean oven racks and trays?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our oven cleaning service includes cleaning removable oven racks, trays, and internal oven surfaces where accessible."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide exhaust fan cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We provide exhaust fan and rangehood filter cleaning to help remove built-up grease and improve kitchen cleanliness."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is oven cleaning included in end of lease cleaning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oven cleaning is commonly included or added as part of end of lease cleaning services for rental properties across Perth."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your cleaners insured and police-cleared?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our cleaning team is police-cleared and our business is fully insured for residential cleaning services."
+            }
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Oven Cleaning Perth",
+        "serviceType": "Oven Cleaning",
+        "description": "Professional oven cleaning services across Perth, including oven degreasing, rangehood cleaning, exhaust fan cleaning, and kitchen cleaning for homes, apartments, and rental properties.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Perth Bond Cleaners",
+          "url": "https://perthbondcleaners.com"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Perth"
+        }
+      }
+    </script>
+  </head>
 
-        <div class="brand">
-            Perth Bond Cleaners
-        </div>
+  <body>
+    <!-- Top Alert Bar -->
+    <div class="top-alert bg-success text-white py-2">
+      <div class="container text-center">
+        <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Flexible
+        Cleaning Plans • Professionally Insured
+      </div>
+    </div>
 
-        <h1>Oven Cleaning Service Page</h1>
-
-        <p>
-            We're currently putting the finishing touches on our Oven Cleaning service page.
-        </p>
-
-        <p>
-            If you require oven cleaning, stain removal, rug cleaning, upholstery cleaning, or end of lease carpet cleaning, contact our team today for a free quote.
-        </p>
-
-        <a href="contact.html" class="btn">
-            Request a Free Quote
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/logo.png"
+            alt="Perth Bond Cleaner Logo"
+            class="navbar-logo"
+          />
         </a>
-        
+        <div class="d-lg-none d-flex align-items-center">
+          <div class="price-display ms-3">
+            <span class="price-badge">Free Quotes Available</span>
+          </div>
+          <button
+            class="navbar-toggler ms-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-</section>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-</body>
+            <!-- Services -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item fw-bold" href="services.html"
+                    >ALL SERVICES</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-perth.html"
+                    >Bond Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="house-cleaning-perth.html"
+                    >House Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="carpet-cleaning-perth.html"
+                    >Carpet Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="window-cleaning-perth.html"
+                    >Window Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="commercial-cleaning-perth.html"
+                    >Commercial Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="oven-cleaning-perth.html"
+                    >Oven Cleaning</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Service Areas -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="areas.html"
+                id="areasDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Service Areas
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item fw-bold" href="areas.html"
+                    >ALL SERVICE AREAS</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-subiaco.html"
+                    >Subiaco</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-perth-cbd.html"
+                    >Perth CBD</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-south-perth.html"
+                    >South Perth</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-east-perth.html"
+                    >East Perth</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-rockingham.html"
+                    >Rockingham</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-malaga.html"
+                    >Malaga</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-baldivis.html"
+                    >Baldivis</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div class="d-none d-lg-flex align-items-center">
+            <div class="nav-cta">
+              <a href="tel:+61452366782" class="btn btn-outline-success me-3"
+                ><i class="fas fa-phone"></i> +61 452 366 782</a
+              >
+              <a href="contact.html#quote-form" class="btn btn-success"
+                ><i class="fas fa-calendar-alt"></i> Get Instant Quote</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="service-hero" data-aos="fade-down">
+      <div class="container">
+        <h1>Oven Cleaning Perth</h1>
+        <p>
+          Struggling with a dirty oven, burnt grease, or stubborn cooking
+          residue? Perth Bond Cleaners provides professional oven cleaning
+          services across Perth to restore cleanliness and freshness.
+        </p>
+        <div
+          class="d-grid gap-2 d-md-flex justify-content-center mt-5"
+          data-aos="fade-up"
+        >
+          <a href="contact.html#quote-form" class="btn btn-success btn-lg">
+            <i class="fas fa-arrow-up-right-from-square"></i> Book Oven Cleaning
+            Now
+          </a>
+
+          <a
+            href="contact.html#quote-form"
+            class="btn btn-outline-light btn-lg"
+          >
+            <i class="fas fa-angles-right"></i> Request Free Quote
+          </a>
+
+          <!--<a href="contact.html" class="btn btn-outline-light btn-lg">
+            <i class="fas fa-arrow-up-right-from-square"></i> Book Oven Cleaning
+            Now
+          </a>-->
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+
+    <section class="py-5 mb-5 bg-white">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8" data-aos="fade-right">
+            <h2 class="fw-bold mb-4">
+              Professional, Reliable Oven Cleaning Perth Services
+            </h2>
+
+            <p class="lead mb-4" style="color: #495057">
+              A dirty oven is one of the hardest parts of any kitchen to clean
+              properly. Burnt grease, baked-on food residue, smoke stains,
+              carbon build-up, and lingering cooking odours can quickly
+              accumulate over time, especially in busy family homes and rental
+              properties.
+            </p>
+
+            <p>
+              At Perth Bond Cleaners, we provide professional oven cleaning
+              Perth services designed to restore ovens, improve kitchen hygiene,
+              and help homeowners and tenants maintain cleaner cooking spaces.
+            </p>
+
+            <p>
+              We work with homeowners, tenants, landlords, property managers,
+              and busy households across Perth City and surrounding suburbs,
+              delivering reliable oven cleaning services using professional
+              cleaning products and proven degreasing methods.
+            </p>
+
+            <p>
+              From apartment kitchens in East Perth to family homes in Baldivis
+              and Canning Vale, our experienced team provides detailed oven
+              cleaning tailored to the condition and usage of the appliance.
+            </p>
+
+            <p>
+              Our police-cleared cleaners are professionally trained and fully
+              insured, giving Perth residents confidence when booking kitchen
+              cleaning services for their home or rental property.
+            </p>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-left">
+            <div class="bg-light rounded-4 shadow-sm p-4">
+              <h4 class="fw-bold mb-4">Why Perth Residents Choose Us</h4>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Professional Oven Cleaning
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Police-Cleared Team
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Fully Insured Service
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Rental Inspection Support
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  End of Lease Oven Cleaning
+                </li>
+                <li>
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  Local Perth Cleaning Specialists
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Service -->
+    <section class="pt-0 pb-5">
+      <div class="container">
+        <div class="main-service-card" data-aos="fade-up">
+          <div class="service-header">
+            <h2>Professional Oven Cleaning Services Across Perth</h2>
+            <div class="subtitle">
+              Our police-cleared cleaners are professionally trained and fully
+              insured, giving Perth residents confidence when booking kitchen
+              and oven cleaning services for their home or rental property.
+            </div>
+          </div>
+
+          <div class="service-body">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="whats-included">
+                  <h3>
+                    <i class="fas fa-fire me-2 text-success"></i>
+                    Oven Cleaning Includes:
+                  </h3>
+                  <ul class="included-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Complete oven cleaning</strong> of interior and
+                        exterior surfaces, racks, trays, and controls
+                      </div>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Kitchen surface cleaning</strong> of benchtops,
+                        splashbacks, sinks, stovetops, cupboard exteriors, and
+                        appliances
+                      </div>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Burnt grease and carbon removal</strong> from
+                        oven interiors and hard-to-reach areas
+                      </div>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Oven rack and tray cleaning</strong> to restore
+                        cleanliness and presentation
+                      </div>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Oven door and glass cleaning</strong> to remove
+                        grease, stains, and residue
+                      </div>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Exhaust fan and rangehood cleaning</strong>
+                        including accessible filters and surfaces
+                      </div>
+                    </li>
+
+                    <li>
+                      <i class="fas fa-check-circle"></i>
+                      <div>
+                        <strong>Kitchen degreasing</strong> for a cleaner and
+                        fresher cooking environment
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Price table for bond cleaning -->
+                <div
+                  class="price-table text-center"
+                  style="
+                    border: 2px solid #28a745;
+                    border-radius: 12px;
+                    padding: 25px;
+                    background-color: #f5fff7;
+                    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.08);
+                    margin-bottom: 20px;
+                  "
+                >
+                  <h3 class="text-success fw-bold mb-3">
+                    <i class="fas fa-user-shield me-2"></i>
+                    Trusted Oven Cleaning Across Perth
+                  </h3>
+
+                  <p class="mb-3">
+                    Professional oven cleaning services for homes, apartments,
+                    and rental properties throughout Perth and surrounding
+                    suburbs.
+                  </p>
+
+                  <div
+                    class="d-flex flex-wrap justify-content-center gap-3 mt-3"
+                  >
+                    <span
+                      ><i class="fas fa-user-check text-success me-1"></i>
+                      Police-Cleared Team</span
+                    >
+                    <span
+                      ><i class="fas fa-star text-success me-1"></i> Premium
+                      Services</span
+                    >
+                    <span
+                      ><i class="fas fa-clock text-success me-1"></i> Flexible
+                      Scheduling</span
+                    >
+                  </div>
+                </div>
+                <div class="border rounded-4 px-4 py-4 bg-white shadow-sm">
+                  <h3 class="fw-bold mb-4">
+                    Why Professional Oven Cleaning Matters
+                  </h3>
+
+                  <p>
+                    Most people wipe down visible kitchen surfaces regularly but
+                    avoid cleaning inside the oven because of the time, effort,
+                    and heavy grease build-up involved.
+                  </p>
+
+                  <p>
+                    Over time, ovens collect layers of burnt food, oil splatter,
+                    smoke residue, grease, and carbon deposits that standard
+                    household cleaners often struggle to remove properly.
+                  </p>
+
+                  <p class="mb-0">
+                    At Perth Bond Cleaners, we provide professional oven
+                    cleaning services designed to restore cleanliness and
+                    improve the overall condition of your kitchen appliances.
+                  </p>
+                </div>
+                <div class="border rounded-4 p-4 mt-4 bg-white shadow-sm">
+                  <h3 class="fw-bold mb-3">Oven Cleaning Perth</h3>
+
+                  <p>
+                    Our Oven Cleaning Perth service focuses on removing stubborn
+                    grease, burnt residue, food spills, and built-up carbon from
+                    inside the oven.
+                  </p>
+
+                  <p>
+                    Our oven cleaning service is popular with homeowners,
+                    tenants, landlords, and property managers throughout Perth
+                    looking to remove stubborn grease, burnt residue, and carbon
+                    build-up.
+                  </p>
+
+                  <p class="mb-0">This can include cleaning:</p>
+                  <ul>
+                    <li>Oven interiors</li>
+                    <li>Oven doors and glass</li>
+                    <li>Oven racks and trays</li>
+                    <li>Built-up grease and grime</li>
+                    <li>Burnt food residue</li>
+                    <li>Internal surfaces and corners</li>
+                  </ul>
+                  <p class="mb-0">
+                    Professional oven cleaning helps improve both appearance and
+                    hygiene while reducing smoke and unpleasant cooking odours
+                    caused by burnt residue.
+                  </p>
+                  <p class="mb-0">
+                    This service is especially popular for rental inspections
+                    and end of lease cleaning where property managers often
+                    inspect ovens closely.
+                  </p>
+                </div>
+                <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                  <h3 class="fw-bold mb-3">Exhaust Fan Cleaning</h3>
+
+                  <p>
+                    Kitchen exhaust fans and rangehood filters naturally collect
+                    grease, dust, and cooking residue over time.
+                  </p>
+
+                  <p class="mb-0">
+                    Our exhaust fan cleaning service helps remove built-up
+                    grease from:
+                  </p>
+                  <ul>
+                    <li>Rangehood filters</li>
+                    <li>Exhaust fan covers</li>
+                    <li>External grease residue</li>
+                    <li>Kitchen ventilation areas</li>
+                  </ul>
+                  <p>
+                    This helps improve airflow while reducing greasy build-up
+                    around the kitchen.
+                  </p>
+                </div>
+                <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                  <h3 class="fw-bold mb-3">Kitchen Cleaning Services</h3>
+
+                  <p>
+                    Many customers combine oven cleaning with general kitchen
+                    cleaning services to refresh the entire cooking area.
+                  </p>
+
+                  <p>This may include:</p>
+                  <ul>
+                    <li>Benchtop cleaning</li>
+                    <li>Splashback cleaning</li>
+                    <li>Sink cleaning</li>
+                    <li>Cupboard exterior wiping</li>
+                    <li>Appliance exterior cleaning</li>
+                    <li>Floor mopping</li>
+                    <li>Grease removal from kitchen surfaces</li>
+                  </ul>
+                  <p class="mb-0">
+                    Homes in busy suburbs like Thornlie, Southern River, and
+                    Byford often require more regular kitchen maintenance due to
+                    larger family households and frequent cooking.
+                  </p>
+                </div>
+                <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                  <h3 class="fw-bold mb-3">
+                    Why Professional Oven Cleaning Matters for Perth Homes
+                  </h3>
+                  <p>
+                    Ovens naturally accumulate grease and food residue over
+                    time, especially with regular cooking. These deposits can
+                    build up on interior surfaces, racks, trays, and glass
+                    doors, making the appliance harder to clean and less
+                    pleasant to use. Regular maintenance helps keep your oven
+                    looking its best while supporting a cleaner and more
+                    hygienic kitchen environment.
+                  </p>
+                  <h4 class="fw-bold mb-3">
+                    Removes Built-Up Grease and Burnt Residue
+                  </h4>
+
+                  <p>
+                    Without proper cleaning, burnt residue can continue smoking
+                    during use and create unpleasant odours throughout the
+                    kitchen.
+                  </p>
+
+                  <p class="mb-0">
+                    Professional oven cleaning helps remove layers of built-up
+                    grime more thoroughly than basic household cleaning methods.
+                  </p>
+
+                  <h4 class="mt-3 fw-bold mb-3">Improves Kitchen Hygiene</h4>
+
+                  <p>
+                    Kitchens are one of the most heavily used areas in any home.
+                    Grease build-up inside ovens and exhaust fans can affect
+                    overall kitchen cleanliness if left untreated for long
+                    periods.
+                  </p>
+
+                  <p class="mb-0">
+                    Professional kitchen cleaning helps maintain a cleaner
+                    cooking environment for households across Perth.
+                  </p>
+                  <h4 class="mt-3 fw-bold mb-3">
+                    Helps During Rental Inspections
+                  </h4>
+
+                  <p>
+                    Ovens are one of the most commonly inspected appliances
+                    during end of lease inspections.
+                  </p>
+                  <p>Property managers frequently check for:</p>
+                  <ul>
+                    <li>Burnt grease build-up</li>
+                    <li>Dirty oven trays</li>
+                    <li>Glass stains</li>
+                    <li>Food residue</li>
+                    <li>Greasy exhaust filters</li>
+                  </ul>
+                  <p>
+                    Many tenants in suburbs like Victoria Park, Subiaco, and
+                    East Perth book professional oven cleaning before vacating
+                    rental properties to help avoid cleaning disputes or bond
+                    deductions.
+                  </p>
+                  <h4 class="mt-3 fw-bold mb-3">Saves Time and Effort</h4>
+
+                  <p>
+                    Deep cleaning an oven can take several hours without
+                    professional equipment or experience.
+                  </p>
+
+                  <p class="mb-0">
+                    Professional cleaners use specialised products and methods
+                    that help remove stubborn grime more efficiently while
+                    reducing the physical effort involved.
+                  </p>
+                  <h4 class="mt-3 fw-bold mb-3">
+                    Reduces Smoke and Cooking Odours
+                  </h4>
+
+                  <p>
+                    Burnt food residue trapped inside the oven can produce smoke
+                    and unpleasant smells during cooking.
+                  </p>
+
+                  <p class="mb-0">
+                    Cleaning away old grease and carbon build-up helps create a
+                    fresher kitchen environment and can improve the overall
+                    cooking experience.
+                  </p>
+                </div>
+
+                <!-- Frequently Asked Questions -->
+                <div class="border rounded-4 p-4 mt-3 bg-white shadow-sm">
+                  <h2 class="fw-bold mb-4">Frequently Asked Questions</h2>
+
+                  <div class="mb-4">
+                    <h3 class="h5 fw-bold">
+                      How often should an oven be professionally cleaned?
+                    </h3>
+                    <p class="mb-0">
+                      Most Perth households benefit from professional oven
+                      cleaning every 6 to 12 months depending on cooking
+                      frequency and oven usage.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h3 class="h5 fw-bold">
+                      Can you remove heavy grease and burnt residue?
+                    </h3>
+                    <p class="mb-0">
+                      Yes. We use professional cleaning products and degreasing
+                      methods designed to remove stubborn grease, carbon
+                      build-up, and burnt food residue.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h3 class="h5 fw-bold">
+                      Do you clean oven racks and trays?
+                    </h3>
+                    <p class="mb-0">
+                      Yes. Our oven cleaning service includes cleaning removable
+                      oven racks, trays, and internal oven surfaces where
+                      accessible.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h3 class="h5 fw-bold">
+                      Do you provide exhaust fan cleaning?
+                    </h3>
+                    <p class="mb-0">
+                      Yes. We provide exhaust fan and rangehood filter cleaning
+                      to help remove built-up grease and improve kitchen
+                      cleanliness.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h3 class="h5 fw-bold">
+                      Is oven cleaning included in end of lease cleaning?
+                    </h3>
+                    <p class="mb-0">
+                      Oven cleaning is commonly included or added as part of end
+                      of lease cleaning services for rental properties across
+                      Perth.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 class="h5 fw-bold">
+                      Are your cleaners insured and police-cleared?
+                    </h3>
+                    <p class="mb-0">
+                      Yes. Our cleaning team is police-cleared and our business
+                      is fully insured for residential cleaning services.
+                    </p>
+                  </div>
+                  <!-- End of FAQ Item-->
+                </div>
+                <!-- End of FAQ Container-->
+              </div>
+              <!-- End of col-lg-8-->
+
+              <div class="col-lg-4">
+                <div class="service-features-grid">
+                  <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                    <h4>Professional Oven Cleaning</h4>
+                    <p>
+                      Removes grease, burnt residue, carbon build-up and
+                      stubborn stains.
+                    </p>
+                  </div>
+
+                  <div class="feature-item">
+                    <div class="feature-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Fully Insured</h4>
+                    <p>
+                      Professional oven and kitchen cleaning services backed by
+                      insurance and trained cleaners.
+                    </p>
+                  </div>
+
+                  <div class="feature-item">
+                    <div class="feature-icon">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>Included With Every Service</h4>
+                    <ul class="medium mt-2 mb-0 ps-3 text-start">
+                      <li>Police-cleared professionals</li>
+                      <li>Professional equipment</li>
+                      <li>Flexible scheduling</li>
+                      <li>No hidden charges</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="service-cta-buttons">
+                  <!--
+                                <a href="service-details.html" class="btn btn-outline-success"><i
+                                        class="fas fa-info-circle"></i> Full Details</a>-->
+                  <a href="contact.html#quote-form" class="btn btn-success">
+                    <i class="fas fa-calendar-check"></i> Request a Free Quote
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Our Service -->
+    <section class="why-choose-section" id="details">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <h2 class="section-title">
+            Why Choose Perth Bond Cleaners for Oven Cleaning Perth?
+          </h2>
+          <p class="section-subtitle">
+            Not all cleaning companies provide the same level of detail when it
+            comes to oven and kitchen cleaning. At Perth Bond Cleaners, we focus
+            on delivering reliable cleaning services backed by local experience
+            and professional standards.
+          </p>
+        </div>
+
+        <div class="why-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-fire"></i></div>
+            <h3>Professional Oven Cleaning</h3>
+            <p>
+              Our experienced cleaners remove grease, burnt-on residue, carbon
+              build-up, and stubborn stains from ovens, racks, trays, and glass
+              doors. Enjoy a cleaner, fresher oven without the hard work.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-award"></i></div>
+            <h3>Experienced & Reliable Team</h3>
+            <p>
+              Perth Bond Cleaners provides professional oven cleaning services
+              backed by attention to detail and quality workmanship. We treat
+              every appliance with care to deliver outstanding results.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>Flexible Booking Options</h3>
+            <p>
+              Whether you need a one-off oven clean, pre-sale preparation, or
+              end-of-lease cleaning support, we offer convenient scheduling to
+              suit your needs and availability.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Kitchen & Oven Cleaning Experts</h3>
+            <p>
+              We understand the types of grease, grime, and residue commonly
+              found in Perth homes and rental properties.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-magnifying-glass"></i></div>
+            <h3>Attention to Detail</h3>
+            <p>
+              We focus on the areas often missed during basic household
+              cleaning, including oven corners, racks, glass panels, grease
+              build-up, and exhaust fan filters.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Police-Cleared Team</h3>
+            <p>
+              All our cleaning staff are police-cleared and undergo rigorous
+              background checks to ensure your safety and peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Other Services (Updated with new 7 items, correct per-unit prices, removed Oven & Curtains) -->
+    <section class="other-services">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">A Must-Have Cleaning Service</h2>
+          <p class="section-subtitle">
+            Combine oven cleaning with these popular Perth cleaning services.
+          </p>
+        </div>
+
+        <div class="row">
+          <!-- Wall Wash -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-paint-roller"></i>
+              </div>
+              <h4>Wall Wash / Wall Cleaning</h4>
+              <p>
+                Gentle wall washing to remove marks, stains, and scuff marks.
+                Restores walls to like-new condition.
+              </p>
+              <div class="other-service-price">
+                $5-$8/square meter or $150-$400 per property
+              </div>
+              <a
+                href="contact.html?service=wall"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- External Window Cleaning -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-window-maximize"></i>
+              </div>
+              <h4>External Window Cleaning</h4>
+              <p>
+                Streak-free exterior window cleaning for crystal clear views.
+                Includes frames, tracks, and glass.
+              </p>
+              <div class="other-service-price">$30 per window</div>
+              <a
+                href="contact.html?service=external-window"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Carpet Steam Cleaning -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon"><i class="fas fa-steam"></i></div>
+              <h4>Carpet Steam Cleaning</h4>
+              <p>
+                Professional deep steam cleaning for carpets to remove stains,
+                dirt, and odors. Perfect for end-of-lease requirements.
+              </p>
+              <div class="other-service-price">$50 per unit</div>
+              <a
+                href="contact.html?service=carpet"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Steam Mattress Cleaning (Updated)-->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="other-service-card">
+              <div class="other-service-icon"><i class="fas fa-soap"></i></div>
+              <h4>Steam Mattress Cleaning</h4>
+              <p>
+                Deep cleaning for mattresses to remove dust mites, stains, and
+                allergens.
+              </p>
+              <div class="other-service-price">$60 per mattress</div>
+              <a
+                href="contact.html?service=steam-mattress"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Fridge Cleaning (Interior) -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-thermometer-half"></i>
+              </div>
+              <h4>Fridge Cleaning (Interior)</h4>
+              <p>
+                Thorough cleaning inside your fridge, including shelves and
+                drawers.
+              </p>
+              <div class="other-service-price">$50 per fridge</div>
+              <a
+                href="contact.html?service=fridge"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Sliding Door Cleaning -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-door-open"></i>
+              </div>
+              <h4>Sliding Door Cleaning</h4>
+              <p>
+                Cleaning and track clearing for sliding doors, ensuring smooth
+                operation.
+              </p>
+              <div class="other-service-price">$30 per sliding door</div>
+              <a
+                href="contact.html?service=sliding-door"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Garage Cleaning -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-warehouse"></i>
+              </div>
+              <h4>Garage Cleaning</h4>
+              <p>
+                Thorough cleaning of your garage, including floors, walls, and
+                storage areas.
+              </p>
+              <div class="other-service-price">$50 per garage</div>
+              <a
+                href="contact.html?service=garage"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Balcony Cleaning -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h4>Balcony Cleaning</h4>
+              <p>
+                Thorough cleaning of your balcony, including surfaces and
+                furniture.
+              </p>
+              <div class="other-service-price">$50 per balcony</div>
+              <a
+                href="contact.html?service=balcony"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Patio Cleaning -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fa-solid fa-building-flag"></i>
+              </div>
+              <h4>Patio Cleaning</h4>
+              <p>
+                Thorough cleaning of your patio, including surfaces and
+                furniture.
+              </p>
+              <div class="other-service-price">$60 per patio</div>
+              <a
+                href="contact.html?service=patio"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Steam Couch Cleaning (Added)-->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon"><i class="fas fa-couch"></i></div>
+              <h4>Steam Couch Cleaning</h4>
+              <p>
+                Thorough cleaning of your couch using steam, removing stains and
+                odors.
+              </p>
+              <div class="other-service-price">$60 per couch</div>
+              <a
+                href="contact.html?service=steam-couch"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Grout Cleaning (Added)-->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+              </div>
+              <h4>Grout Cleaning</h4>
+              <p>Thorough cleaning of grout lines, removing dirt and stains.</p>
+              <div class="other-service-price">$50 per area</div>
+              <a
+                href="contact.html?service=grout"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+          <!-- Blind Cleaning (icon updated to fa-grip-lines) -->
+          <div
+            class="col-md-4 mb-4 mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="other-service-card">
+              <div class="other-service-icon">
+                <i class="fas fa-border-all"></i>
+              </div>
+              <h4>Blind Cleaning</h4>
+              <p>
+                Thorough cleaning of all types of blinds – Venetian, vertical,
+                roller. Removes dust and stains.
+              </p>
+              <div class="other-service-price">$10 per blind</div>
+              <a
+                href="contact.html?service=blinds"
+                class="btn btn-outline-success mt-3"
+                >ADD THIS SERVICE</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Note about included services -->
+        <div
+          class="note-included text-center mx-auto mt-4"
+          style="max-width: 700px"
+        >
+          <i class="fas text-success me-1"></i>
+          <strong style="font-size: 1.25rem">
+            <i class="fas fa-sliders-h text-success me-2"></i>
+            Popular Add-On Services:
+          </strong>
+          <p class="mb-0">
+            Kitchen Cleaning • Carpet Cleaning • Window Cleaning • Wall Washing
+            • Steam Couch Cleaning
+          </p>
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="contact.html#quote-form" class="btn btn-success btn-lg">
+            <i class="fas fa-calendar-check"></i> Request a Quote
+          </a>
+          <p class="text-muted mt-3">
+            Flexible scheduling, professional equipment, and fully insured
+            cleaning services included.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-clean-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8" data-aos="fade-right">
+            <h2>Ready for a Professional Oven Cleaning?</h2>
+            <p class="cta-text">
+              Remove built-up grease, burnt residue, and stubborn carbon
+              deposits with professional oven cleaning services across Perth.
+            </p>
+            <div class="cta-badges mt-3">
+              <span class="cta-badge"
+                ><i class="fas fa-truck-fast"></i> Same Day Availability</span
+              >
+              <span class="cta-badge"
+                ><i class="fas fa-address-card"></i> Insured Team</span
+              >
+              <span class="cta-badge"
+                ><i class="fas fa-list-check"></i> Flexible Cleaning Plans</span
+              >
+            </div>
+          </div>
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-left">
+            <a href="tel:+61452366782" class="cta-button"
+              ><i class="fas fa-phone"></i> Call Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="footer-brand mb-3">
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/logo.png"
+                  alt="Perth Bond Cleaner Logo"
+                  class="footer-logo-img me-2"
+                />
+                <div>
+                  <h4 class="footer-logo">Perth Bond Cleaners</h4>
+                  <p class="footer-tagline">
+                    Perth's trusted cleaning professionals
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Professional cleaning services across Perth for homes, rental
+              properties, and businesses.
+            </p>
+            <div class="trust-badges mt-3">
+              <span
+                class="badge bg-success me-0"
+                style="font-size: 0.95rem; padding: 0.5rem 1rem"
+              >
+                TRUSTED by Perth Residents
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+              <li><a href="areas.html">Service Areas</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Book Now</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h5>Our Services</h5>
+            <ul class="footer-links">
+              <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+              <li><a href="house-cleaning-perth.html">House Cleaning</a></li>
+              <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+              <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
+              <li>
+                <a href="commercial-cleaning-perth.html">Commercial Cleaning</a>
+              </li>
+              <li><a href="oven-cleaning-perth.html">Oven Cleaning</a></li>
+              <!--
+                        <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
+                        <li><a href="services.html#windows">External Window Cleaning</a></li>
+                        <li><a href="services.html#walls">Wall Cleaning</a></li>
+                        <li><a href="services.html#blinds">Blind Cleaning</a></li>
+                        -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h5>Get In Touch</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-phone"></i>
+                <div>
+                  <a href="tel:+61452366782">+61 452 366 782</a
+                  ><small class="d-block">Call or Text</small>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <a href="mailto:perthbondcleaners@gmail.com"
+                    >perthbondcleaners@gmail.com</a
+                  >
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>109 Weston St, Maddington WA 6109, Australia</div>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                  <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="whatsapp-cta mt-3">
+              <a href="https://wa.me/61452366782" class="btn btn-success w-100"
+                ><i class="fab fa-whatsapp"></i> WhatsApp for a Free Quote</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2026 Perth Bond Cleaners. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="privacy-policy.html" class="text-white me-3"
+              >Privacy Policy</a
+            >
+            <a href="terms-of-service.html" class="text-white me-3"
+              >Terms of Service</a
+            >
+            <a href="bond-back-guarantee.html" class="text-white"
+              >Bond-Back Assurance</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPage)
+            link.classList.add("active");
+          else link.classList.remove("active");
+        });
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const service = urlParams.get("service");
+        if (service) {
+          setTimeout(() => {
+            const element = document.getElementById(service);
+            if (element) element.scrollIntoView({ behavior: "smooth" });
+          }, 500);
+        }
+      });
+    </script>
+    <script src="js/navigation.js"></script>
+  </body>
 </html>

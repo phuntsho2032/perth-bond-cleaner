@@ -1,1492 +1,1825 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Perth Bond Cleaners | Get Your Free Quote Today</title>
-    
+
     <!-- Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- Favicon with cache busting -->
-    <link rel="icon" href="/favicon/favicon.ico?v=2">
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png?v=2">
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png?v=2">
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png?v=2">
-    
+    <link rel="icon" href="/favicon/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png?v=2" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon/android-chrome-192x192.png?v=2"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/favicon/android-chrome-512x512.png?v=2"
+    />
+
     <style>
-        /* ===============================
+      /* ===============================
            ADDITIONAL STYLES FOR CONTACT PAGE
         =============================== */
-        .contact-hero {
-            background: linear-gradient(135deg, 
-                rgba(34, 153, 61, 0.95),    /* Darker primary green */
-                rgba(28, 187, 140, 0.92),   /* Darker accent green */
-                rgba(34, 153, 61, 0.93)     /* Back to darker primary */
-            );
-            padding: 160px 0 100px;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
+      .contact-hero {
+        background: linear-gradient(
+          135deg,
+          rgba(34, 153, 61, 0.95),
+          /* Darker primary green */ rgba(28, 187, 140, 0.92),
+          /* Darker accent green */ rgba(34, 153, 61, 0.93)
+            /* Back to darker primary */
+        );
+        padding: 160px 0 100px;
+        text-align: center;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
 
-        /* Add the wave pattern overlay */
-        .contact-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-            background-size: cover;
-            background-position: bottom;
-            opacity: 0.8;
-            z-index: 1;
-        }
+      /* Add the wave pattern overlay */
+      .contact-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,160C672,139,768,117,864,122.7C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+        background-size: cover;
+        background-position: bottom;
+        opacity: 0.8;
+        z-index: 1;
+      }
 
-        /* Clean fade to white at the bottom */
-        .contact-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            background: linear-gradient(
-                to bottom, 
-                transparent 0%, 
-                rgba(255, 255, 255, 0.1) 20%,
-                rgba(255, 255, 255, 0.3) 40%,
-                rgba(255, 255, 255, 0.6) 60%,
-                rgba(255, 255, 255, 0.85) 80%,
-                white 100%
-            );
-            z-index: 1;
-        }
+      /* Clean fade to white at the bottom */
+      .contact-hero::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(255, 255, 255, 0.1) 20%,
+          rgba(255, 255, 255, 0.3) 40%,
+          rgba(255, 255, 255, 0.6) 60%,
+          rgba(255, 255, 255, 0.85) 80%,
+          white 100%
+        );
+        z-index: 1;
+      }
 
-        .contact-hero .container {
-            position: relative;
-            z-index: 2;
-        }
+      .contact-hero .container {
+        position: relative;
+        z-index: 2;
+      }
 
-        .contact-hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-        }
+      .contact-hero h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      }
 
-        .contact-hero p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.95;
-            line-height: 1.6;
-            font-weight: 300;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
+      .contact-hero p {
+        font-size: 1.25rem;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.95;
+        line-height: 1.6;
+        font-weight: 300;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
 
-        .contact-section {
-            padding: 5rem 0;
-            background: white;
-        }
+      .contact-section {
+        padding: 5rem 0;
+        background: white;
+      }
 
-        .contact-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            border: 1px solid rgba(40, 167, 69, 0.1);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-            height: 100%;
-        }
+      .contact-card {
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        border: 1px solid rgba(40, 167, 69, 0.1);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        height: 100%;
+      }
 
+      .contact-info {
+        padding-right: 2rem;
+      }
+
+      .service-badge {
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          var(--accent-green)
+        );
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2);
+        text-align: center;
+        width: 100%;
+      }
+
+      .service-badge .price {
+        font-size: 1.8rem;
+        font-weight: 800;
+        display: block;
+        margin-bottom: 0.3rem;
+      }
+
+      .service-badge .subtext {
+        font-size: 1rem;
+        opacity: 0.9;
+        font-weight: 400;
+      }
+
+      .contact-details {
+        margin-bottom: 3rem;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+        background: var(--light-gray);
+        transition: all 0.3s ease;
+      }
+
+      .contact-item:hover {
+        background: var(--light-green);
+        transform: translateX(5px);
+      }
+
+      .contact-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .contact-icon {
+        width: 55px;
+        height: 55px;
+        background: var(--primary-green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+
+      .contact-text h5 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+        font-size: 1.1rem;
+      }
+
+      .contact-text p {
+        margin: 0;
+        color: var(--text-light);
+        line-height: 1.5;
+      }
+
+      .contact-text a {
+        color: var(--text-dark);
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+      }
+
+      .contact-text a:hover {
+        color: var(--primary-green);
+      }
+
+      .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 3rem;
+      }
+
+      .contact-btn {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.2rem;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .contact-btn.whatsapp {
+        background: #25d366;
+        color: white;
+      }
+
+      .contact-btn.call {
+        background: var(--primary-green);
+        color: white;
+      }
+
+      .contact-btn.email {
+        background: white;
+        color: var(--text-dark);
+        border-color: #e9ecef;
+      }
+
+      .contact-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-btn .btn-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        text-align: center;
+      }
+
+      .contact-btn .btn-text {
+        flex-grow: 1;
+      }
+
+      .contact-btn .btn-text span {
+        display: block;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .contact-btn .btn-text small {
+        opacity: 0.9;
+        font-size: 0.9rem;
+      }
+
+      .form-section {
+        padding-left: 2rem;
+      }
+
+      .form-title {
+        color: var(--text-dark);
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 3px solid var(--light-green);
+        font-size: 1.8rem;
+      }
+
+      .form-note {
+        background: var(--light-green);
+        color: var(--dark-green);
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 2.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        border-left: 4px solid var(--primary-green);
+      }
+
+      .form-note i {
+        margin-right: 0.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.8rem;
+      }
+
+      .form-label {
+        font-weight: 600;
+        margin-bottom: 0.6rem;
+        color: var(--text-dark);
+        display: block;
+        font-size: 1rem;
+      }
+
+      .form-control,
+      .form-select {
+        padding: 1rem;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s;
+        width: 100%;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--primary-green);
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+        outline: none;
+      }
+
+      .captcha-note {
+        background: #f8f9fa;
+        border: 1px dashed #dee2e6;
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        margin: 2rem 0;
+        color: var(--text-light);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .submit-btn {
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          var(--accent-green)
+        );
+        color: white;
+        border: none;
+        padding: 1.2rem 2rem;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        width: 100%;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        cursor: pointer;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+      }
+
+      .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      /* Additional Services Styling - Redesigned */
+      .additional-services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .additional-service-item {
+        background: #f8fafc;
+        border: 1px solid #e9edf2;
+        border-radius: 12px;
+        padding: 1rem 1rem 1rem 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      }
+
+      .additional-service-item:hover {
+        background: #eaf7ea;
+        border-color: var(--primary-green);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(40, 167, 69, 0.08);
+      }
+
+      .additional-service-item input[type="checkbox"] {
+        width: 1.2rem;
+        height: 1.2rem;
+        accent-color: var(--primary-green);
+        margin: 0;
+        flex-shrink: 0;
+      }
+
+      .service-icon {
+        color: var(--primary-green);
+        font-size: 1.2rem;
+        width: 1.6rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .service-name {
+        flex: 1;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #2c3e50;
+      }
+
+      .price-badge {
+        background: #dcfce7;
+        color: #166534;
+        padding: 0.3rem 0.7rem;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        white-space: nowrap;
+        border: 1px solid #bbf7d0;
+        flex-shrink: 0;
+      }
+
+      .note-included {
+        background: #f0f9ff;
+        border-left: 4px solid var(--primary-green);
+        padding: 1rem 1.2rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        color: #1e3a5f;
+        margin-top: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        .additional-services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Guarantee Section */
+      .guarantee-section {
+        padding: 5rem 0;
+        background: var(--light-gray);
+      }
+
+      .guarantee-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .guarantee-card {
+        text-align: center;
+        padding: 2.5rem 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e9ecef;
+        transition: all 0.3s ease;
+      }
+
+      .guarantee-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary-green);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .guarantee-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          var(--accent-green)
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 1.8rem;
+      }
+
+      .guarantee-card h4 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+        font-size: 1.3rem;
+      }
+
+      .guarantee-card p {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* ===============================
+           RESPONSIVE STYLES
+        =============================== */
+      @media (max-width: 992px) {
         .contact-info {
-            padding-right: 2rem;
-        }
-
-        .service-badge {
-            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2);
-            text-align: center;
-            width: 100%;
-        }
-
-        .service-badge .price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-
-        .service-badge .subtext {
-            font-size: 1rem;
-            opacity: 0.9;
-            font-weight: 400;
-        }
-
-        .contact-details {
-            margin-bottom: 3rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.2rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-radius: 12px;
-            background: var(--light-gray);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            background: var(--light-green);
-            transform: translateX(5px);
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-icon {
-            width: 55px;
-            height: 55px;
-            background: var(--primary-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-
-        .contact-text h5 {
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-size: 1.1rem;
-        }
-
-        .contact-text p {
-            margin: 0;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-
-        .contact-text a {
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        .contact-text a:hover {
-            color: var(--primary-green);
-        }
-
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            padding: 1.2rem;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .contact-btn.whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .contact-btn.call {
-            background: var(--primary-green);
-            color: white;
-        }
-
-        .contact-btn.email {
-            background: white;
-            color: var(--text-dark);
-            border-color: #e9ecef;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .contact-btn .btn-icon {
-            font-size: 1.5rem;
-            width: 40px;
-            text-align: center;
-        }
-
-        .contact-btn .btn-text {
-            flex-grow: 1;
-        }
-
-        .contact-btn .btn-text span {
-            display: block;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .contact-btn .btn-text small {
-            opacity: 0.9;
-            font-size: 0.9rem;
+          padding-right: 0;
+          margin-bottom: 3rem;
         }
 
         .form-section {
-            padding-left: 2rem;
+          padding-left: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .contact-hero {
+          padding: 120px 0 60px;
         }
 
-        .form-title {
-            color: var(--text-dark);
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 3px solid var(--light-green);
-            font-size: 1.8rem;
+        .contact-hero h1 {
+          font-size: 2.5rem;
         }
 
-        .form-note {
-            background: var(--light-green);
-            color: var(--dark-green);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 2.5rem;
-            font-size: 1rem;
-            line-height: 1.6;
-            border-left: 4px solid var(--primary-green);
+        .contact-card {
+          padding: 2rem;
         }
 
-        .form-note i {
-            margin-right: 0.5rem;
+        .service-badge {
+          padding: 0.8rem 1.5rem;
+          font-size: 1.1rem;
         }
 
-        .form-group {
-            margin-bottom: 1.8rem;
+        .service-badge .price {
+          font-size: 1.5rem;
         }
 
-        .form-label {
-            font-weight: 600;
-            margin-bottom: 0.6rem;
-            color: var(--text-dark);
-            display: block;
-            font-size: 1rem;
+        .contact-item {
+          padding: 1.2rem;
         }
 
-        .form-control, .form-select {
-            padding: 1rem;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: all 0.3s;
-            width: 100%;
+        .contact-buttons {
+          gap: 1rem;
         }
 
-        .form-control:focus, .form-select:focus {
-            border-color: var(--primary-green);
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
-            outline: none;
+        .contact-btn {
+          padding: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .contact-hero {
+          padding: 100px 0 50px;
         }
 
-        .captcha-note {
-            background: #f8f9fa;
-            border: 1px dashed #dee2e6;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            margin: 2rem 0;
-            color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .contact-hero h1 {
+          font-size: 2rem;
         }
 
-        .submit-btn {
-            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-            color: white;
-            border: none;
-            padding: 1.2rem 2rem;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            width: 100%;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.8rem;
-            cursor: pointer;
+        .contact-hero p {
+          font-size: 1.1rem;
+          padding: 0 1rem;
         }
 
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+        .contact-card {
+          padding: 1.5rem;
         }
 
-        .submit-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
+        .service-badge {
+          font-size: 1rem;
+          padding: 0.8rem 1.2rem;
         }
 
-        /* Additional Services Styling - Redesigned */
-        .additional-services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            margin: 1.5rem 0;
+        .contact-item {
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
         }
 
-        .additional-service-item {
-            background: #f8fafc;
-            border: 1px solid #e9edf2;
-            border-radius: 12px;
-            padding: 1rem 1rem 1rem 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        .contact-icon {
+          margin: 0 auto;
         }
 
-        .additional-service-item:hover {
-            background: #eaf7ea;
-            border-color: var(--primary-green);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(40, 167, 69, 0.08);
+        .contact-buttons {
+          margin-top: 2rem;
         }
+      }
 
-        .additional-service-item input[type="checkbox"] {
-            width: 1.2rem;
-            height: 1.2rem;
-            accent-color: var(--primary-green);
-            margin: 0;
-            flex-shrink: 0;
-        }
-
-        .service-icon {
-            color: var(--primary-green);
-            font-size: 1.2rem;
-            width: 1.6rem;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .service-name {
-            flex: 1;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #2c3e50;
-        }
-
-        .price-badge {
-            background: #dcfce7;
-            color: #166534;
-            padding: 0.3rem 0.7rem;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            white-space: nowrap;
-            border: 1px solid #bbf7d0;
-            flex-shrink: 0;
-        }
-
-        .note-included {
-            background: #f0f9ff;
-            border-left: 4px solid var(--primary-green);
-            padding: 1rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: #1e3a5f;
-            margin-top: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .additional-services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Guarantee Section */
-        .guarantee-section {
-            padding: 5rem 0;
-            background: var(--light-gray);
-        }
-
-        .guarantee-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .guarantee-card {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
-        }
-
-        .guarantee-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-green);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .guarantee-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-green), var(--accent-green));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 1.8rem;
-        }
-
-        .guarantee-card h4 {
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            font-size: 1.3rem;
-        }
-
-        .guarantee-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* ===============================
-           RESPONSIVE STYLES
-        =============================== */
-        @media (max-width: 992px) {
-            .contact-info {
-                padding-right: 0;
-                margin-bottom: 3rem;
-            }
-            
-            .form-section {
-                padding-left: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .contact-hero {
-                padding: 120px 0 60px;
-            }
-            
-            .contact-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .contact-card {
-                padding: 2rem;
-            }
-            
-            .service-badge {
-                padding: 0.8rem 1.5rem;
-                font-size: 1.1rem;
-            }
-            
-            .service-badge .price {
-                font-size: 1.5rem;
-            }
-            
-            .contact-item {
-                padding: 1.2rem;
-            }
-            
-            .contact-buttons {
-                gap: 1rem;
-            }
-            
-            .contact-btn {
-                padding: 1rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .contact-hero {
-                padding: 100px 0 50px;
-            }
-            
-            .contact-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .contact-hero p {
-                font-size: 1.1rem;
-                padding: 0 1rem;
-            }
-            
-            .contact-card {
-                padding: 1.5rem;
-            }
-            
-            .service-badge {
-                font-size: 1rem;
-                padding: 0.8rem 1.2rem;
-            }
-            
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-            
-            .contact-icon {
-                margin: 0 auto;
-            }
-            
-            .contact-buttons {
-                margin-top: 2rem;
-            }
-        }
-
-        /* ===============================
+      /* ===============================
            NAVBAR LOGO – DESKTOP
         =============================== */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            padding: 0;
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+
+      .navbar-logo {
+        height: 80px; /* 👈 MAIN CONTROL */
+        width: auto;
+        max-width: 260px;
+        object-fit: contain;
+      }
+
+      /* Desktop only */
+      @media (min-width: 992px) {
+        .navbar {
+          min-height: 90px;
         }
 
         .navbar-logo {
-            height: 80px;        /* 👈 MAIN CONTROL */
-            width: auto;
-            max-width: 260px;
-            object-fit: contain;
+          height: 80px; /* Bigger logo on desktop */
         }
-
-        /* Desktop only */
-        @media (min-width: 992px) {
-            .navbar {
-                min-height: 90px;
-            }
-
-            .navbar-logo {
-                height: 80px;    /* Bigger logo on desktop */
-            }
-        }
+      }
     </style>
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Perth Bond Cleaners",
-  "url": "https://www.perthbondcleaners.com",
-  "description": "Professional bond cleaning and end of lease cleaning services in Perth, Western Australia, with bond-back assurance.",
-  "telephone": "+61 4 5236 6782",
-  "priceRange": "$$",
-  "areaServed": [
-    {
-      "@type": "City",
-      "name": "Perth"
-    },
-    {
-      "@type": "City",
-      "name": "Fremantle"
-    },
-    {
-      "@type": "City",
-      "name": "Joondalup"
-    },
-    {
-      "@type": "City",
-      "name": "Rockingham"
-    }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Perth",
-    "addressRegion": "WA",
-    "addressCountry": "AU"
-  },
-  "openingHours": "Mo-Su 07:00-19:00"
-}
-</script>
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Perth Bond Cleaners",
+        "url": "https://www.perthbondcleaners.com",
+        "description": "Professional bond cleaning and end of lease cleaning services in Perth, Western Australia, with bond-back assurance.",
+        "telephone": "+61 4 5236 6782",
+        "priceRange": "$$",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Perth"
+          },
+          {
+            "@type": "City",
+            "name": "Fremantle"
+          },
+          {
+            "@type": "City",
+            "name": "Joondalup"
+          },
+          {
+            "@type": "City",
+            "name": "Rockingham"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Perth",
+          "addressRegion": "WA",
+          "addressCountry": "AU"
+        },
+        "openingHours": "Mo-Su 07:00-19:00"
+      }
+    </script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- Top Alert Bar -->
     <div class="top-alert bg-success text-white py-2">
-        <div class="container text-center">
-            <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Bond-Back Assurance • Professionally Insured
-        </div>
+      <div class="container text-center">
+        <i class="fas fa-shield-alt me-2"></i> Police-Cleared Team • Bond-Back
+        Assurance • Professionally Insured
+      </div>
     </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img 
-                    src="images/logo.png" 
-                    alt="Perth Bond Cleaner Logo"
-                    class="navbar-logo"
-                >
-            </a>
-            
-            <div class="d-lg-none d-flex align-items-center">
-                <div class="price-display ms-3">
-                    <span class="price-badge">From $299 AUD</span>
-                </div>
-                <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/logo.png"
+            alt="Perth Bond Cleaner Logo"
+            class="navbar-logo"
+          />
+        </a>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown">
-                            Services
-                        </a>
-                   
-                    <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="bond-cleaning-perth.html">Bond Cleaning</a></li>
-                            <li><a class="dropdown-item" href="house-cleaning-perth.html">House Cleaning</a></li>
-                            <li><a class="dropdown-item" href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
-                            <li><a class="dropdown-item" href="window-cleaning-perth.html">Window Cleaning</a></li>
-                            <li><a class="dropdown-item" href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
-                            <li><a class="dropdown-item" href="oven-cleaning-perth.html">Oven Cleaning</a></li>
-                        </ul>
-                    </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="areas.html">Service Areas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-                
-                <div class="d-none d-lg-flex align-items-center">
-                    <div class="nav-cta">
-                        <a href="tel:+61452366782" class="btn btn-outline-success me-3">
-                            <i class="fas fa-phone"></i> +61 452 366 782
-                        </a>
-                        <a href="contact.html" class="btn btn-success">
-                            <i class="fas fa-calendar-alt"></i> Get Instant Quote
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="d-lg-none d-flex align-items-center">
+          <div class="price-display ms-3">
+            <span class="price-badge">From $299 AUD</span>
+          </div>
+
+          <button
+            class="navbar-toggler ms-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <!-- Services -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="services.html"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item fw-bold" href="services.html"
+                    >ALL SERVICES</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-perth.html"
+                    >Bond Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="house-cleaning-perth.html"
+                    >House Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="carpet-cleaning-perth.html"
+                    >Carpet Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="window-cleaning-perth.html"
+                    >Window Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="commercial-cleaning-perth.html"
+                    >Commercial Cleaning</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="oven-cleaning-perth.html"
+                    >Oven Cleaning</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Service Areas -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="areas.html"
+                id="areasDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Service Areas
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item fw-bold" href="areas.html"
+                    >ALL SERVICE AREAS</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-subiaco.html"
+                    >Subiaco</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-perth-cbd.html"
+                    >Perth CBD</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-south-perth.html"
+                    >South Perth</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-east-perth.html"
+                    >East Perth</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-rockingham.html"
+                    >Rockingham</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-malaga.html"
+                    >Malaga</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="bond-cleaning-baldivis.html"
+                    >Baldivis</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center">
+            <div class="nav-cta">
+              <a href="tel:+61452366782" class="btn btn-outline-success me-3">
+                <i class="fas fa-phone"></i> +61 452 366 782
+              </a>
+
+              <a href="contact.html" class="btn btn-success">
+                <i class="fas fa-calendar-alt"></i> Get Instant Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- Contact Hero -->
     <section class="contact-hero" data-aos="fade-down">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get a fast personalised quote for professional bond cleaning across Perth.</p>
-        </div>
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>
+          Get a fast personalised quote for professional bond cleaning across
+          Perth.
+        </p>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <div class="container">
-            <div class="row">
-                <!-- Contact Info Column -->
-                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="contact-card contact-info">
-                        <div class="service-badge">
-                            <span class="price">From $299 AUD</span> 
-                            <span class="subtext">Final price depends on property details • Bond-back guarantee</span>
-                        </div>
-                        
-                        <h3 class="mb-4">Professional Bond Cleaning</h3>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Phone</h5>
-                                    <p><a href="tel:+61452366782">+61 452 366 782</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Email</h5>
-                                    <p><a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Hours</h5>
-                                    <p>Mon-Fri: 7:00 AM - 6:00 PM<br>Sat: 8:00 AM - 4:00 PM<br>Sun: 8:00 AM - 4:00 PM</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-text">
-                                    <h5>Service Area</h5>
-                                    <p>Serving all Perth metropolitan suburbs and surrounding areas. Free travel included.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-buttons">
-                            <a href="https://wa.me/61452366782" class="contact-btn whatsapp">
-                                <div class="btn-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="btn-text">
-                                    <span>WhatsApp Us</span>
-                                    <small>Fast response via WhatsApp</small>
-                                </div>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                            
-                            <a href="tel:+61452366782" class="contact-btn call">
-                                <div class="btn-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="btn-text">
-                                    <span>Call Now</span>
-                                    <small>Speak directly with our team</small>
-                                </div>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                            
-                            <a href="mailto:perthbondcleaners@gmail.com" class="contact-btn email">
-                                <div class="btn-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="btn-text">
-                                    <span>Send Email</span>
-                                    <small>Get a detailed quote via email</small>
-                                </div>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        <!-- Google Maps -->
-<div class="mt-4">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432910.83793878695!2d115.63120919985035!3d-32.03905358825566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2ec25e8c266ef203%3A0xd3c022a85b024063!2sPerth%20Bond%20Cleaner!5e0!3m2!1sen!2sph!4v1779191550198!5m2!1sen!2sph"
-    width="100%"
-    height="380"
-    style="border:0; border-radius:12px;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>    
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="row">
+          <!-- Contact Info Column -->
+          <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="contact-card contact-info">
+              <div class="service-badge">
+                <span class="price">From $299 AUD</span>
+                <span class="subtext"
+                  >Final price depends on property details • Bond-back
+                  guarantee</span
+                >
+              </div>
+
+              <h3 class="mb-4">Professional Bond Cleaning</h3>
+
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Phone</h5>
+                    <p><a href="tel:+61452366782">+61 452 366 782</a></p>
+                  </div>
                 </div>
-                
-                <!-- Contact Form Column -->
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="contact-card form-section">
-                        <h3 class="form-title">Get Your Free Quote</h3>
 
-                        <div class="form-note">
-                            <i class="fas fa-info-circle"></i>
-                            Fill out the form below and we'll get back to you within 24 hours with a free, no-obligation quote.
-                        </div>
-
-                        <!-- Netlify Form -->
-                        <form 
-                            id="contactForm"
-                            name="contact"
-                            method="POST"
-                            data-netlify="true"
-                            netlify-honeypot="bot-field"
-                            action="/thank-you.html"
-                        >
-                            <!-- Required for Netlify -->
-                            <input type="hidden" name="form-name" value="contact">
-
-                            <!-- Honeypot -->
-                            <p style="display:none;">
-                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                            </p>
-
-                            <!-- Personal Details -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" name="firstName" id="firstName" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" name="lastName">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="phone" class="form-label">Phone Number *</label>
-                                        <input 
-                                            type="tel"
-                                            class="form-control"
-                                            id="phone"
-                                            name="phone"
-                                            inputmode="numeric"
-                                            placeholder="+61412345678"
-                                            required
-                                        >
-                                        <div class="invalid-feedback">
-                                            Enter a valid Australian number (e.g. +61412345678)
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" name="email">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Address Details -->
-                            <div class="form-group">
-                                <label class="form-label">Street Address *</label>
-                                <input type="text" class="form-control" name="address" placeholder="House number & street name" required>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="suburb" class="form-label">Suburb *</label>
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="suburb"
-                                            name="suburb"
-                                            required
-                                        >
-                                        <div class="invalid-feedback">Please enter your suburb.</div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="postcode" class="form-label">Postcode *</label>
-                                        <input
-                                            type="tel"
-                                            inputmode="numeric"
-                                            class="form-control"
-                                            id="postcode"
-                                            name="postcode"
-                                            pattern="\d{4}"
-                                            maxlength="4"
-                                            placeholder="6000"
-                                            required
-                                        >
-                                        <div class="invalid-feedback">
-                                            Enter a valid 4-digit postcode.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Property Details -->
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="form-label">Bedrooms</label>
-                                        <select class="form-select" name="bedrooms" id="bedrooms">
-                                            <option value="">Select</option>
-                                            <option>Studio / 1 Bedroom Unit</option>
-                                            <option>2 Bedroom Unit / House</option>
-                                            <option>3 Bedroom House</option>
-                                            <option>4 Bedroom House</option>
-                                            <option>5+ Bedroom House</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="form-label">Bathrooms</label>
-                                        <select class="form-select" name="bathrooms">
-                                            <option value="">Select</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3+</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label class="form-label">Storeys</label>
-                                        <select class="form-select" name="storeys">
-                                            <option value="">Select</option>
-                                            <option>1 Storey</option>
-                                            <option>2 Storey</option>
-                                            <option>3+ Storey</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Additional Services - Updated with icons and prices -->
-                            <div class="additional-services-grid">
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Wall Cleaning">
-                                    <i class="fas fa-paint-roller service-icon"></i>
-                                    <span class="service-name">Wall Wash / Wall Cleaning</span>
-                                    <span class="price-badge">From $5-$8/m²</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="External Window Cleaning">
-                                    <i class="fas fa-window-maximize service-icon"></i>
-                                    <span class="service-name">External Window Cleaning</span>
-                                    <span class="price-badge">$30 per window</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Carpet Steam Cleaning">
-                                    <i class="fas fa-couch service-icon"></i>
-                                    <span class="service-name">Carpet Steam Cleaning</span>
-                                    <span class="price-badge">$50 per unit</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Mattress Cleaning">
-                                    <i class="fas fa-bed service-icon"></i>
-                                    <span class="service-name">Steam Mattress Cleaning</span>
-                                    <span class="price-badge">$60 per mattress</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Fridge Cleaning">
-                                    <i class="fas fa-thermometer-half service-icon"></i>
-                                    <span class="service-name">Fridge Cleaning (Interior)</span>
-                                    <span class="price-badge">$50 per fridge</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Sliding Door Cleaning">
-                                    <i class="fas fa-door-open service-icon"></i>
-                                    <span class="service-name">Sliding Door Cleaning</span>
-                                    <span class="price-badge">$30 per sliding door</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Blind Cleaning">
-                                    <i class="fas fa-border-all service-icon"></i>
-                                    <span class="service-name">Blind Cleaning</span>
-                                    <span class="price-badge">$10 per blind</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Garage Cleaning">
-                                    <i class="fas fa-warehouse service-icon"></i>
-                                    <span class="service-name">Garage Cleaning</span>
-                                    <span class="price-badge">From $50 per garage</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Balcony Cleaning">
-                                    <i class="fas fa-building service-icon"></i>
-                                    <span class="service-name">Balcony Cleaning</span>
-                                    <span class="price-badge">From $50 per balcony</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Patio Cleaning">
-                                    <i class="fas fa-chair service-icon"></i>
-                                    <span class="service-name">Patio Cleaning</span>
-                                    <span class="price-badge">From $60 per patio</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Steam Couch Cleaning">
-                                    <i class="fas fa-couch service-icon"></i>
-                                    <span class="service-name">Steam Couch Cleaning</span>
-                                    <span class="price-badge">From $60</span>
-                                </label>
-
-                                <label class="additional-service-item">
-                                    <input type="checkbox" name="additional[]" value="Grout Cleaning">
-                                    <i class="fas fa-border-all service-icon"></i>
-                                    <span class="service-name">Grout Cleaning</span>
-                                    <span class="price-badge">From $50</span>
-                                </label>
-                            </div>
-
-                            <!-- Note about included services -->
-                            <div class="note-included">
-                                <i class="fas fa-check-circle text-success me-2"></i>
-                                <strong>Included in bond cleaning:</strong> Oven cleaning, internal window cleaning, and spot wall cleaning. 
-                                Only external window cleaning is an extra charge (all other services above are optional).
-                            </div>
-
-                            <!-- Date & Time -->
-                            <div class="row mt-4">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="preferredDate" class="form-label">Preferred Date *</label>
-                                        <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
-                                        <div class="invalid-feedback">
-                                            Please select a preferred date.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="form-label">Preferred Time</label>
-                                        <select class="form-select" name="preferredTime">
-                                            <option value="">Any time</option>
-                                            <option>Morning (8am - 12pm)</option>
-                                            <option>Afternoon (12pm - 4pm)</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Notes -->
-                            <div class="form-group">
-                                <label class="form-label">Additional Information</label>
-                                <textarea class="form-control" name="message" rows="4"
-                                    placeholder="Access instructions, pets, special requests, etc."></textarea>
-                            </div>
-
-                            <!-- Submit -->
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane"></i> Get Free Quote Now
-                            </button>
-
-                            <div class="text-center mt-3">
-                                <small class="text-muted">
-                                    By submitting this form, you agree to our
-                                    <a href="privacy-policy.html">Privacy Policy</a>.
-                                </small>
-                            </div>
-                        </form>
-                    </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Email</h5>
+                    <p>
+                      <a href="mailto:perthbondcleaners@gmail.com"
+                        >perthbondcleaners@gmail.com</a
+                      >
+                    </p>
+                  </div>
                 </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Hours</h5>
+                    <p>
+                      Mon-Fri: 7:00 AM - 6:00 PM<br />Sat: 8:00 AM - 4:00 PM<br />Sun:
+                      8:00 AM - 4:00 PM
+                    </p>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-text">
+                    <h5>Service Area</h5>
+                    <p>
+                      Serving all Perth metropolitan suburbs and surrounding
+                      areas. Free travel included.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-buttons">
+                <a
+                  href="https://wa.me/61452366782"
+                  class="contact-btn whatsapp"
+                >
+                  <div class="btn-icon">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div class="btn-text">
+                    <span>WhatsApp Us</span>
+                    <small>Fast response via WhatsApp</small>
+                  </div>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="tel:+61452366782" class="contact-btn call">
+                  <div class="btn-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="btn-text">
+                    <span>Call Now</span>
+                    <small>Speak directly with our team</small>
+                  </div>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a
+                  href="mailto:perthbondcleaners@gmail.com"
+                  class="contact-btn email"
+                >
+                  <div class="btn-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="btn-text">
+                    <span>Send Email</span>
+                    <small>Get a detailed quote via email</small>
+                  </div>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <!-- Google Maps -->
+                <div class="mt-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432910.83793878695!2d115.63120919985035!3d-32.03905358825566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2ec25e8c266ef203%3A0xd3c022a85b024063!2sPerth%20Bond%20Cleaner!5e0!3m2!1sen!2sph!4v1779191550198!5m2!1sen!2sph"
+                    width="100%"
+                    height="380"
+                    style="border: 0; border-radius: 12px"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div id="quote-form" class="col-lg-7" data-aos="fade-left">
+            <div class="contact-card form-section">
+              <h3 class="form-title">Get Your Free Quote</h3>
+
+              <div class="form-note">
+                <i class="fas fa-info-circle"></i>
+                Fill out the form below and we'll get back to you within 24
+                hours with a free, no-obligation quote.
+              </div>
+
+              <!-- Netlify Form -->
+              <form
+                id="contactForm"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                action="/thank-you.html"
+              >
+                <!-- Required for Netlify -->
+                <input type="hidden" name="form-name" value="contact" />
+
+                <!-- Honeypot -->
+                <p style="display: none">
+                  <label
+                    >Don't fill this out if you're human:
+                    <input name="bot-field"
+                  /></label>
+                </p>
+
+                <!-- Personal Details -->
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">First Name *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="firstName"
+                        id="firstName"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" class="form-control" name="lastName" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone" class="form-label"
+                        >Phone Number *</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        inputmode="numeric"
+                        placeholder="+61412345678"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Enter a valid Australian number (e.g. +61412345678)
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Email Address</label>
+                      <input type="email" class="form-control" name="email" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Address Details -->
+                <div class="form-group">
+                  <label class="form-label">Street Address *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="address"
+                    placeholder="House number & street name"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="suburb" class="form-label">Suburb *</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="suburb"
+                        name="suburb"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please enter your suburb.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="postcode" class="form-label"
+                        >Postcode *</label
+                      >
+                      <input
+                        type="tel"
+                        inputmode="numeric"
+                        class="form-control"
+                        id="postcode"
+                        name="postcode"
+                        pattern="\d{4}"
+                        maxlength="4"
+                        placeholder="6000"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Enter a valid 4-digit postcode.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Property Details -->
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Bedrooms</label>
+                      <select class="form-select" name="bedrooms" id="bedrooms">
+                        <option value="">Select</option>
+                        <option>Studio / 1 Bedroom Unit</option>
+                        <option>2 Bedroom Unit / House</option>
+                        <option>3 Bedroom House</option>
+                        <option>4 Bedroom House</option>
+                        <option>5+ Bedroom House</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Bathrooms</label>
+                      <select class="form-select" name="bathrooms">
+                        <option value="">Select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3+</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="form-label">Storeys</label>
+                      <select class="form-select" name="storeys">
+                        <option value="">Select</option>
+                        <option>1 Storey</option>
+                        <option>2 Storey</option>
+                        <option>3+ Storey</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Additional Services - Updated with icons and prices -->
+                <div class="additional-services-grid">
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Wall Cleaning"
+                    />
+                    <i class="fas fa-paint-roller service-icon"></i>
+                    <span class="service-name">Wall Wash / Wall Cleaning</span>
+                    <span class="price-badge">From $5-$8/m²</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="External Window Cleaning"
+                    />
+                    <i class="fas fa-window-maximize service-icon"></i>
+                    <span class="service-name">External Window Cleaning</span>
+                    <span class="price-badge">$30 per window</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Carpet Steam Cleaning"
+                    />
+                    <i class="fas fa-couch service-icon"></i>
+                    <span class="service-name">Carpet Steam Cleaning</span>
+                    <span class="price-badge">$50 per unit</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Mattress Cleaning"
+                    />
+                    <i class="fas fa-bed service-icon"></i>
+                    <span class="service-name">Steam Mattress Cleaning</span>
+                    <span class="price-badge">$60 per mattress</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Fridge Cleaning"
+                    />
+                    <i class="fas fa-thermometer-half service-icon"></i>
+                    <span class="service-name">Fridge Cleaning (Interior)</span>
+                    <span class="price-badge">$50 per fridge</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Sliding Door Cleaning"
+                    />
+                    <i class="fas fa-door-open service-icon"></i>
+                    <span class="service-name">Sliding Door Cleaning</span>
+                    <span class="price-badge">$30 per sliding door</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Blind Cleaning"
+                    />
+                    <i class="fas fa-border-all service-icon"></i>
+                    <span class="service-name">Blind Cleaning</span>
+                    <span class="price-badge">$10 per blind</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Garage Cleaning"
+                    />
+                    <i class="fas fa-warehouse service-icon"></i>
+                    <span class="service-name">Garage Cleaning</span>
+                    <span class="price-badge">From $50 per garage</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Balcony Cleaning"
+                    />
+                    <i class="fas fa-building service-icon"></i>
+                    <span class="service-name">Balcony Cleaning</span>
+                    <span class="price-badge">From $50 per balcony</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Patio Cleaning"
+                    />
+                    <i class="fas fa-chair service-icon"></i>
+                    <span class="service-name">Patio Cleaning</span>
+                    <span class="price-badge">From $60 per patio</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Steam Couch Cleaning"
+                    />
+                    <i class="fas fa-couch service-icon"></i>
+                    <span class="service-name">Steam Couch Cleaning</span>
+                    <span class="price-badge">From $60</span>
+                  </label>
+
+                  <label class="additional-service-item">
+                    <input
+                      type="checkbox"
+                      name="additional[]"
+                      value="Grout Cleaning"
+                    />
+                    <i class="fas fa-border-all service-icon"></i>
+                    <span class="service-name">Grout Cleaning</span>
+                    <span class="price-badge">From $50</span>
+                  </label>
+                </div>
+
+                <!-- Note about included services -->
+                <div class="note-included">
+                  <i class="fas fa-check-circle text-success me-2"></i>
+                  <strong>Included in bond cleaning:</strong> Oven cleaning,
+                  internal window cleaning, and spot wall cleaning. Only
+                  external window cleaning is an extra charge (all other
+                  services above are optional).
+                </div>
+
+                <!-- Date & Time -->
+                <div class="row mt-4">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="preferredDate" class="form-label"
+                        >Preferred Date *</label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="preferredDate"
+                        name="preferredDate"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please select a preferred date.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="form-label">Preferred Time</label>
+                      <select class="form-select" name="preferredTime">
+                        <option value="">Any time</option>
+                        <option>Morning (8am - 12pm)</option>
+                        <option>Afternoon (12pm - 4pm)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Notes -->
+                <div class="form-group">
+                  <label class="form-label">Additional Information</label>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="4"
+                    placeholder="Access instructions, pets, special requests, etc."
+                  ></textarea>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn">
+                  <i class="fas fa-paper-plane"></i> Get Free Quote Now
+                </button>
+
+                <div class="text-center mt-3">
+                  <small class="text-muted">
+                    By submitting this form, you agree to our
+                    <a href="privacy-policy.html">Privacy Policy</a>.
+                  </small>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Guarantee Section -->
     <section class="guarantee-section">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Why Choose Us</h2>
-                <p class="section-subtitle">Get peace of mind with our comprehensive guarantees</p>
-            </div>
-            
-            <div class="guarantee-grid">
-                <div class="guarantee-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="guarantee-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4>Bond-Back Guarantee</h4>
-                        <p>If any cleaning-related issues are identified during the final inspection, we’ll arrange a return visit at no extra cost.</p>                
-                    </div>
-                
-                <div class="guarantee-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="guarantee-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h4>24-Hour Response</h4>
-                    <p>We guarantee a response to your inquiry within 24 hours, 7 days a week.</p>
-                </div>
-                
-                <div class="guarantee-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="guarantee-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h4>Price Match Guarantee</h4>
-                    <p>Found a better comparable quote? Let us know and we'll do our best to match it.</p>
-                </div>
-                
-                <div class="guarantee-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="guarantee-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h4>Police-Cleared Team</h4>
-                    <p>All our team members are police-cleared and fully insured for your peace of mind.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">
+            Get peace of mind with our comprehensive guarantees
+          </p>
         </div>
+
+        <div class="guarantee-grid">
+          <div class="guarantee-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="guarantee-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4>Bond-Back Guarantee</h4>
+            <p>
+              If any cleaning-related issues are identified during the final
+              inspection, we’ll arrange a return visit at no extra cost.
+            </p>
+          </div>
+
+          <div class="guarantee-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="guarantee-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4>24-Hour Response</h4>
+            <p>
+              We guarantee a response to your inquiry within 24 hours, 7 days a
+              week.
+            </p>
+          </div>
+
+          <div class="guarantee-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="guarantee-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h4>Price Match Guarantee</h4>
+            <p>
+              Found a better comparable quote? Let us know and we'll do our best
+              to match it.
+            </p>
+          </div>
+
+          <div class="guarantee-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="guarantee-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h4>Police-Cleared Team</h4>
+            <p>
+              All our team members are police-cleared and fully insured for your
+              peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FAQ Section -->
     <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Common questions about our bond cleaning service</p>
-            </div>
-            
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item" data-aos="fade-up">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            How soon can you clean my property?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We offer same-day service for bookings made before 12 PM. Typically, we can schedule your clean within 24-48 hours, including weekends. Use our booking form to check real-time availability.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Is the price really starting from $299?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Our pricing starts from $299 AUD. The final quote depends on factors such as property type, condition, and any additional services requested. We always provide a clear, upfront quote before confirming your booking.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            How does the Bond-Back Guarantee work?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            After receiving the property manager’s exit report, we will arrange a return visit for any cleaning-related issues if required. We'll return at no additional cost to address any concerns. We'll work with you until your bond is successfully returned.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            Do I need to be home during the cleaning?
-                        </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            No, you don't need to be present. We can collect keys from a secure location or real estate agent. All our team members are police-cleared and fully insured for your peace of mind.
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Common questions about our bond cleaning service
+          </p>
         </div>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item" data-aos="fade-up">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq1"
+              >
+                How soon can you clean my property?
+              </button>
+            </h2>
+            <div
+              id="faq1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                We offer same-day service for bookings made before 12 PM.
+                Typically, we can schedule your clean within 24-48 hours,
+                including weekends. Use our booking form to check real-time
+                availability.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq2"
+              >
+                Is the price really starting from $299?
+              </button>
+            </h2>
+            <div
+              id="faq2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Our pricing starts from $299 AUD. The final quote depends on
+                factors such as property type, condition, and any additional
+                services requested. We always provide a clear, upfront quote
+                before confirming your booking.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq3"
+              >
+                How does the Bond-Back Guarantee work?
+              </button>
+            </h2>
+            <div
+              id="faq3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                After receiving the property manager’s exit report, we will
+                arrange a return visit for any cleaning-related issues if
+                required. We'll return at no additional cost to address any
+                concerns. We'll work with you until your bond is successfully
+                returned.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faq4"
+              >
+                Do I need to be home during the cleaning?
+              </button>
+            </h2>
+            <div
+              id="faq4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                No, you don't need to be present. We can collect keys from a
+                secure location or real estate agent. All our team members are
+                police-cleared and fully insured for your peace of mind.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand mb-3">
-                        <div class="d-flex align-items-center">
-                            <img 
-                                src="images/logo.png" 
-                                alt="Perth Bond Cleaner Logo"
-                                class="footer-logo-img me-2"
-                            />
-                            <div>
-                                <h4 class="footer-logo">Perth Bond Cleaners</h4>
-                                <p class="footer-tagline">Perth's trusted bond cleaning specialists</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p>Professional, reliable bond cleaning from $299 AUD with bond-back assurance.</p>
-                    <div class="trust-badges mt-3">
-                        <span class="badge bg-success me-0" style="font-size:0.95rem; padding:0.5rem 1rem;">
-                            TRUSTED by Perth residents
-                        </span>
-                    </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="footer-brand mb-3">
+              <div class="d-flex align-items-center">
+                <img
+                  src="images/logo.png"
+                  alt="Perth Bond Cleaner Logo"
+                  class="footer-logo-img me-2"
+                />
+                <div>
+                  <h4 class="footer-logo">Perth Bond Cleaners</h4>
+                  <p class="footer-tagline">
+                    Perth's trusted bond cleaning specialists
+                  </p>
                 </div>
-                
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
-                        <li><a href="areas.html">Service Areas</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Book Now</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 mb-4">
-                    <h5>Our Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
-                        <li><a href="house-cleaning-perth.html">House Cleaning</a></li>
-                        <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
-                        <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
-                        <li><a href="commercial-cleaning-perth.html">Commercial Cleaning</a></li>
-                        <li><a href="oven-cleaning-perth.html">Oven Cleaning</a></li>
-                        <!-- 
+              </div>
+            </div>
+            <p>
+              Professional, reliable bond cleaning from $299 AUD with bond-back
+              assurance.
+            </p>
+            <div class="trust-badges mt-3">
+              <span
+                class="badge bg-success me-0"
+                style="font-size: 0.95rem; padding: 0.5rem 1rem"
+              >
+                TRUSTED by Perth residents
+              </span>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+              <li><a href="areas.html">Service Areas</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Book Now</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h5>Our Services</h5>
+            <ul class="footer-links">
+              <li><a href="bond-cleaning-perth.html">Bond Cleaning</a></li>
+              <li><a href="house-cleaning-perth.html">House Cleaning</a></li>
+              <li><a href="carpet-cleaning-perth.html">Carpet Cleaning</a></li>
+              <li><a href="window-cleaning-perth.html">Window Cleaning</a></li>
+              <li>
+                <a href="commercial-cleaning-perth.html">Commercial Cleaning</a>
+              </li>
+              <li><a href="oven-cleaning-perth.html">Oven Cleaning</a></li>
+              <!-- 
                         <li><a href="services.html#carpet">Carpet Steam Cleaning</a></li>
                         <li><a href="services.html#windows">External Window Cleaning</a></li>
                         <li><a href="services.html#walls">Wall Cleaning</a></li>
                         <li><a href="services.html#blinds">Blind Cleaning</a></li>
                         -->
-                    </ul>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mb-4">
+            <h5>Get In Touch</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fas fa-phone"></i>
+                <div>
+                  <a href="tel:+61452366782">+61 452 366 782</a>
+                  <small class="d-block">Call or Text</small>
                 </div>
-                
-                <div class="col-lg-3 col-md-4 mb-4">
-                    <h5>Get In Touch</h5>
-                    <ul class="footer-contact">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <a href="tel:+61452366782">+61 452 366 782</a>
-                                <small class="d-block">Call or Text</small>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <a href="mailto:perthbondcleaners@gmail.com">perthbondcleaners@gmail.com</a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                109 Weston St, Maddington WA 6109, Australia
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
-                                <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="whatsapp-cta mt-3">
-                        <a href="https://wa.me/61452366782" class="btn btn-success w-100">
-                            <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
-                        </a>
-                    </div>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <a href="mailto:perthbondcleaners@gmail.com"
+                    >perthbondcleaners@gmail.com</a
+                  >
                 </div>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>109 Weston St, Maddington WA 6109, Australia</div>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <div>Mon-Fri: 7:00 AM - 6:00 PM</div>
+                  <div>Sat-Sun: 8:00 AM - 4:00 PM</div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="whatsapp-cta mt-3">
+              <a href="https://wa.me/61452366782" class="btn btn-success w-100">
+                <i class="fab fa-whatsapp"></i> WhatsApp for a Quote from $299
+              </a>
             </div>
-            
-            <hr class="my-4">
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2026 Perth Bond Cleaners. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="privacy-policy.html" class="text-white me-3">Privacy Policy</a>
-                    <a href="terms-of-service.html" class="text-white me-3">Terms of Service</a>
-                    <a href="bond-back-guarantee.html" class="text-white">Bond-Back Assurance</a>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <hr class="my-4" />
+
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">
+              &copy; 2026 Perth Bond Cleaners. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="privacy-policy.html" class="text-white me-3"
+              >Privacy Policy</a
+            >
+            <a href="terms-of-service.html" class="text-white me-3"
+              >Terms of Service</a
+            >
+            <a href="bond-back-guarantee.html" class="text-white"
+              >Bond-Back Assurance</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
-    
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
-        
-        // Contact form handling for Netlify (Client-side validation only)
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            
-            // Set minimum date for date picker to today (removed PHP line from HTML)
-            const today = new Date().toISOString().split('T')[0];
-            const dateInput = document.getElementById('preferredDate');
-            if (dateInput) {
-                dateInput.min = today;
-            }
-            
-            // Highlight current page in navigation
-            const currentPage = window.location.pathname.split('/').pop();
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-            
-            // Real-time validation (for UX, not submission blocking)
-            const inputs = contactForm.querySelectorAll('input, select, textarea');
-            inputs.forEach(input => {
-                input.addEventListener('blur', function() {
-                    validateField(this);
-                });
-                
-                input.addEventListener('input', function() {
-                    this.classList.remove('is-invalid');
-                    const feedback = this.nextElementSibling;
-                    if (feedback && feedback.classList.contains('invalid-feedback')) {
-                        feedback.style.display = 'none';
-                    }
-                });
-            });
-            
-            function validateField(field) {
-                if (field.hasAttribute('required') && !field.value.trim()) {
-                    showError(field, 'This field is required.');
-                    return false;
-                }
-                
-                // Email validation
-                if (field.type === 'email' && field.value) {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(field.value)) {
-                        showError(field, 'Please enter a valid email address.');
-                        return false;
-                    }
-                }
-                
-                // Phone validation
-                if (field.id === 'phone' && field.value) {
-                    const phoneDigits = field.value.replace(/\D/g, '');
-                    if (phoneDigits.length < 10) {
-                        showError(field, 'Please enter a valid Australian phone number.');
-                        return false;
-                    }
-                }
-                
-                return true;
-            }
-            
-            function showError(field, message) {
-                field.classList.add('is-invalid');
-                let feedback = field.nextElementSibling;
-                if (!feedback || !feedback.classList.contains('invalid-feedback')) {
-                    feedback = document.createElement('div');
-                    feedback.className = 'invalid-feedback';
-                    field.parentNode.insertBefore(feedback, field.nextSibling);
-                }
-                feedback.textContent = message;
-                feedback.style.display = 'block';
-            }
-            
-            // Simple AU phone helper (Netlify-safe)
-            const phoneInput = document.getElementById('phone');
-            if (phoneInput) {
-                phoneInput.addEventListener('focus', () => {
-                    if (!phoneInput.value) phoneInput.value = '+61';
-                });
 
-                phoneInput.addEventListener('input', () => {
-                    phoneInput.value = phoneInput.value.replace(/[^+\d]/g, '');
-                });
-            }
-            
-            // Handle URL parameters for pre-filling form
-            const urlParams = new URLSearchParams(window.location.search);
-            const suburbParam = urlParams.get('suburb');
-            const serviceParam = urlParams.get('service');
-            
-            if (suburbParam) {
-                const suburbInput = document.getElementById('suburb');
-                if (suburbInput) {
-                    suburbInput.value = suburbParam.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
-                }
-            }
-            
-            if (serviceParam) {
-                const serviceCheckbox = document.getElementById(serviceParam + 'Cleaning');
-                if (serviceCheckbox) {
-                    serviceCheckbox.checked = true;
-                }
-            }
-            
-            // Netlify will handle the actual form submission.
-            // We removed the submit event listener that was trying to control submission.
-            // The form will submit normally and redirect to /thank-you.html as specified in the action attribute.
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+
+      // Contact form handling for Netlify (Client-side validation only)
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+
+        // Set minimum date for date picker to today (removed PHP line from HTML)
+        const today = new Date().toISOString().split("T")[0];
+        const dateInput = document.getElementById("preferredDate");
+        if (dateInput) {
+          dateInput.min = today;
+        }
+
+        // Highlight current page in navigation
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
         });
-        
-        // WhatsApp message function
-        function sendWhatsApp() {
-            const name = document.getElementById('firstName')?.value || '';
-            const phone = document.getElementById('phone')?.value || '';
-            const suburb = document.getElementById('suburb')?.value || '';
-            const bedrooms = document.getElementById('bedrooms')?.value || '';
-            
-            const message = `Hi, I'm interested in your bond cleaning service. 
+
+        // Real-time validation (for UX, not submission blocking)
+        const inputs = contactForm.querySelectorAll("input, select, textarea");
+        inputs.forEach((input) => {
+          input.addEventListener("blur", function () {
+            validateField(this);
+          });
+
+          input.addEventListener("input", function () {
+            this.classList.remove("is-invalid");
+            const feedback = this.nextElementSibling;
+            if (feedback && feedback.classList.contains("invalid-feedback")) {
+              feedback.style.display = "none";
+            }
+          });
+        });
+
+        function validateField(field) {
+          if (field.hasAttribute("required") && !field.value.trim()) {
+            showError(field, "This field is required.");
+            return false;
+          }
+
+          // Email validation
+          if (field.type === "email" && field.value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(field.value)) {
+              showError(field, "Please enter a valid email address.");
+              return false;
+            }
+          }
+
+          // Phone validation
+          if (field.id === "phone" && field.value) {
+            const phoneDigits = field.value.replace(/\D/g, "");
+            if (phoneDigits.length < 10) {
+              showError(field, "Please enter a valid Australian phone number.");
+              return false;
+            }
+          }
+
+          return true;
+        }
+
+        function showError(field, message) {
+          field.classList.add("is-invalid");
+          let feedback = field.nextElementSibling;
+          if (!feedback || !feedback.classList.contains("invalid-feedback")) {
+            feedback = document.createElement("div");
+            feedback.className = "invalid-feedback";
+            field.parentNode.insertBefore(feedback, field.nextSibling);
+          }
+          feedback.textContent = message;
+          feedback.style.display = "block";
+        }
+
+        // Simple AU phone helper (Netlify-safe)
+        const phoneInput = document.getElementById("phone");
+        if (phoneInput) {
+          phoneInput.addEventListener("focus", () => {
+            if (!phoneInput.value) phoneInput.value = "+61";
+          });
+
+          phoneInput.addEventListener("input", () => {
+            phoneInput.value = phoneInput.value.replace(/[^+\d]/g, "");
+          });
+        }
+
+        // Handle URL parameters for pre-filling form
+        const urlParams = new URLSearchParams(window.location.search);
+        const suburbParam = urlParams.get("suburb");
+        const serviceParam = urlParams.get("service");
+
+        if (suburbParam) {
+          const suburbInput = document.getElementById("suburb");
+          if (suburbInput) {
+            suburbInput.value = suburbParam
+              .replace("-", " ")
+              .replace(/\b\w/g, (l) => l.toUpperCase());
+          }
+        }
+
+        if (serviceParam) {
+          const serviceCheckbox = document.getElementById(
+            serviceParam + "Cleaning",
+          );
+          if (serviceCheckbox) {
+            serviceCheckbox.checked = true;
+          }
+        }
+
+        // Netlify will handle the actual form submission.
+        // We removed the submit event listener that was trying to control submission.
+        // The form will submit normally and redirect to /thank-you.html as specified in the action attribute.
+      });
+
+      // WhatsApp message function
+      function sendWhatsApp() {
+        const name = document.getElementById("firstName")?.value || "";
+        const phone = document.getElementById("phone")?.value || "";
+        const suburb = document.getElementById("suburb")?.value || "";
+        const bedrooms = document.getElementById("bedrooms")?.value || "";
+
+        const message = `Hi, I'm interested in your bond cleaning service. 
         Name: ${name}
         Phone: ${phone}
         Suburb: ${suburb}
         Bedrooms: ${bedrooms}
         Please send me a quote.`;
-            
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/61452366782?text=${encodedMessage}`, '_blank');
-        }
+
+        const encodedMessage = encodeURIComponent(message);
+        window.open(
+          `https://wa.me/61452366782?text=${encodedMessage}`,
+          "_blank",
+        );
+      }
     </script>
     <script src="js/navigation.js"></script>
-</body>
+  </body>
 </html>
