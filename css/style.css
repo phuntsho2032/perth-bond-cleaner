@@ -718,6 +718,41 @@ h6 {
   font-weight: 600;
   padding: 0.8rem 1rem;
 }
+/* Social Icons in Footer */
+.social-links .social-icon {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+/* Facebook Hover - Official Blue */
+.social-links a[href*="facebook.com"]:hover {
+  background: #1877F2 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+}
+
+/* Instagram Hover - Official Bright Pink */
+.social-links a[href*="instagram.com"]:hover {
+  background: #E4405F !important;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(228, 64, 95, 0.4);
+}
+
+.social-links small {
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 
 /* Trust Badges */
 .trust-badges img {
