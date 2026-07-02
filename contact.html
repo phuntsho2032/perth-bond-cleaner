@@ -884,7 +884,7 @@
       <div class="container">
         <div class="row">
           <!-- Contact Info Column -->
-          <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+          <div class="col-lg-5 mb-4 mb-lg-0 order-2 order-lg-1" data-aos="fade-right">
             <div class="contact-card contact-info">
               <div class="service-badge">
                 <span class="price">From $299 AUD</span>
@@ -1019,13 +1019,13 @@
           </div>
 
           <!-- Contact Form Column -->
-          <div id="quote-form" class="col-lg-7" data-aos="fade-left">
+          <div id="quote-form" class="col-lg-7 order-1 order-lg-2" data-aos="fade-left">
             <div class="contact-card form-section">
               <h3 class="form-title">Get Your Free Quote</h3>
 
               <div class="form-note">
                 <i class="fas fa-info-circle"></i>
-                Fill out the form below and we'll get back to you within 24
+                Fill out the form below and we'll get back to you within 12
                 hours with a free, no-obligation quote.
               </div>
 
@@ -1200,11 +1200,10 @@
                     <input
                       type="checkbox"
                       name="additional[]"
-                      value="Wall Cleaning"
+                      value="Full Wall Washing"
                     />
                     <i class="fas fa-paint-roller service-icon"></i>
-                    <span class="service-name">Wall Wash / Wall Cleaning</span>
-                    <span class="price-badge">From $5-$8/m²</span>
+                    <span class="service-name">Full Wall Washing</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1215,7 +1214,6 @@
                     />
                     <i class="fas fa-window-maximize service-icon"></i>
                     <span class="service-name">External Window Cleaning</span>
-                    <span class="price-badge">$30 per window</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1226,40 +1224,36 @@
                     />
                     <i class="fas fa-couch service-icon"></i>
                     <span class="service-name">Carpet Steam Cleaning</span>
-                    <span class="price-badge">$50 per unit</span>
                   </label>
 
                   <label class="additional-service-item">
                     <input
                       type="checkbox"
                       name="additional[]"
-                      value="Mattress Cleaning"
+                      value="Mattress Steam Cleaning"
                     />
                     <i class="fas fa-bed service-icon"></i>
-                    <span class="service-name">Steam Mattress Cleaning</span>
-                    <span class="price-badge">$60 per mattress</span>
+                    <span class="service-name">Mattress Steam Cleaning</span>
                   </label>
 
                   <label class="additional-service-item">
                     <input
                       type="checkbox"
                       name="additional[]"
-                      value="Fridge Cleaning"
+                      value="Refrigerator (Internal Cleaning)"
                     />
                     <i class="fas fa-thermometer-half service-icon"></i>
-                    <span class="service-name">Fridge Cleaning (Interior)</span>
-                    <span class="price-badge">$50 per fridge</span>
+                    <span class="service-name">Refrigerator (Internal Cleaning)</span>
                   </label>
 
                   <label class="additional-service-item">
                     <input
                       type="checkbox"
                       name="additional[]"
-                      value="Sliding Door Cleaning"
+                      value="Sliding Door Deep Cleaning"
                     />
                     <i class="fas fa-door-open service-icon"></i>
-                    <span class="service-name">Sliding Door Cleaning</span>
-                    <span class="price-badge">$30 per sliding door</span>
+                    <span class="service-name">Sliding Door Deep Cleaning (Tracks & Frames)</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1270,7 +1264,6 @@
                     />
                     <i class="fas fa-border-all service-icon"></i>
                     <span class="service-name">Blind Cleaning</span>
-                    <span class="price-badge">$10 per blind</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1281,7 +1274,6 @@
                     />
                     <i class="fas fa-warehouse service-icon"></i>
                     <span class="service-name">Garage Cleaning</span>
-                    <span class="price-badge">From $50 per garage</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1292,7 +1284,6 @@
                     />
                     <i class="fas fa-building service-icon"></i>
                     <span class="service-name">Balcony Cleaning</span>
-                    <span class="price-badge">From $50 per balcony</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1303,18 +1294,16 @@
                     />
                     <i class="fas fa-chair service-icon"></i>
                     <span class="service-name">Patio Cleaning</span>
-                    <span class="price-badge">From $60 per patio</span>
                   </label>
 
                   <label class="additional-service-item">
                     <input
                       type="checkbox"
                       name="additional[]"
-                      value="Steam Couch Cleaning"
+                      value="Couch Steam Cleaning"
                     />
                     <i class="fas fa-couch service-icon"></i>
-                    <span class="service-name">Steam Couch Cleaning</span>
-                    <span class="price-badge">From $60</span>
+                    <span class="service-name">Couch Steam Cleaning</span>
                   </label>
 
                   <label class="additional-service-item">
@@ -1325,8 +1314,27 @@
                     />
                     <i class="fas fa-border-all service-icon"></i>
                     <span class="service-name">Grout Cleaning</span>
-                    <span class="price-badge">From $50</span>
                   </label>
+
+                  <label class="additional-service-item">
+                    <input
+                        type="checkbox"
+                        name="additional[]"
+                        value="Flea Treatment"
+                    />
+                    <i class="fas fa-bug service-icon"></i>
+                    <span class="service-name">Flea Treatment</span>
+                    </label>
+
+                  <label class="additional-service-item">
+                    <input
+                        type="checkbox"
+                        name="additional[]"
+                        value="Pressure Washing"
+                    />
+                    <i class="fas fa-tint service-icon"></i>
+                    <span class="service-name">Pressure Washing</span>
+                   </label>
                 </div>
 
                 <!-- Note about included services -->
@@ -1425,9 +1433,9 @@
             <div class="guarantee-icon">
               <i class="fas fa-clock"></i>
             </div>
-            <h4>24-Hour Response</h4>
+            <h4>12-Hour Response</h4>
             <p>
-              We guarantee a response to your inquiry within 24 hours, 7 days a
+              We guarantee a response to your inquiry within 12 hours, 7 days a
               week.
             </p>
           </div>
