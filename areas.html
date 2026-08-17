@@ -752,6 +752,130 @@
           background-position: center center;
         }
       }
+
+      /* =========================================
+                SUBURB CARD CTA BUTTONS
+                Production Version
+      ========================================= */
+
+      .suburb-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: auto;
+        padding-top: 0.5rem;
+      }
+
+      .suburb-cta .btn {
+        width: 100%;
+        min-height: 48px;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        font-size: 0.92rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.45rem;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          background-color 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      /* Primary CTA */
+      .suburb-cta .btn-success {
+        background: linear-gradient(
+          135deg,
+          var(--primary-green),
+          var(--accent-green)
+        );
+        border: 1px solid var(--primary-green);
+        color: #fff;
+        box-shadow: 0 5px 14px rgba(40, 167, 69, 0.18);
+      }
+
+      .suburb-cta .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(40, 167, 69, 0.28);
+        color: #fff;
+      }
+
+      /* Secondary CTA */
+      .suburb-cta .btn-outline-success {
+        background: #fff;
+        color: var(--primary-green);
+        border: 1.5px solid rgba(40, 167, 69, 0.45);
+      }
+
+      .suburb-cta .btn-outline-success:hover {
+        background: var(--light-green);
+        border-color: var(--primary-green);
+        color: var(--dark-green);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 14px rgba(40, 167, 69, 0.12);
+      }
+
+      /* Icons */
+      .suburb-cta .btn i {
+        font-size: 0.9rem;
+      }
+
+      /* Prevent ugly focus outlines while keeping accessibility */
+      .suburb-cta .btn:focus-visible {
+        outline: 3px solid rgba(40, 167, 69, 0.25);
+        outline-offset: 2px;
+      }
+
+      /* Desktop: buttons sit beside each other */
+      @media (min-width: 768px) {
+        .suburb-cta {
+          flex-direction: row;
+          gap: 0.75rem;
+        }
+
+        .suburb-cta .btn {
+          flex: 1;
+        }
+      }
+
+      /* Tablet */
+      @media (max-width: 767px) {
+        .suburb-cta {
+          gap: 0.65rem;
+        }
+
+        .suburb-cta .btn {
+          min-height: 47px;
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Small mobile */
+      @media (max-width: 576px) {
+        .suburb-cta {
+          margin-top: 1rem;
+          padding-top: 0.25rem;
+        }
+
+        .suburb-cta .btn {
+          width: 100%;
+          min-height: 48px;
+          font-size: 0.9rem;
+          border-radius: 9px;
+        }
+      }
+
+      /* Make sure cards can push CTA to the bottom */
+      .suburb-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .suburb-description {
+        flex-grow: 1;
+      }
     </style>
 
     <script type="application/ld+json">
@@ -922,69 +1046,63 @@
 
         <!-- Service Areas -->
         <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="areas.html"
-            id="areasDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Service Areas
-          </a>
-
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item fw-bold" href="areas.html">
-                All Service Areas
+              <a
+                class="nav-link dropdown-toggle"
+                href="areas.html"
+                id="areasDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Service Areas
               </a>
-            </li>
+              <ul class="dropdown-menu">
+                <!-- All Service Areas -->
+                <li>
+                  <a class="dropdown-item fw-bold" href="areas.html">
+                    All Service Areas
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
 
-            <li><hr class="dropdown-divider" /></li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-subiaco.html">
-                Subiaco
-              </a>
+                <!-- Top 7 suburbs - pointing to FINAL production filenames -->
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-cannington.html">
+                    Cannington
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-victoria-park.html">
+                    Victoria Park
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-east-victoria-park.html">
+                    East Victoria Park
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-bentley.html">
+                    Bentley
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-carlisle.html">
+                    Carlisle
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-rivervale.html">
+                    Rivervale
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="suburbs/bond-cleaning-belmont.html">
+                    Belmont
+                  </a>
+                </li>
+              </ul>
             </li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-perth-cbd.html">
-                Perth CBD
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-south-perth.html">
-                South Perth
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-east-perth.html">
-                East Perth
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-rockingham.html">
-                Rockingham
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-malaga.html">
-                Malaga
-              </a>
-            </li>
-
-            <li>
-              <a class="dropdown-item" href="bond-cleaning-baldivis.html">
-                Baldivis
-              </a>
-            </li>
-          </ul>
-        </li>
 
         <li class="nav-item">
           <a class="nav-link" href="about.html">About Us</a>
@@ -1085,9 +1203,22 @@
                         <span class="suburb-feature">Apartments</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=cannington" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a
+                        href="contact.html?suburb=cannington"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Cannington"
+                      >
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a
+                        href="suburbs/bond-cleaning-cannington.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Cannington"
+                      >
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Cannington</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1106,10 +1237,19 @@
                         <span class="suburb-feature">Landlords</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=victoria-park" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=victoria-park"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Victoria Park">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-victoria-park.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Victoria Park">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Victoria Park</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1127,10 +1267,19 @@
                         <span class="suburb-feature">Quality Service</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=east-victoria-park" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=east-victoria-park"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for East Victoria Park">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-east-victoria-park.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in East Victoria Park">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View East Victoria Park</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1148,10 +1297,19 @@
                         <span class="suburb-feature">Student Housing</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=bentley" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=bentley"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Bentley">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-bentley.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Bentley">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Bentley</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1169,10 +1327,19 @@
                         <span class="suburb-feature">Reliable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=carlisle" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=carlisle"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Carlisle">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-carlisle.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Carlisle">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Carlisle</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1190,10 +1357,19 @@
                         <span class="suburb-feature">Reliable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=rivervale" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=rivervale"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Rivervale">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-rivervale.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Rivervale">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Rivervale</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1211,10 +1387,19 @@
                         <span class="suburb-feature">Businesses</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=belmont" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=belmont"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Belmont">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-belmont.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Belmont">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Belmont</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1232,10 +1417,19 @@
                         <span class="suburb-feature">Flexible</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=kewdale" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=kewdale"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Kewdale">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-kewdale.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Kewdale">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Kewdale</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1253,10 +1447,19 @@
                         <span class="suburb-feature">Residential</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=maddington" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=maddington"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Maddington">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-maddington.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Maddington">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Maddington</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1274,10 +1477,19 @@
                         <span class="suburb-feature">Professional</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=beckenham" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=beckenham"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Beckenham">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-beckenham.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Beckenham">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Beckenham</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1295,10 +1507,19 @@
                         <span class="suburb-feature">Landlords</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=thornlie" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
-                    </div>
+                    <a href="contact.html?suburb=thornlie"
+                      class="btn btn-success"
+                      aria-label="Get a free bond cleaning quote for Thornlie">
+                      <i class="fas fa-calendar-check"></i>
+                      <span>Get Free Quote</span>
+                    </a>
+                    <a href="suburbs/bond-cleaning-thornlie.html"
+                      class="btn btn-outline-success"
+                      aria-label="View bond cleaning services in Thornlie">
+                      <i class="fas fa-arrow-right"></i>
+                      <span>View Thornlie</span>
+                    </a>
+                  </div>
                 </div>
             </div>
 
@@ -1316,9 +1537,18 @@
                         <span class="suburb-feature">Detail-Oriented</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=queens-park" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=queens-park"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Queens Park">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-queens-park.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Queens Park">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Queens Park</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1337,9 +1567,18 @@
                         <span class="suburb-feature">Reliable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=east-cannington" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=east-cannington"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for East Cannington">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-east-cannington.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in East Cannington">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View East Cannington</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1358,9 +1597,19 @@
                         <span class="suburb-feature">Affordable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=gosnells" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=gosnells"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Gosnells">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-gosnells.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Gosnells">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Gosnells</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1379,9 +1628,19 @@
                         <span class="suburb-feature">Quality Service</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=armadale" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=armadale"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Armadale">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-armadale.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Armadale">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Armadale</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1400,9 +1659,19 @@
                         <span class="suburb-feature">Competitive</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=kelmscott" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=kelmscott"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Kelmscott">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-kelmscott.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Kelmscott">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Kelmscott</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1421,9 +1690,19 @@
                         <span class="suburb-feature">Hygienic</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=midland" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=midland"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Midland">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-midland.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Midland">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Midland</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1442,9 +1721,19 @@
                         <span class="suburb-feature">Flexible</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=morley" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=morley"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Morley">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-morley.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Morley">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Morley</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1463,9 +1752,18 @@
                         <span class="suburb-feature">Professional</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=balga" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=balga"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Balga">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-balga.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Balga">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Balga</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1484,9 +1782,18 @@
                         <span class="suburb-feature">Welcoming</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=nollamara" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=nollamara"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Nollamara">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-nollamara.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Nollamara">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Nollamara</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1505,9 +1812,18 @@
                         <span class="suburb-feature">Quality</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=westminster" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=westminster"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Westminster">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-westminster.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Westminster">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Westminster</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1526,9 +1842,18 @@
                         <span class="suburb-feature">Trusted</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=balcatta" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=balcatta"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Balcatta">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-balcatta.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Balcatta">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Balcatta</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1547,9 +1872,18 @@
                         <span class="suburb-feature">Spotless</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=osborne-park" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=osborne-park"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Osborne Park">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-osborne-park.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Osborne Park">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Osborne Park</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1568,9 +1902,18 @@
                         <span class="suburb-feature">Professional</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=innaloo" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=innaloo"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Innaloo">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-innaloo.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Innaloo">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Innaloo</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1589,9 +1932,18 @@
                         <span class="suburb-feature">Customer Service</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=joondalup" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=joondalup"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Joondalup">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-joondalup.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Joondalup">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Joondalup</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1610,9 +1962,18 @@
                         <span class="suburb-feature">Dependable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=cockburn-central" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=cockburn-central"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Cockburn Central">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-cockburn-central.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Cockburn Central">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Cockburn Central</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1631,9 +1992,18 @@
                         <span class="suburb-feature">Quality</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=success" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=success"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Success">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-success.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Success">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Success</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1652,9 +2022,18 @@
                         <span class="suburb-feature">Tailored</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=atwell" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=atwell"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Atwell">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-atwell.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Atwell">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Atwell</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1673,9 +2052,18 @@
                         <span class="suburb-feature">Professional</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=aubin-grove" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=aubin-grove"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Aubin Grove">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-aubin-grove.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Aubin Grove">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Aubin Grove</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1694,9 +2082,18 @@
                         <span class="suburb-feature">Professional</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=hammond-park" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=hammond-park"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Hammond Park">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-hammond-park.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Hammond Park">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Hammond Park</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1715,9 +2112,18 @@
                         <span class="suburb-feature">Reliable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=bibra-lake" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=bibra-lake"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Bibra Lake">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-bibra-lake.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Bibra Lake">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Bibra Lake</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1736,9 +2142,18 @@
                         <span class="suburb-feature">Experienced</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=spearwood" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=spearwood"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Spearwood">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-spearwood.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Spearwood">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Spearwood</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1757,9 +2172,18 @@
                         <span class="suburb-feature">Dependable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=hamilton-hill" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=hamilton-hill"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Hamilton Hill">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-hamilton-hill.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Hamilton Hill">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Hamilton Hill</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1778,9 +2202,18 @@
                         <span class="suburb-feature">Heritage</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=fremantle" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=fremantle"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Fremantle">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-fremantle.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Fremantle">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Fremantle</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1799,9 +2232,18 @@
                         <span class="suburb-feature">Competitive</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=south-fremantle" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=south-fremantle"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for South Fremantle">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-south-fremantle.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in South Fremantle">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View South Fremantle</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1820,9 +2262,18 @@
                         <span class="suburb-feature">Apartments</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=east-perth" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=east-perth"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for East Perth">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-east-perth.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in East Perth">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View East Perth</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1841,9 +2292,18 @@
                         <span class="suburb-feature">High-Rise</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=perth-cbd" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=perth-cbd"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Perth CBD">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-perth-cbd.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Perth CBD">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Perth CBD</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1862,9 +2322,18 @@
                         <span class="suburb-feature">Executive</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=west-perth" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=west-perth"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for West Perth">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-west-perth.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in West Perth">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View West Perth</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1883,9 +2352,18 @@
                         <span class="suburb-feature">High-Quality</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=subiaco" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=subiaco"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Subiaco">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-subiaco.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Subiaco">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Subiaco</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1904,9 +2382,18 @@
                         <span class="suburb-feature">Fresh & Clean</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=leederville" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=leederville"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Leederville">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-leederville.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Leederville">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Leederville</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1925,9 +2412,18 @@
                         <span class="suburb-feature">Detail-Oriented</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=mount-lawley" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=mount-lawley"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Mount Lawley">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-mount-lawley.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Mount Lawley">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Mount Lawley</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1946,9 +2442,18 @@
                         <span class="suburb-feature">Dependable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=highgate" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=highgate"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Highgate">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-highgate.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Highgate">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Highgate</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1967,9 +2472,18 @@
                         <span class="suburb-feature">Trusted</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=shenton-park" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=shenton-park"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Shenton Park">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-shenton-park.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Shenton Park">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Shenton Park</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -1988,9 +2502,18 @@
                         <span class="suburb-feature">Reliable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=wembley" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=wembley"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Wembley">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-wembley.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Wembley">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Wembley</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -2009,9 +2532,18 @@
                         <span class="suburb-feature">Spotless</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=scarborough" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=scarborough"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Scarborough">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-scarborough.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Scarborough">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Scarborough</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -2030,9 +2562,18 @@
                         <span class="suburb-feature">Dependable</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=tuart-hill" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=tuart-hill"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Tuart Hill">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-tuart-hill.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Tuart Hill">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Tuart Hill</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -2051,9 +2592,18 @@
                         <span class="suburb-feature">Quality</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=maylands" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=maylands"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Maylands">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+                      <a href="suburbs/bond-cleaning-maylands.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Maylands">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Maylands</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -2072,9 +2622,19 @@
                         <span class="suburb-feature">Businesses</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=bassendean" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=bassendean"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Bassendean">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-bassendean.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Bassendean">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Bassendean</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -2093,9 +2653,19 @@
                         <span class="suburb-feature">High-Quality</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=ellenbrook" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=ellenbrook"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Ellenbrook">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-ellenbrook.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Ellenbrook">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Ellenbrook</span>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -2114,9 +2684,19 @@
                         <span class="suburb-feature">Professional</span>
                     </div>
                     <div class="suburb-cta">
-                        <a href="contact.html?suburb=brabham" class="btn btn-success">
-                            <i class="fas fa-calendar-check"></i> Book from $299
-                        </a>
+                      <a href="contact.html?suburb=brabham"
+                        class="btn btn-success"
+                        aria-label="Get a free bond cleaning quote for Brabham">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Get Free Quote</span>
+                      </a>
+
+                      <a href="suburbs/bond-cleaning-brabham.html"
+                        class="btn btn-outline-success"
+                        aria-label="View bond cleaning services in Brabham">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>View Brabham</span>
+                      </a>
                     </div>
                 </div>
             </div>
