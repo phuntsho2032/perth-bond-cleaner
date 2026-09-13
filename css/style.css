@@ -1,14 +1,14 @@
 /* Main CSS for Perth Bond Cleaner - Upgraded Version */
 :root {
-  --primary-green: #28a745;
-  --dark-green: #218838;
-  --light-green: #d4edda;
-  --accent-green: #20c997;
-  --text-dark: #2c3e50;
+  --primary-green: #0078d8;
+  --dark-green: #003078;
+  --light-green: #d6ebfa;
+  --accent-green: #0090d8;
+  --text-dark: #04214a;
   --text-light: #6c757d;
   --white: #ffffff;
   --light-gray: #f8f9fa;
-  --dark-bg: #2c3e50;
+  --dark-bg: #04214a;
 }
 
 * {
@@ -961,7 +961,7 @@ h6 {
   }
 
   .dropdown-item:hover {
-    background: #28a745 !important;
+    background: #0078d8 !important;
     color: #fff !important;
   }
 }
@@ -1010,3 +1010,11 @@ h6 {
     display: none;
   }
 }
+
+
+/* brand-blue overrides */
+.text-success{color:#0078d8!important}
+.bg-success{background-color:#0078d8!important}
+.btn-success{background-color:#0078d8!important;border-color:#0078d8!important}
+.btn-success:hover{background-color:#003078!important;border-color:#003078!important}
+.badge.bg-success{background-color:#0078d8!important}
