@@ -1081,164 +1081,147 @@
                 netlify-honeypot="bot-field"
                 action="/thank-you.html"
               >
-                <!-- Required for Netlify -->
                 <input type="hidden" name="form-name" value="contact" />
-
-                <!-- Honeypot -->
                 <p style="display: none">
-                  <label
-                    >Don't fill this out if you're human:
-                    <input name="bot-field"
-                  /></label>
+                  <label>Don't fill this out if you're human:
+                    <input name="bot-field" /></label>
                 </p>
 
-                <!-- Personal Details -->
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="form-label">First Name *</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="firstName"
-                        id="firstName"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="form-label">Last Name</label>
-                      <input type="text" class="form-control" name="lastName" />
-                    </div>
-                  </div>
-                </div>
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">1. Contact Details</h5>
 
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="phone" class="form-label"
-                        >Phone Number *</label
-                      >
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="phone"
-                        name="phone"
-                        inputmode="numeric"
-                        placeholder="+61412345678"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Enter a valid Australian number (e.g. +61412345678)
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="form-label">Email Address</label>
-                      <input type="email" class="form-control" name="email" />
-                    </div>
-                  </div>
+                  <div class="col-md-6"><div class="form-group">
+                    <label class="form-label">First Name *</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" required />
+                  </div></div>
+                  <div class="col-md-6"><div class="form-group">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" />
+                  </div></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6"><div class="form-group">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" inputmode="numeric" placeholder="+61412345678" required />
+                  </div></div>
+                  <div class="col-md-6"><div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" class="form-control" name="email" required />
+                  </div></div>
                 </div>
 
-                <!-- Address Details -->
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">2. Property Details</h5>
+
                 <div class="form-group">
                   <label class="form-label">Street Address *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="address"
-                    placeholder="House number & street name"
-                    required
-                  />
+                  <input type="text" class="form-control" name="address" placeholder="House number & street name" required />
                 </div>
-
                 <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="suburb" class="form-label">Suburb *</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="suburb"
-                        name="suburb"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Please enter your suburb.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="postcode" class="form-label"
-                        >Postcode *</label
-                      >
-                      <input
-                        type="tel"
-                        inputmode="numeric"
-                        class="form-control"
-                        id="postcode"
-                        name="postcode"
-                        pattern="\d{4}"
-                        maxlength="4"
-                        placeholder="6000"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Enter a valid 4-digit postcode.
-                      </div>
-                    </div>
-                  </div>
+                  <div class="col-md-6"><div class="form-group">
+                    <label for="suburb" class="form-label">Suburb *</label>
+                    <input type="text" class="form-control" id="suburb" name="suburb" required />
+                  </div></div>
+                  <div class="col-md-6"><div class="form-group">
+                    <label for="postcode" class="form-label">Postcode *</label>
+                    <input type="tel" inputmode="numeric" class="form-control" id="postcode" name="postcode" pattern="\d{4}" maxlength="4" placeholder="6000" required />
+                  </div></div>
                 </div>
-
-                <!-- Property Details -->
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="form-label">Bedrooms</label>
-                      <select class="form-select" name="bedrooms" id="bedrooms">
-                        <option value="">Select</option>
-                        <option>Studio / 1 Bedroom Unit</option>
-                        <option>2 Bedroom Unit / House</option>
-                        <option>3 Bedroom House</option>
-                        <option>4 Bedroom House</option>
-                        <option>5+ Bedroom House</option>
-                      </select>
-                    </div>
-                  </div>
+                  <div class="col-md-4"><div class="form-group">
+                    <label class="form-label">Bedrooms</label>
+                    <select class="form-select" name="bedrooms">
+                      <option value="">Select</option>
+                      <option>Studio / 1 Bedroom Unit</option><option>2 Bedroom Unit / House</option>
+                      <option>3 Bedroom House</option><option>4 Bedroom House</option><option>5+ Bedroom House</option>
+                    </select>
+                  </div></div>
+                  <div class="col-md-4"><div class="form-group">
+                    <label class="form-label">Bathrooms</label>
+                    <select class="form-select" name="bathrooms"><option value="">Select</option><option>1</option><option>2</option><option>3+</option></select>
+                  </div></div>
+                  <div class="col-md-4"><div class="form-group">
+                    <label class="form-label">Storeys</label>
+                    <select class="form-select" name="storeys"><option value="">Select</option><option>1 Storey</option><option>2 Storey</option><option>3+ Storey</option></select>
+                  </div></div>
+                </div>
 
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="form-label">Bathrooms</label>
-                      <select class="form-select" name="bathrooms">
-                        <option value="">Select</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3+</option>
-                      </select>
-                    </div>
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">3. Property Status</h5>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyStatus" id="propertyStatus0" value="Vacant / Empty" required />
+                    <label class="form-check-label" for="propertyStatus0">Vacant / Empty</label>
                   </div>
-
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="form-label">Storeys</label>
-                      <select class="form-select" name="storeys">
-                        <option value="">Select</option>
-                        <option>1 Storey</option>
-                        <option>2 Storey</option>
-                        <option>3+ Storey</option>
-                      </select>
-                    </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyStatus" id="propertyStatus1" value="Furnished" />
+                    <label class="form-check-label" for="propertyStatus1">Furnished</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyStatus" id="propertyStatus2" value="Partially Furnished" />
+                    <label class="form-check-label" for="propertyStatus2">Partially Furnished</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyStatus" id="propertyStatus3" value="Currently Occupied" />
+                    <label class="form-check-label" for="propertyStatus3">Currently Occupied</label>
                   </div>
                 </div>
 
-                <!-- Additional Services - Updated with icons and prices -->
-                <div class="additional-services-grid">
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">4. Property Condition</h5>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyCondition" id="propertyCondition0" value="Light Cleaning Required" required />
+                    <label class="form-check-label" for="propertyCondition0">Light Cleaning Required</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyCondition" id="propertyCondition1" value="Average / Normally Maintained" />
+                    <label class="form-check-label" for="propertyCondition1">Average / Normally Maintained</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyCondition" id="propertyCondition2" value="Heavy Cleaning Required" />
+                    <label class="form-check-label" for="propertyCondition2">Heavy Cleaning Required</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyCondition" id="propertyCondition3" value="Very Dirty / Neglected" />
+                    <label class="form-check-label" for="propertyCondition3">Very Dirty / Neglected</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="propertyCondition" id="propertyCondition4" value="Not Sure" />
+                    <label class="form-check-label" for="propertyCondition4">Not Sure</label>
+                  </div>
+                </div>
+
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">5. Cleaning Service Required</h5>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceRequired" id="serviceRequired0" value="Bond / End-of-Lease Cleaning" required />
+                    <label class="form-check-label" for="serviceRequired0">Bond / End-of-Lease Cleaning</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceRequired" id="serviceRequired1" value="Vacate Cleaning" />
+                    <label class="form-check-label" for="serviceRequired1">Vacate Cleaning</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceRequired" id="serviceRequired2" value="General House Cleaning" />
+                    <label class="form-check-label" for="serviceRequired2">General House Cleaning</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceRequired" id="serviceRequired3" value="Carpet Steam Cleaning" />
+                    <label class="form-check-label" for="serviceRequired3">Carpet Steam Cleaning</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceRequired" id="serviceRequired4" value="Upholstery Cleaning" />
+                    <label class="form-check-label" for="serviceRequired4">Upholstery Cleaning</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="serviceRequired" id="serviceRequired5" value="Other" />
+                    <label class="form-check-label" for="serviceRequired5">Other</label>
+                  </div>
+                </div>
+
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">6. Additional Services (optional)</h5>
+
+                <details class="mb-2">
+                  <summary style="cursor:pointer;color:var(--primary-green);font-weight:600;">Tap to add optional extras</summary>
+                  <div class="additional-services-grid">
                   <label class="additional-service-item">
                     <input
                       type="checkbox"
@@ -1380,68 +1363,64 @@
                    </label>
                 </div>
 
-                <!-- Note about included services -->
+                
+                </details>
                 <div class="note-included">
                   <i class="fas fa-check-circle text-success me-2"></i>
-                  <strong>Included in bond cleaning:</strong> Oven cleaning,
-                  internal window cleaning, and spot wall cleaning. Only
-                  external window cleaning is an extra charge (all other
-                  services above are optional).
+                  <strong>Included in bond cleaning:</strong> Oven cleaning, internal window cleaning, and spot wall cleaning. Only external window cleaning is an extra charge.
                 </div>
 
-                <!-- Date & Time -->
-                <div class="row mt-4">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="preferredDate" class="form-label"
-                        >Preferred Date *</label
-                      >
-                      <input
-                        type="date"
-                        class="form-control"
-                        id="preferredDate"
-                        name="preferredDate"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Please select a preferred date.
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="form-label">Preferred Time</label>
-                      <select class="form-select" name="preferredTime">
-                        <option value="">Any time</option>
-                        <option>Morning (8am - 12pm)</option>
-                        <option>Afternoon (12pm - 4pm)</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Notes -->
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">7. Approximate Cleaning Budget</h5>
                 <div class="form-group">
-                  <label class="form-label">Additional Information</label>
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="4"
-                    placeholder="Access instructions, pets, special requests, etc."
-                  ></textarea>
+                  <label class="form-label">Approximate Budget</label>
+                  <select class="form-select" name="budget">
+                    <option value="">Select</option>
+                    <option>Under $300</option>
+                    <option>$300 - $500</option>
+                    <option>$500 - $800</option>
+                    <option>$800 - $1200</option>
+                    <option>$1200+</option>
+                    <option>Not sure</option>
+                  </select>
                 </div>
 
-                <!-- Submit -->
-                <button type="submit" class="submit-btn">
-                  <i class="fas fa-paper-plane"></i> Get Free Quote Now
-                </button>
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">8. Preferred Date</h5>
 
+                <div class="form-group">
+                  <input type="date" class="form-control" name="preferredDate" required />
+                </div>
+
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">9. Preferred Time</h5>
+                <div class="form-group">
+                  <label class="form-label">Preferred Time</label>
+                  <select class="form-select" name="preferredTime">
+                    <option value="">Any time</option>
+                    <option>Morning (8am - 12pm)</option>
+                    <option>Afternoon (12pm - 4pm)</option>
+                  </select>
+                </div>
+
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">10. Access / Key Arrangement</h5>
+                <div class="form-group">
+                  <label class="form-label">How will we access the property?</label>
+                  <select class="form-select" name="accessArrangement">
+                    <option value="">Select</option>
+                    <option>I will be home</option>
+                    <option>Lockbox on site</option>
+                    <option>Real estate agent has the key</option>
+                    <option>I will leave the key / instructions</option>
+                    <option>Other (add below)</option>
+                  </select>
+                </div>
+
+                <h5 class="fw-bold mt-4 mb-3" style="color:var(--primary-green);">11. Additional Information</h5>
+
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Access instructions, pets, special requests, etc."></textarea>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Get Free Quote Now</button>
                 <div class="text-center mt-3">
-                  <small class="text-muted">
-                    By submitting this form, you agree to our
-                    <a href="privacy-policy.html">Privacy Policy</a>.
-                  </small>
+                  <small class="text-muted">By submitting this form, you agree to our <a href="privacy-policy.html">Privacy Policy</a>.</small>
                 </div>
               </form>
             </div>
